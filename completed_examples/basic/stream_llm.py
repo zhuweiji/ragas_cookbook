@@ -29,8 +29,7 @@ prompt = ChatPromptTemplate.from_messages(
         (
             "system",
             """You are an essay assistant tasked with writing excellent 5-paragraph essays.
-             Generate the best essay possible for the user's request.
-             If the user provides critique, respond with a revised version of your previous attempts.""",
+             Generate the best essay possible for the user's request.""",
         ),
         MessagesPlaceholder(variable_name="messages"),
     ]
@@ -39,7 +38,7 @@ prompt = ChatPromptTemplate.from_messages(
 generate = prompt | generator_llm
 
 request = HumanMessage(
-    content="Write an essay on why the little prince is relevant in modern childhood"
+    content="Write an essay on the threat of supply chain attacks."
 )
 for chunk in generate.stream({"messages": [request]}):
     print(chunk, end='')
