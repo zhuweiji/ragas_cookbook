@@ -50,6 +50,7 @@ class UnimplementedCallbackHandler(BaseCallbackHandler):
 
     def on_chain_end(self, outputs: Dict[str, Any], **kwargs: Any) -> Any:
         """Run when chain ends running."""
+        log.info(outputs)
         log.critical("on_chain_end")
 
     def on_chain_error(
