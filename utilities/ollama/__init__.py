@@ -5,7 +5,7 @@ def verify_ollama_model_present(model):
     url = "http://localhost:11434/api/generate"
     data = {
         "model": model,
-        "prompt": "Why is the sky blue?"
+        "prompt": "Hi!"
     }
 
     print('validating model exists...')
