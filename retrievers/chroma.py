@@ -57,6 +57,7 @@ class ExtendedChromaMarkdownRetriever:
         return docs
 
     def get_all_related_chunks(self, query, max_size: int = 1500, **kwargs):
+        LOOP_LIMIT = 100
         docs = self._search(query, **kwargs)
 
         for doc in docs:
@@ -79,8 +80,17 @@ class ExtendedChromaMarkdownRetriever:
 
             added_chunks = set()
 
+            counter = 0
             # add related docs above and below the retrieved chunk until total size is too big
             while above_ptr > 0 or below_ptr < len(related_docs_ordered):
+                # infinite loop sometimes
+                # e.g (above_ptr=0, below_ptw=5),(above_ptr=0, below_ptw=5),(above_ptr=0, below_ptw=5)
+                if counter > LOOP_LIMIT:
+                    break
+                counter += 1
+
+                if len(added_chunks) >= len(related_docs_ordered):
+                    break
 
                 # add chunks that are above the retrieved chunk in the document
                 if above_ptr > 0:

@@ -2,7 +2,7 @@
 import logging
 import sys
 from pathlib import Path
-from typing import List
+from typing import List, Optional
 
 from langchain_community.document_loaders import DirectoryLoader
 from langchain_community.embeddings import OllamaEmbeddings
@@ -21,9 +21,20 @@ log = logging.getLogger(__name__)
 
 
 class Agent:
-    def __init__(self, retriever=ExtendedChromaMarkdownRetriever()) -> None:
+    def __init__(self, retriever=ExtendedChromaMarkdownRetriever(),
+                 config: Optional[RunnableConfig | str] = None) -> None:
         self.llm = llm
         self.retriever = retriever
+
+        if config == 'stdout':
+            handler = StdOutCallbackHandler()
+            config = RunnableConfig({
+                'callbacks': [handler]
+            })
+
+        self.langchain_config: Optional[RunnableConfig]
+        self.langchain_config = config
+
         # self.llm_embeddings = OllamaEmbeddings(model=llm_model_name)
 
     def answer_question(self, query, docs: List[Document]):
@@ -47,11 +58,6 @@ class Agent:
             ]
         )
 
-        handler = StdOutCallbackHandler()
-
-        config = RunnableConfig({
-            'callbacks': [handler]
-        })
         generate = prompt | self.llm
 
         request = HumanMessage(
@@ -59,7 +65,7 @@ class Agent:
             Context: {docs}""".replace('\t', '')
         )
 
-        return generate.invoke({'question': [request]}, config=config)
+        return generate.invoke({'question': [request]}, config=self.langchain_config)
 
     def evaluate_answer(self, question, answer):
         prompt = ChatPromptTemplate.from_messages(
@@ -69,13 +75,7 @@ class Agent:
                     """Evaluate a response to a given question. Do not add any preamble or explanation. Use the following metrics:
                     
                     Score (1-5):
-                    1: Completely wrong or irrelevant answer.
-                    2: Somewhat off-topic or inaccurate answer.
-                    3: Lacks details or clarity.
-                    4: Mostly correct answer.
-                    5: Excellent answer.
-                    
-                    Answered: (Yes/No) - Did the answer address the core aspects of the question?
+                    Answered: (Yes/No).
                     
                     Example:
 
@@ -84,19 +84,14 @@ class Agent:
 
                     Evaluation:
 
-                    Score (1-5): 4
-                    Answered: Yes
+                    Score (1-5): 2
+                    Answered: No.
                     """.replace('\t', '')
                 ),
                 MessagesPlaceholder(variable_name="question"),
             ]
         )
 
-        handler = StdOutCallbackHandler()
-
-        config = RunnableConfig({
-            'callbacks': [handler]
-        })
         generate = prompt | self.llm
 
         request = HumanMessage(
@@ -104,27 +99,30 @@ class Agent:
             Answer: {answer}""".replace('\t', '')
         )
 
-        return generate.invoke({'question': [request]}, config=config)
+        return generate.invoke({'question': [request]}, config=self.langchain_config)
 
     def evaluate_document_relevance(self, question, document: Document):
         prompt = ChatPromptTemplate.from_messages(
             [
                 (
                     "system",
-                    """Evaluate a document's relevance for a question. Do not add any preamble or explanation. Use the following metrics:
-                    Answered: (Yes/No) - Did the answer address the core aspects of the question?
+                    """Evaluate a document's relevance for a question. Do not add any preamble or explanation. Follow this template:
+                    Answered: Yes|No.
                     Reason:
+                    
+                    Example:
+                    Answered: No.
+                    Reason: The context provided does not give information about Python.
+                    
+                    Example:
+                    Answered: Yes.
+                    Reason: The context provided gives source code for implementing a Flask server.
                     """.replace('\t', '')
                 ),
                 MessagesPlaceholder(variable_name="question"),
             ]
         )
 
-        handler = StdOutCallbackHandler()
-
-        config = RunnableConfig({
-            'callbacks': [handler]
-        })
         generate = prompt | self.llm
 
         request = HumanMessage(
@@ -132,4 +130,33 @@ class Agent:
             Document: {document}""".replace('\t', '')
         )
 
-        return generate.invoke({'question': [request]}, config=config)
+        return generate.invoke({'question': [request]}, config=self.langchain_config)
+
+    def try_document_toc_irrelevant_document(self, question, evaluation, document: Document):
+        """Try to salvage an irrelevant document by either 
+        1. searching within the same document for more relevant chunks 
+        2. modifying the search query"""
+        prompt = ChatPromptTemplate.from_messages(
+            [
+                (
+                    "system",
+                    """A document has been evaluated to be irrelevant to a question.
+                    Use the evaluation and a table of contents of the document, to determine if the question can be answered by other relevant chunks in the document or not.
+                    
+                    Answer in the template of these examples:
+                    Yes, using the following headers: 3. ##Prerequesites, 5. ### Example
+                    No.
+                        """.replace('\t', '')
+                ),
+                MessagesPlaceholder(variable_name="question"),
+            ]
+        )
+
+        generate = prompt | self.llm
+
+        request = HumanMessage(
+            content=f"""Question: {question}
+                Document: {document}""".replace('\t', '')
+        )
+
+        return generate.invoke({'question': [request]}, config=self.langchain_config)

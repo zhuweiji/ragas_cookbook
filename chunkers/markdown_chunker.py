@@ -44,9 +44,12 @@ class MarkdownChunker:
             markdown_text = markdown_text.read_text()
 
         lines = markdown_text.splitlines()
+
+        counter = 1
         for line in lines:
             if line.startswith("#"):
-                headers.append(line.strip())
+                headers.append(f'{counter:<2}: {line.strip()}')
+                counter += 1
 
         headers = '\n'.join(headers)
         return headers
