@@ -159,5 +159,8 @@ if __name__ == "__main__":
 
     retriever = ExtendedChromaMarkdownRetriever()
     for i in tqdm(documents):
-        docs = MarkdownChunker.split(i)
-        retriever.add_documents(docs)
+        try:
+            docs = MarkdownChunker.split(i)
+            retriever.add_documents(docs)
+        except Exception as e:
+            log.error(f'Could not add document {i.name}. Exception: {e}')

@@ -18,9 +18,12 @@ class MarkdownChunker:
         markdown_splitter = MarkdownHeaderTextSplitter(
             headers_to_split_on=cls.headers_to_split_on)
 
+        table_of_contents = cls.get_table_of_contents(markdown_text)
         metadata = {
             'filename': '',
+            'table_of_contents': table_of_contents
         }
+
         if isinstance(markdown_text, Path):
             metadata['filename'] = markdown_text.name
             markdown_text = markdown_text.read_text()
@@ -31,3 +34,19 @@ class MarkdownChunker:
             doc.metadata = {**doc.metadata, **
                             metadata, 'document_index': index}
         return docs
+
+    @classmethod
+    def get_table_of_contents(cls, markdown_text: str | Path):
+        """Get a table of contents from a markdown file by extracting all headers (#, ##, ...)."""
+
+        headers = []
+        if isinstance(markdown_text, Path):
+            markdown_text = markdown_text.read_text()
+
+        lines = markdown_text.splitlines()
+        for line in lines:
+            if line.startswith("#"):
+                headers.append(line.strip())
+
+        headers = '\n'.join(headers)
+        return headers
