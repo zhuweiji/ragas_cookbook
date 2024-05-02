@@ -11,12 +11,20 @@ route answer (irrelevant context)
 	- stop hallucinations
 
 answer is bad
-- evaluate documents(question,answer,doc)
+- evaluate documents(question,answer,doc) 
 	-> relevant | not relevant
-	- check toc()
+	- check toc() (done)
 		-> relevant headers | document not relevant
-			- get chunks from headers
-			
-	- reform query? how?
-	
-- 
+			- get chunks from headers (done)
+
+- reflection (done)
+
+- route inadequate answer
+	- reflection 
+	- langchain agent with tools?
+		- investigate
+	- SQR?
+    - reform query? how?
+
+- need synthetic test data to see where model issues are
+	- will help to guide work on answer routing and SQR

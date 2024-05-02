@@ -144,7 +144,8 @@ class Agent:
                     Use the evaluation and a table of contents of the document, to determine if the question can be answered by other relevant chunks in the document or not.
                     
                     Answer in the template of these examples:
-                    Yes, using the following headers: 3. ##Prerequesites, 5. ### Example
+                    Yes, using the following headers: 3: ##Prerequisites, 5: ### Examples
+                    Yes, using the following headers: 1: #Introduction
                     No.
                         """.replace('\t', '')
                 ),
@@ -157,6 +158,36 @@ class Agent:
         request = HumanMessage(
             content=f"""Question: {question}
                 Document: {document}""".replace('\t', '')
+        )
+
+        return generate.invoke({'question': [request]}, config=self.langchain_config)
+
+    def regenerate_new_answer_from_evaluation(self, question, answer, evaluation):
+        """Reflect on an inadequate answer to try to produce a better answer
+
+        This might involve a chain including tools and SQR? 
+        But for now just use evaluation to produce a new answer
+        """
+        prompt = ChatPromptTemplate.from_messages(
+            [
+                (
+                    "system",
+                    """Given the following answer for a question, and its critique, respond with a revised answer.
+                    If information/context is missing, or no good answer can be generated, then answer in the following templates:
+                    Information is missing. Details:
+                    No good answer can be generated. Details:
+                    """.replace('\t', '')
+                ),
+                MessagesPlaceholder(variable_name="question"),
+            ]
+        )
+
+        generate = prompt | self.llm
+
+        request = HumanMessage(
+            content=f"""Question: {question}
+                Answer: {answer}
+                Evaluation: {evaluation}""".replace('\t', '')
         )
 
         return generate.invoke({'question': [request]}, config=self.langchain_config)

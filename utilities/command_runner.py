@@ -10,7 +10,9 @@ def run_command(command, cwd=Path.cwd()):
     return subprocess.run(command, shell=True, stderr=sys.stdout, stdout=sys.stdout, cwd=cwd)
 
 
-def move_file(source_file, destination_dir):
+def move_file(source_file: Path, destination_dir: Path):
+    if not destination_dir.exists():
+        destination_dir.mkdir(parents=True)
     try:
         destination_file = destination_dir / source_file.name
         source_file.rename(destination_file)

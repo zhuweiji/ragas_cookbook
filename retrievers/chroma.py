@@ -1,6 +1,6 @@
 
 import logging
-from typing import List
+from typing import Dict, List, Tuple
 
 import chromadb
 from chromadb.config import Settings
@@ -16,6 +16,8 @@ from config.constants import (
     llm_model_name,
 )
 from config.project_paths import chromadb_dir
+from utilities import print_long_text
+from utilities.document_utils import filter_for_matching_header_metadata
 
 log = logging.getLogger(__name__)
 
@@ -41,6 +43,19 @@ class ExtendedChromaMarkdownRetriever:
     def _get_relevant_documents(self, query: str, max_chunk_size: int = 1500, **kwargs):
         return self.get_all_related_chunks(query, max_size=max_chunk_size, **kwargs)
 
+    def get_documents_by_filename(self, filename: str, headers: tuple | dict | List[tuple | dict]):
+        if isinstance(headers, tuple):
+            _headers = {headers[0]: headers[1]}
+        elif isinstance(headers, list) and headers and isinstance(headers[0], tuple):
+            _headers = {k: v for k, v in headers}
+        else:
+            _headers: dict = headers  # type: ignore
+
+        docs = self._get_documents(metadata_filter={'filename': filename})
+        if headers:
+            docs = filter_for_matching_header_metadata(docs, _headers)
+        return docs
+
     def _search(self, query, **kwargs):
         # default to max marginal relevance search
         kwargs['search_type'] = kwargs.get('search_type', 'mmr')
@@ -57,25 +72,39 @@ class ExtendedChromaMarkdownRetriever:
         return docs
 
     def get_all_related_chunks(self, query, max_size: int = 1500, **kwargs):
+        """search for matching documents for a header
+        for each matching doc, find the relative chunks (as defined by highest-parent relationship)
+        add chunks above and below the initial chunk until we reach max size"""
         LOOP_LIMIT = 100
         docs = self._search(query, **kwargs)
 
         for doc in docs:
-            header_type, header_value = self.get_biggest_header(doc)
+            largest_header = self.get_biggest_header(doc)
+            if not largest_header:
+                continue
+
+            largest_header_type, largest_header_value = largest_header
             related_docs = self._get_documents(metadata_filter={
                 '$and': [
-                    {header_type: header_value},
+                    {largest_header_type: largest_header_value},
                     {'filename': doc.metadata.get('filename', -1)}
                 ]
             }
             )
 
+            if not related_docs:
+                continue
+
             related_docs_ordered = sorted(related_docs,
                                           key=lambda x: x.metadata.get('document_index', -1))
 
             # find the index of the matched doc
-            doc_index = doc.metadata.get(
-                'document_index', related_docs_ordered.index(doc))
+            doc_index = doc.metadata.get(related_docs_ordered.index(doc))
+
+            # TODO: error handling
+            if not doc_index:
+                continue
+
             above_ptr, below_ptr = doc_index - 1, doc_index + 1
 
             added_chunks = set()
@@ -94,6 +123,9 @@ class ExtendedChromaMarkdownRetriever:
 
                 # add chunks that are above the retrieved chunk in the document
                 if above_ptr > 0:
+
+                    log.info(
+                        f'{doc_index}, {above_ptr}, {len(related_docs_ordered)}')
                     above_chunk = related_docs_ordered[above_ptr]
 
                     if above_chunk.page_content not in added_chunks:
@@ -138,17 +170,28 @@ class ExtendedChromaMarkdownRetriever:
 
     @classmethod
     def get_biggest_header(cls, doc: Document):
-        return cls.get_document_headers(doc)[0]
+        headers = cls.get_document_headers(doc)
+        return None if not headers else headers[0]
 
     @classmethod
     def get_smallest_header(cls, doc: Document):
-        return cls.get_document_headers(doc)[-1]
+        headers = cls.get_document_headers(doc)
+        return None if not headers else headers[-1]
 
     @classmethod
     def add_two_docs_page_content(cls, main_doc: Document, other_doc: Document):
-        _, other_doc_header = cls.get_smallest_header(other_doc)
-        return main_doc.page_content + '\n\n' + f'**{other_doc_header}**' + \
-            '\n' + other_doc.page_content
+        header = cls.get_smallest_header(other_doc)
+
+        header_value = ''
+        if header:
+            _, header_value = header
+
+        text = f'{main_doc.page_content}\n\n'
+        if header_value:
+            text += f'**{header_value}**\n'
+
+        text += other_doc.page_content
+        return text
 
 
 if __name__ == "__main__":
@@ -157,7 +200,7 @@ if __name__ == "__main__":
     from tqdm import tqdm
 
     from chunkers.markdown_chunker import MarkdownChunker
-    from config.project_paths import source_document_directory
+    from config.project_paths import project_root, source_document_directory
 
     logging.basicConfig(
         format='%(name)s-%(levelname)s|%(lineno)d:  %(message)s', level=logging.INFO)

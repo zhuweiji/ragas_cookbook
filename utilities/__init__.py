@@ -1,4 +1,7 @@
+import logging
 import textwrap
+
+log = logging.getLogger(__name__)
 
 
 def print_long_text(text):
