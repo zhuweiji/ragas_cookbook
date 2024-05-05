@@ -1,0 +1,60 @@
+Question: What are the keyboard shortcuts to adjust zoom level in VS Code?
+Answer: `kb(workbench.action.zoomIn)` for Zoom In, `kb(workbench.action.zoomOut)` for Zoom Out, and `kb(workbench.action.zoomReset)` for Reset Zoom.
+
+Question: Which setting persists the zoom level in VS Code?
+Answer: `window.zoomLevel`
+
+Question: How can users open accessibility help in VS Code?
+Answer: Using the command **Open Accessibility Help** `kb(editor.action.accessibilityHelp)`.
+
+Question: What is the keyboard shortcut to open the Select Color Theme dropdown?
+Answer: `kb(workbench.action.selectTheme)`
+
+Question: Which color themes are recommended for color vision accessibility?
+Answer: GitHub, Gotthard, Blinds, Greative, and Pitaya Smoothie.
+
+Question: What is the purpose of assigning colors to `editorError` and `editorWarning`?
+Answer: Assigning colors to the background of `editorError` and `editorWarning` helps to identify potential issues and highlights the respective error or warning.
+
+Question: What is the best approach to select colors for accessibility?
+Answer: The best approach is to apply complementary colors, which are colors located opposite of one another on a color wheel.
+
+Question: What command enables dimming unfocused views in VS Code?
+Answer: The command is "accessibility.dimUnfocused.enabled".
+
+Question: What keys can be used to navigate between UI controls in VS Code?
+Answer: The `kbstyle(Tab)` key can be used to navigate forward and `kbstyle(Shift+Tab)` can be used to navigate in reverse order.
+
+Question: What is the purpose of the "Toggle Tab Key Moves Focus" action in VS Code?
+Answer: This action toggles `kbstyle(Tab)` trapping on and off, allowing focus to move out of the file or terminal.
+
+Question: What screen reader is recommended for NVDA in Windows?
+Answer: It is recommended to stay in focus mode and use hotkeys to navigate in NVDA for Windows.
+
+Question: What command is used to run Accessible View?
+Answer: The command **Open Accessible View** `kb(editor.action.accessibleView)` is used to run Accessible View.
+
+Question: What does screen reader optimized mode do in VS Code?
+Answer: Screen reader optimized mode in VS Code optimizes UI such as the editor and Integrated Terminal for screen reader use.
+
+Question: How to navigate between an input control and its results?
+Answer: You can navigate between an input control and its results using (`kb(widgetNavigation.focusNext)`) and (`kb(widgetNavigation.focusPrevious)`).
+
+Question: What is the purpose of the `terminal.integrated.minimumContrastRatio` setting?
+Answer: The `terminal.integrated.minimumContrastRatio` setting adjusts text color luminance to meet a desired contrast ratio or pure white/black.
+
+Question: What type of markers do accessibility signals indicate?
+Answer: Accessibility signals indicate if the current line has certain markers such as: errors, warnings, breakpoints, folded text regions or inline suggestions.
+
+Question: How can one control the enabled/disabled status of accessibility signal sounds?
+Answer: The enabled/disabled status of accessibility signal sounds can be controlled by the settings `accessibility.signals.*`.
+
+Question: What command lists all available signal announcements and allows for configuring their enabled/disabled status?
+Answer: The command **Help: List Signal Announcements** informs the user of which signal announcements are available and allows for configuring their enabled/disabled status.
+
+Question: Which key can be held to lock a hover in place on Linux systems?
+Answer: On Linux systems, holding the `kbstyle(Alt)` or `kbstyle(Option)` key while a hover is active will lock it in place.
+
+Question: What setting needs to be enabled to make VS Code work with the Orca screen reader on Linux?
+Answer: The setting `"editor.accessibilitySupport": "on"` needs to be enabled to make VS Code work with the Orca screen reader on Linux.
+

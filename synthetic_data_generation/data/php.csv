@@ -1,0 +1,5 @@
+What editor is recommended for PHP development?,Visual Studio Code is a great editor for PHP development.
+What feature of VS Code is used for PHP language diagnostics?,VS Code uses the official PHP linter (`php -l`) for PHP language diagnostics.
+How to change the PHP settings in VS Code?,"To change the PHP settings, open your User or Workspace Settings (`kb(workbench.action.openSettings)`) and type 'php' to filter the list of available settings."
+How to disable built-in PHP support in VS Code?,"To disable the built-in PHP smart completions in favor of suggestions from an installed PHP extension, uncheck **PHP > Suggest: Basic** in the settings."
+What is required to use XDebug for PHP debugging in VS Code?,PHP debugging with **XDebug** is supported through a [PHP Debug extension](https://marketplace.visualstudio.com/items?itemName=xdebug.php-debug). Follow the extension's instructions for configuring **XDebug** to work with VS Code.

@@ -1,0 +1,20 @@
+What commands increase or decrease the zoom level in VS Code?,The commands are **View** > **Appearance** > **Zoom In** (`kb(workbench.action.zoomIn)`) and **View** > **Appearance** > **Zoom Out** (`kb(workbench.action.zoomOut)`).
+How to access the accessibility help menu in VS Code?,Use the command **Open Accessibility Help** `kb(editor.action.accessibilityHelp)`.
+Which color theme is recommended for people with deuteranopia?,The **Blinds** theme is recommended for people with deuteranopia.
+How to customize warning colors in VS Code?,"Customize the color by going to **File** > **Preferences** > **Settings** for user settings, search for ""color customizations"" and open your user `settings.json` file, then nest the JSON code for the desired colors."
+What does the `editorWarning.foreground` setting control in VS Code?,The `editorWarning.foreground` setting controls the color of the wavy line beneath a warning in VS Code.
+What is the purpose of assigning colors to `editorError` and `editorWarning`?,Assigning colors to the background of `editorError` and `editorWarning` helps identify potential issues and highlight the respective error or warning.
+What is the best approach to selecting accessible colors?,"The best approach to selecting accessible colors is to apply complementary colors, which are colors located opposite of one another on a color wheel."
+How can you modify key bindings for VS Code actions?,You can modify key bindings by opening the Keyboard Shortcuts editor at **File** > **Preferences** > **Keyboard Shortcuts** (`kb(workbench.action.openGlobalKeybindings)`).
+What is the default behavior for `Tab` trapping in the integrated terminal?,The default behavior for `Tab` trapping in the integrated terminal can be configured with `editor.tabFocusMode`.
+"Which screen readers have been tested with VS Code on Windows, macOS, and Linux?","The tested screen readers are NVDA and JAWS for Windows, VoiceOver for macOS, and Orca for Linux."
+What screen reader is recommended for use with NVDA?,"It is recommended to stay in focus mode and use hotkeys to navigate with NVDA, instead of browse mode."
+How to navigate suggestions using keyboard shortcuts in VS Code?,Use `kbstyle(Ctrl+Up)` and `kbstyle(Ctrl+Down)` to navigate suggestions and `kbstyle(Shift+Escape)` to dismiss them.
+What command displays an Accessible View in VS Code?,Run the command **Open Accessible View** `kb(editor.action.accessibleView)` to display an Accessible View.
+How to enable screen reader mode in VS Code?,VS Code goes into an optimized screen reader mode when it detects a screen reader being used.
+How to navigate between an input control and its results in VS Code?,Use (`kb(widgetNavigation.focusNext)`) and (`kb(widgetNavigation.focusPrevious)`).
+What type of indicators are accessibility signals?,"Accessibility signals indicate if the current line has certain markers such as errors, warnings, breakpoints, folded text regions or inline suggestions."
+When are accessibility signal sounds and announcements played?,They are played when the primary cursor changes its line or the first time a marker is added to the current line.
+What command lists all available signal sounds?,The command **Help: List Signal Sounds** lists all available sounds.
+How can hovers that cannot be hovered normally be used with screen magnifiers?,"Hold the `kbstyle(Alt)` or `kbstyle(Option)` key while a hover is active to ""lock"" it in place."
+Which screen reader works well with VS Code on Linux?,VS Code works well with the Orca screen reader on Linux.

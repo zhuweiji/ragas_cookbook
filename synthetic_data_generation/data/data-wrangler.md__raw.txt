@@ -1,0 +1,60 @@
+Question: "What is the purpose of the Viewing mode in Data Wrangler?"
+Answer: "The Viewing mode in Data Wrangler optimizes the interface for quickly viewing, filtering, and sorting data, making it ideal for initial exploration of a dataset."
+
+Question: "What is the default mode when Data Wrangler is opened?"
+Answer: "By default, Data Wrangler opens in the Viewing mode."
+
+Question: "How can one change the default opening mode of Data Wrangler?"
+Answer: "This behavior can be changed in the Settings editor `kb(workbench.settings.dataWrangler.startInEditModeForNotebookEntrypoints)`."
+
+Question: "What does Data Wrangler's Viewing mode offer for data exploration?"
+Answer: "Data Wrangler's Viewing mode allows users to view, filter, and sort data, making it suitable for initial exploration of datasets."
+
+Question: "What mode of Data Wrangler is recommended for initial dataset exploration?"
+Answer: "Viewing mode is recommended for initial dataset exploration in Data Wrangler."
+
+Question: What interface displays detailed summary statistics for a dataset?
+Answer: The Data Summary panel in Viewing mode displays detailed summary statistics for a dataset.
+
+Question: What information does the Quick Insights header provide?
+Answer: The Quick Insights header provides valuable information about each column, such as the distribution of the data or the frequency of datapoints, as well as missing and distinct values.
+
+Question: What allows you to undo specific operations or edit the most recent operation in Data Wrangler?
+Answer: The Cleaning Steps panel in Data Wrangler allows you to undo specific operations or edit the most recent operation.
+
+Question: What is displayed when you have an operation selected and are previewing its effects on the data in Data Wrangler?
+Answer: A data diff view of the changes made to the data is displayed when you have an operation selected and are previewing its effects on the data in Data Wrangler.
+
+Question: What does the Data Wrangler Operations panel allow you to do?
+Answer: The Data Wrangler Operations panel allows you to search through all of Data Wrangler’s built-in data operations and select the ones you want to use.
+
+Question: What does "Sort" operation do?
+Answer: The "Sort" operation sorts column(s) in a dataset either ascending or descending order.
+
+Question: What is the purpose of "Filter" operation?
+Answer: The "Filter" operation filters rows based on one or more conditions.
+
+Question: How does "Calculate text length" work?
+Answer: The "Calculate text length" operation creates a new column with values equal to the length of each string value in a text column.
+
+Question: What is the use of "Drop missing values" operation?
+Answer: The "Drop missing values" operation removes rows with missing values in a dataset.
+
+Question: What does "Group by column and aggregate" do?
+Answer: The "Group by column and aggregate" operation groups data by one or more columns and aggregates results.
+
+Question: How to find a specific column in a dataset?
+Answer: Use the 'Go to column' feature in Data Wrangler's toolbar and search for the respective column.
+
+Question: What are some ways to troubleshoot general connectivity issues with Data Wrangler?
+Answer: Try alternative methods to connect as described in the "Connecting to a Python kernel" section, or install different versions of the Jupyter and Python extensions.
+
+Question: How to fix a `UnicodeDecodeError` when opening a data file in Data Wrangler?
+Answer: Open Data Wrangler from a Jupyter Notebook instead, and read the file using Pandas with the appropriate `encoding` and/or `encoding_errors` parameters.
+
+Question: Where to submit problems, feature requests, or feedback for Data Wrangler?
+Answer: Submit an Issue on the Microsoft/vscode-data-wrangler GitHub repository.
+
+Question: What does the Microsoft Data Wrangler extension for Visual Studio Code do with usage data?
+Answer: The extension collects usage data and sends it to Microsoft to help improve their products and services, while respecting the `telemetry.telemetryLevel` setting.
+

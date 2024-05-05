@@ -1,0 +1,10 @@
+What are the Activation Events in Visual Studio Code extensions?,Activation Events are a set of JSON declarations in the `activationEvents` field of `package.json` Extension Manifest that determine when an extension becomes activated.
+What is the role of 'onLanguage' activation event in Visual Studio Code extensions?,"The 'onLanguage' activation event is emitted when a file that resolves to a certain language gets opened, causing interested extensions to be activated."
+What is the purpose of 'onCommand' activation event in Visual Studio Code extensions?,"The 'onCommand' activation event is emitted when a command is being invoked, leading to the activation of interested extensions."
+What does 'workspaceContains' activation event signify in Visual Studio Code extensions?,The 'workspaceContains' activation event is emitted when a folder is opened and the folder contains at least one file that matches a glob pattern.
+What is the significance of 'onUri' activation event in Visual Studio Code extensions?,"The 'onUri' activation event is emitted when a system-wide Uri for that extension is opened, causing interested extensions to be activated."
+What is the Uri scheme for extensions activation?,The Uri scheme is fixed to either `vscode` or `vscode-insiders`.
+What is the role of 'onUri' activation event?,This activation event is emitted when a system-wide Uri for that extension is opened.
+What triggers 'onWebviewPanel' activation event?,VS Code needs to restore a [webview](/api/extension-guides/webview) with the matching `viewType`.
+What is the requirement for custom editors activation since VS Code 1.74.0?,Custom editors do not require a corresponding `onCustomEditor` activation event declaration.
+What is the purpose of 'onStartupFinished' activation event?,This event is emitted after all the `*` activated extensions have finished activating.

@@ -1,0 +1,20 @@
+"""What is the purpose of the Viewing mode in Data Wrangler?""","""The Viewing mode in Data Wrangler optimizes the interface for quickly viewing, filtering, and sorting data, making it ideal for initial exploration of a dataset."""
+"""What is the default mode when Data Wrangler is opened?""","""By default, Data Wrangler opens in the Viewing mode."""
+"""How can one change the default opening mode of Data Wrangler?""","""This behavior can be changed in the Settings editor `kb(workbench.settings.dataWrangler.startInEditModeForNotebookEntrypoints)`."""
+"""What does Data Wrangler's Viewing mode offer for data exploration?""","""Data Wrangler's Viewing mode allows users to view, filter, and sort data, making it suitable for initial exploration of datasets."""
+"""What mode of Data Wrangler is recommended for initial dataset exploration?""","""Viewing mode is recommended for initial dataset exploration in Data Wrangler."""
+What interface displays detailed summary statistics for a dataset?,The Data Summary panel in Viewing mode displays detailed summary statistics for a dataset.
+What information does the Quick Insights header provide?,"The Quick Insights header provides valuable information about each column, such as the distribution of the data or the frequency of datapoints, as well as missing and distinct values."
+What allows you to undo specific operations or edit the most recent operation in Data Wrangler?,The Cleaning Steps panel in Data Wrangler allows you to undo specific operations or edit the most recent operation.
+What is displayed when you have an operation selected and are previewing its effects on the data in Data Wrangler?,A data diff view of the changes made to the data is displayed when you have an operation selected and are previewing its effects on the data in Data Wrangler.
+What does the Data Wrangler Operations panel allow you to do?,The Data Wrangler Operations panel allows you to search through all of Data Wrangler’s built-in data operations and select the ones you want to use.
+"What does ""Sort"" operation do?","The ""Sort"" operation sorts column(s) in a dataset either ascending or descending order."
+"What is the purpose of ""Filter"" operation?","The ""Filter"" operation filters rows based on one or more conditions."
+"How does ""Calculate text length"" work?","The ""Calculate text length"" operation creates a new column with values equal to the length of each string value in a text column."
+"What is the use of ""Drop missing values"" operation?","The ""Drop missing values"" operation removes rows with missing values in a dataset."
+"What does ""Group by column and aggregate"" do?","The ""Group by column and aggregate"" operation groups data by one or more columns and aggregates results."
+How to find a specific column in a dataset?,Use the 'Go to column' feature in Data Wrangler's toolbar and search for the respective column.
+What are some ways to troubleshoot general connectivity issues with Data Wrangler?,"Try alternative methods to connect as described in the ""Connecting to a Python kernel"" section, or install different versions of the Jupyter and Python extensions."
+How to fix a `UnicodeDecodeError` when opening a data file in Data Wrangler?,"Open Data Wrangler from a Jupyter Notebook instead, and read the file using Pandas with the appropriate `encoding` and/or `encoding_errors` parameters."
+"Where to submit problems, feature requests, or feedback for Data Wrangler?",Submit an Issue on the Microsoft/vscode-data-wrangler GitHub repository.
+What does the Microsoft Data Wrangler extension for Visual Studio Code do with usage data?,"The extension collects usage data and sends it to Microsoft to help improve their products and services, while respecting the `telemetry.telemetryLevel` setting."

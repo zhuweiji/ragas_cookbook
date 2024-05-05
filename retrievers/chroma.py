@@ -1,6 +1,6 @@
 
 import logging
-from typing import Dict, List, Tuple
+from typing import Dict, List, Optional, Tuple
 
 import chromadb
 from chromadb.config import Settings
@@ -43,7 +43,7 @@ class ExtendedChromaMarkdownRetriever:
     def _get_relevant_documents(self, query: str, max_chunk_size: int = 1500, **kwargs):
         return self.get_all_related_chunks(query, max_size=max_chunk_size, **kwargs)
 
-    def get_documents_by_filename(self, filename: str, headers: tuple | dict | List[tuple | dict]):
+    def get_documents_by_filename(self, filename: str, headers: Optional[tuple | dict | List[tuple | dict]] = None):
         if isinstance(headers, tuple):
             _headers = {headers[0]: headers[1]}
         elif isinstance(headers, list) and headers and isinstance(headers[0], tuple):

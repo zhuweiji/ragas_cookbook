@@ -20,7 +20,7 @@ from retrievers.chroma import ExtendedChromaMarkdownRetriever
 log = logging.getLogger(__name__)
 
 
-class Agent:
+class BaseAgent:
     def __init__(self, retriever=ExtendedChromaMarkdownRetriever(),
                  config: Optional[RunnableConfig | str] = None) -> None:
         self.llm = llm
@@ -37,6 +37,8 @@ class Agent:
 
         # self.llm_embeddings = OllamaEmbeddings(model=llm_model_name)
 
+
+class BasicAgent(BaseAgent):
     def answer_question(self, query, docs: List[Document]):
 
         # prompt = """Context: [Insert context here]
@@ -51,7 +53,7 @@ class Agent:
                     """Answer the question based on the context below. Do not add any preamble, keep the answer concise. 
                     If you cannot answer because of any of the following reasons, make sure to give the response corresponding to the reasons below.
                     If all the context provided is irrelevant, respond "Context is irrelevant to the question.\nReason:"
-                    If you cannot answer the question confidently, respond "I do not know the answer.nReason:"
+                    If you cannot answer the question confidently, respond "I do not know the answer\nReason:"
                     """.replace('\t', '')
                 ),
                 MessagesPlaceholder(variable_name="question"),

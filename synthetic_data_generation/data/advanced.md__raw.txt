@@ -1,0 +1,33 @@
+Question: What are the two types of persistent sessions in VS Code's integrated terminal?
+Answer: The two types of persistent sessions are process reconnection and process revive.
+
+Question: How can terminal tabs be moved between VS Code windows?
+Answer: Terminal tabs can be dragged and dropped between VS Code windows or manually through the Command Palette and the Terminal: Detach Session and Terminal: Attach to Session commands.
+
+Question: What does the `terminal.integrated.hideOnStartup` setting control in VS Code's integrated terminal?
+Answer: This setting controls whether the terminal view is hidden or visible on startup when the terminal view is visible.
+
+Question: What is the default behavior of the `terminal.integrated.commandsToSkipShell` setting?
+Answer: By default, this setting contains a hard-coded list of commands that are integral to the VS Code experience and should always "skip the shell" and instead be handled by VS Code's keybinding system.
+
+Question: How can `kbstyle(Cmd+K)` chords be enabled for macOS in VS Code's integrated terminal?
+Answer: `kbstyle(Cmd+K)` chords can be enabled by removing the clear keybinding and redefining the clear keybinding in user keybindings.
+
+Question: What is supported for Unicode version in the terminal?
+Answer: The terminal supports Unicode version 6 and 1
+
+Question: What is the function of the `GIT_ASKPASS` environment variable in VS Code?
+Answer: The `GIT_ASKPASS` environment variable is injected by the built-in Git extension in VS Code to handle authentication to a Git remote.
+
+Question: What happens to existing terminals when an extension changes the terminal environment?
+Answer: If an extension changes the terminal environment, existing terminals are relaunched if it is safe to do so. Otherwise, a warning will show in the terminal status.
+
+Question: What is ConPTY in VS Code's terminal on Windows 10+?
+Answer: ConPTY is an emulation layer in VS Code's terminal on Windows 10+ that provides a more reliable and supported system to leverage Unix-style terminals and apps.
+
+Question: What is the purpose of the `terminal.integrated.localEchoEnabled` setting in VS Code?
+Answer: The `terminal.integrated.localEchoEnabled` setting in VS Code enables or disables local echo, a feature that helps mitigate the effect of input latency on remote windows.
+
+Question: What is the recommended action for highly dynamic applications or shells that do a lot of reprinting of the screen when typing?
+Answer: It is recommended to disable local echo for any highly dynamic application or shell that does a lot of reprinting of the screen when typing.
+

@@ -1,0 +1,120 @@
+Question: What is a Language Server Extension in VS Code?
+Answer: A Language Server Extension in VS Code is a special kind of extension that powers the editing experience for many programming languages. It enables features like autocomplete, error-checking (diagnostics), jump-to-definition, and more.
+
+Question: What challenge does the native language implementation of Language Servers present for VS Code?
+Answer: The native language implementation of Language Servers presents a challenge in integrating them with VS Code, which has a Node.js runtime.
+
+Question: What is the purpose of Language Server Protocol?
+Answer: The Language Server Protocol standardizes the communication between language tooling and code editor, allowing Language Servers to be implemented in any language and run in their own process, improving performance and enabling easier integration with multiple LSP-compliant code editors.
+
+Question: How does running a Language Server in a separate process benefit VS Code?
+Answer: Running a Language Server in a separate process allows the analysis tool to be implemented in any language and avoids performance costs, as language analysis tools are often heavy on CPU and Memory usage.
+
+Question: What is the LSP Sample?
+Answer: The LSP Sample is a simple Language Server extension that implements autocomplete and diagnostics for plain text files, covering the syncing of configurations between Client / Server.
+
+Question: What is the first step to clone the repository [Microsoft/vscode-extension-samples](https://github.com/microsoft/vscode-extension-samples)?
+Answer: Use the git clone command to clone the repository.
+
+Question: What is the purpose of the 'configuration' section in the package.json file?
+Answer: The 'configuration' section in the package.json file contributes configuration settings to VS Code.
+
+Question: What is the role of the 'engines' field in the client's package.json file?
+Answer: The 'engines' field in the client's package.json file references the vscode extension host API through the 'engines' field.
+
+Question: What is the function of the activate function in the extension.ts file?
+Answer: The activate function in the extension.ts file is responsible for creating the language client and starting it.
+
+Question: What is the purpose of the 'dependencies' section in the server's package.json file?
+Answer: The 'dependencies' section in the server's package.json file pulls in the vscode-languageserver libraries.
+
+Question: What is the purpose of the `createConnection` function?
+Answer: The `createConnection` function is used to create a connection for the server, using Node's IPC as a transport. It also includes all preview / proposed LSP features.
+
+Question: What is the role of the `validateTextDocument` function?
+Answer: The `validateTextDocument` function is responsible for creating diagnostics (i.e., problems, warnings, or errors) for text documents based on a specific pattern and settings.
+
+Question: What does the `hasConfigurationCapability` variable indicate?
+Answer: The `hasConfigurationCapability` variable indicates whether the client supports the `workspace/configuration` request or not.
+
+Question: What is the purpose of the `getDocumentSettings` function?
+Answer: The `getDocumentSettings` function returns the settings for a given resource (text document). It first checks if the settings are available in the cache (`documentSettings`). If not, it retrieves the settings from the workspace configuration.
+
+Question: What is the maximum number of problems allowed per text document?
+Answer: The maximum number of problems allowed per text document is determined by the `maxNumberOfProblems` setting in the `ExampleSettings` interface.
+
+Question: What event triggers the validation of a text document in the server?
+Answer: The `documents.onDidChangeContent` event triggers the validation of a text document in the server.
+
+Question: What is the maximum number of problems reported by the validator?
+Answer: The validator reports a maximum of `settings.maxNumberOfProblems` problems.
+
+Question: What is the severity of the diagnostics created by the validator?
+Answer: The severity of the diagnostics created by the validator is `DiagnosticSeverity.Warning`.
+
+Question: What is the message associated with the diagnostics created by the validator?
+Answer: The message associated with the diagnostics created by the validator is `${m[0]} is all uppercase.`.
+
+Question: What is the effect of setting the character of the end position to `Number.MAX_VALUE`?
+Answer: Setting the character of the end position to `Number.MAX_VALUE` will underline with a squiggle until the end of the line.
+
+Question: What setting controls the maximum numbers of problems reported in lsp-sample?
+Answer: `"languageServerExample.trace.server": "verbose"`
+
+Question: What function is used to honor a `maxNumberOfProblems` variable in validateTextDocument?
+Answer: validateTextDocument()
+
+Question: Which event handler listens to configuration changes on the server side?
+Answer: connection.onDidChangeConfiguration()
+
+Question: What feature is usually the first implemented in a language server?
+Answer: Validation of documents
+
+Question: What does the `data` field uniquely identify in completion items?
+Answer: A completion item in the resolve handler.
+
+Question: What capability must be flagged in the initialize handler to enable code completion?
+Answer: The `completionProvider` capability must be flagged with the `resolveProvider` property set to `true` in the initialize handler to enable code completion.
+
+Question: What is the difference between Unit Test and End-to-End Test in Language Server testing?
+Answer: Unit Test mocks up all the information sent to the Language Server and is useful for testing specific functionalities, while End-to-End Test instantiates a VS Code instance with a workspace, opens the file, activates the Language Client / Server, and runs VS Code commands, which is superior for testing files, settings, or dependencies that are hard or impossible to mock.
+
+Question: How can you launch a VS Code instance with `client/testFixture` as the active workspace for End-to-End testing?
+Answer: You can launch a VS Code instance with `client/testFixture` as the active workspace by running the "Language Server E2E Test" debug target in the `.vscode/launch.json` configuration file.
+
+Question: What is the purpose of the `activate(docURI)` function in the End-to-End test?
+Answer: The `activate(docURI)` function in the End-to-End test activates the vscode.lsp-sample extension, opens the specified document, shows it in the active text editor, and waits for 2 seconds to ensure the Language Server is instantiated.
+
+Question: What does the `testCompletion` function in the End-to-End test do?
+Answer: The `testCompletion` function in the End-to-End test activates the extension, runs the `vscode.executeCompletionItemProvider` command with a URI and a position to simulate completion trigger, and asserts the returned completion items against the expected completion items.
+
+Question: What is the purpose of Incremental Text Document Synchronization?
+Answer: Incremental Text Document Synchronization reduces the amount of data transferred and avoids unnecessary parsing and abstract syntax tree creation by installing three notification handlers: onDidOpenTextDocument, onDidChangeTextDocument, and onDidCloseTextDocument.
+
+Question: What are the supported language features in a Language Server?
+Answer: A Language Server supports Document Highlights, Hover, Signature Help, Goto Definition, Goto Type Definition, Goto Implementation, Find References, List Document Symbols, List Workspace Symbols, Code Actions, CodeLens, Document Formatting, Rename, Document Links, and Document Colors.
+
+Question: What does the Programmatic Language Features topic provide?
+Answer: The Programmatic Language Features topic describes each language feature and provides guidance on implementing them through the language server protocol or by using the extensibility API directly from your extension.
+
+Question: How to use VS Code API directly to implement Language Features?
+Answer: Instead of using a Language Server, you can use `vscode.languages.register[LANGUAGE_FEATURE]Provider` to add simple language features for a type of document, like the `completions-sample` using `vscode.languages.registerCompletionItemProvider` to add snippets as completions for plain text files.
+
+Question: What is the benefit of using VS Code API directly for Language Features?
+Answer: Using VS Code API directly is simpler for adding basic language features for a specific type of document, compared to implementing a Language Server.
+
+Question: What is the purpose of an error tolerant parser in a Language Server?
+Answer: An error tolerant parser in a Language Server generates meaningful AST from partially complete and potentially incorrect code, enabling language features to work despite errors in the code.
+
+Question: What issue was encountered when improving PHP support in VS Code?
+Answer: The official PHP parser was not error tolerant, causing issues when used directly in the Language Server.
+
+Question: What repository contains Microsoft's error tolerant PHP parser?
+Answer: The repository for Microsoft's error tolerant PHP parser is [Microsoft/tolerant-php-parser](https://github.com/microsoft/tolerant-php-parser).
+
+Question: What may cause the "cannot connect to runtime process (timeout after 5000 ms)" error when attaching to a server?
+Answer: This error occurs if the server is not running when attempting to attach the debugger, which can be due to the client not being started or client breakpoints interfering with starting the server.
+
+Question: Where can one seek help for unresolved questions regarding the Language Server Protocol?
+Answer: Help can be obtained by opening an issue at [https://github.com/microsoft/language-server-protocol](https://github.com/microsoft/language-server-protocol).
+

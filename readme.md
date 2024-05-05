@@ -26,5 +26,14 @@ answer is bad
 	- SQR?
     - reform query? how?
 
-- need synthetic test data to see where model issues are
+- need synthetic test data to see where model issues are (done)
 	- will help to guide work on answer routing and SQR
+	- use table of content?
+
+	basic synthetic test data can be generated
+	saved as csv of question,answer as well as txt file of question and answers
+
+- add ragas evaluation using syn test data
+	- wrap eval in an agent to create an evaluation object 
+	- eval object should contain ragas metrics
+

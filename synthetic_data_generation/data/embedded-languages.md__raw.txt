@@ -1,0 +1,45 @@
+Question: What is a language service in the context of Visual Studio Code?
+Answer: A language service is a library that implements programmatic language features for a single language in Visual Studio Code.
+
+Question: What is the role of a language server in handling embedded languages?
+Answer: A language server can embed language services to handle embedded languages in Visual Studio Code.
+
+Question: What is the functionality of the built-in html-language-features extension in Visual Studio Code?
+Answer: The built-in html-language-features extension in Visual Studio Code includes an HTML Language Server to offer programmatic language features for HTML.
+
+Question: How does the HTML language server in Visual Studio Code analyze an HTML document?
+Answer: The HTML language server in Visual Studio Code analyzes an HTML document by breaking it down into language regions and using the corresponding language service to handle language server requests.
+
+Question: What is the purpose of the Language Services sample in Visual Studio Code?
+Answer: The Language Services sample in Visual Studio Code is a simplified version of the HTML language server that implements auto-completion for HTML and CSS, and diagnostic errors for CSS.
+
+Question: What is the purpose of `vscode-css-languageservice` in the server code?
+Answer: `vscode-css-languageservice` is used to analyze the given document and compute a list of completion items for CSS language.
+
+Question: What is the input for `cssLanguageService.parseStylesheet()` method?
+Answer: The input for `cssLanguageService.parseStylesheet()` method is the embedded CSS document with all non-CSS code replaced with whitespace.
+
+Question: What is the role of `getCSSMode` function in the server code?
+Answer: `getCSSMode` function is responsible for handling all language server requests that fall into CSS regions.
+
+Question: What is the challenge in including language services written in a different language than the language server?
+Answer: It can be challenging to include language services that are not written in the same language as the language server, as it may require additional effort for integration.
+
+Question: How does request forwarding solve the problem of continuously updating language services?
+Answer: Request forwarding solves the problem by sending the request back to VS Code to use extensions that are active and have registered a completion provider for the embedded language. This allows the language server to get the latest language support without having to update its code.
+
+Question: What is the challenge in implementing formatting across language regions?
+Answer: The challenge is handling indentation and formatter settings for multiple regions inside the single document.
+
+Question: Why is renaming challenging in cross-language regions?
+Answer: It can be difficult to make renaming work across different regions within different documents.
+
+Question: Why does TypeScript not offer full JavaScript support inside HTML documents?
+Answer: It's hard to inform TypeScript of the project's state when including external libraries.
+
+Question: What should be done for language services with different encoding or escaping rules?
+Answer: If the embedded language has different encoding, the language server should escape special characters accordingly.
+
+Question: Which approach is recommended for building a language server?
+Answer: Embedding language services is recommended for more control over the user experience, and the server is reusable for any LSP-compliant editors.
+

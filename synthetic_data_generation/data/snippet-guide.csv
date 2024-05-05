@@ -1,0 +1,5 @@
+What is the Contribution Point for bundling snippets into a Visual Studio Code extension?,The `contributes.snippets` Contribution Point
+What command is suggested to test snippets in Visual Studio Code?,The `Snippets: Configure User Snippets` command
+What metadata is recommended to add to the package.json file for a snippet extension?,"The ""categories"": [""Snippets""] configuration"
+What type of snippets can be added to Visual Studio Code using the yo code extension generator?,TextMate snippets (.tmSnippets) and Sublime snippets (.sublime-snippets)
+What are the two files generated when using the yo code extension generator for a snippet extension?,An extension manifest `package.json` and a `snippets.json` file

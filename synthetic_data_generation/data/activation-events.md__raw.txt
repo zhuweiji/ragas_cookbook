@@ -1,0 +1,30 @@
+Question: What are the Activation Events in Visual Studio Code extensions?
+Answer: Activation Events are a set of JSON declarations in the `activationEvents` field of `package.json` Extension Manifest that determine when an extension becomes activated.
+
+Question: What is the role of 'onLanguage' activation event in Visual Studio Code extensions?
+Answer: The 'onLanguage' activation event is emitted when a file that resolves to a certain language gets opened, causing interested extensions to be activated.
+
+Question: What is the purpose of 'onCommand' activation event in Visual Studio Code extensions?
+Answer: The 'onCommand' activation event is emitted when a command is being invoked, leading to the activation of interested extensions.
+
+Question: What does 'workspaceContains' activation event signify in Visual Studio Code extensions?
+Answer: The 'workspaceContains' activation event is emitted when a folder is opened and the folder contains at least one file that matches a glob pattern.
+
+Question: What is the significance of 'onUri' activation event in Visual Studio Code extensions?
+Answer: The 'onUri' activation event is emitted when a system-wide Uri for that extension is opened, causing interested extensions to be activated.
+
+Question: What is the Uri scheme for extensions activation?
+Answer: The Uri scheme is fixed to either `vscode` or `vscode-insiders`.
+
+Question: What is the role of 'onUri' activation event?
+Answer: This activation event is emitted when a system-wide Uri for that extension is opened.
+
+Question: What triggers 'onWebviewPanel' activation event?
+Answer: VS Code needs to restore a [webview](/api/extension-guides/webview) with the matching `viewType`.
+
+Question: What is the requirement for custom editors activation since VS Code 1.74.0?
+Answer: Custom editors do not require a corresponding `onCustomEditor` activation event declaration.
+
+Question: What is the purpose of 'onStartupFinished' activation event?
+Answer: This event is emitted after all the `*` activated extensions have finished activating.
+
