@@ -1,0 +1,4 @@
+What is the first step to update the software packages?,The first step is to open the terminal and run the 'sudo dnf upgrade' command.
+How can a user copy the code provided in the document?,The user can copy the code using the little clipboard icon to the right of the code.
+What should be set in the Displays menu to enable fractional scaling on Wayland?,The 'Scale' should be set to the user's preference in the Displays menu.
+Where can a user enable 'tap-to-click' on the touchpad?,A user can enable 'tap-to-click' on the touchpad in the Mouse and Touchpad settings.

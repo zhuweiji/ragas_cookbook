@@ -1,0 +1,27 @@
+Question: What is GitHub Copilot's function?
+Answer: GitHub Copilot is an AI-powered pair programmer that automatically offers suggestions to complete your code, comments, tests, and more in the editor while you write your code.
+
+Question: What is required to use GitHub Copilot in VS Code?
+Answer: To use GitHub Copilot in VS Code, you need the GitHub Copilot extension and an active subscription for GitHub Copilot in your personal account or assigned seat by your organization.
+
+Question: How can you accept inline suggestions from GitHub Copilot?
+Answer: When presented with an inline suggestion, you can accept it with the `kbstyle(Tab)` key.
+
+Question: How can you instruct Copilot to create specific code in TypeScript?
+Answer: You can provide hints about what code to expect by using code comments, such as specifying a type of algorithm or concept to use, or which methods and properties to add to a class.
+
+Question: How can you disable GitHub Copilot suggestions for a specific language?
+Answer: You can temporarily disable GitHub Copilot completions for specific languages by selecting the GitHub Copilot icon in the Status Bar, then Disable for <language>.
+
+Question: What is GitHub Copilot Chat?
+Answer: GitHub Copilot Chat is an AI chat conversation feature that helps users learn about GitHub Copilot.
+
+Question: Where can users find the GitHub Copilot documentation?
+Answer: The GitHub Copilot documentation can be found at this URL: <https://docs.github.com/copilot/getting-started-with-github-copilot?tool=vscode>.
+
+Question: What programming languages does the VS Code Copilot Series cover?
+Answer: The VS Code Copilot Series covers Python, C#, Java, PowerShell, and other programming languages.
+
+Question: What is the purpose of the VS Code Copilot Series on YouTube?
+Answer: The VS Code Copilot Series on YouTube provides introductory content and programming-specific videos for using Copilot with various programming languages.
+

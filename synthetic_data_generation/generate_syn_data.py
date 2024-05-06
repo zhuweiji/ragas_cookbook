@@ -14,9 +14,9 @@ from synthetic_data_generation.rag_data import DataGenerator
 log = logging.getLogger(__name__)
 
 
-def generate_synthetic_test_data(md_file: Path, num_questions=5, **kwargs):
+def generate_synthetic_test_data(md_file: Path, num_questions=5, output_dir: Path = project_root / 'synthetic_data_generation' / 'data', **kwargs):
     try:
-        text = md_file.read_text()
+        text = md_file.read_text(errors='ignore')
     except Exception as e:
         log.error(e)
         return
@@ -44,20 +44,20 @@ def generate_synthetic_test_data(md_file: Path, num_questions=5, **kwargs):
         print(q_a)
         results.append(q_a)
 
-    f = project_root / 'synthetic_data_generation' / \
-        'data' / f'{md_file.name}__raw.txt'
+    filepath = output_dir / f'{md_file.name}__raw.txt'
+    filepath.parent.mkdir(parents=True, exist_ok=True)
+
     t = ''
     for i in results:
         t += i.content
         t += '\n\n'
 
-    f.write_text(t)
+    filepath.write_text(t)
 
     qa_tuples = generator.extract_qa_tuples(t)
-    f = project_root / 'synthetic_data_generation' / \
-        'data' / f'{md_file.stem}.csv'
+    filepath = output_dir / f'{md_file.stem}.csv'
 
-    list_to_csv(qa_tuples, f)
+    list_to_csv(qa_tuples, filepath)
 
 
 def list_to_csv(data, filename):
@@ -96,10 +96,14 @@ def csv_to_list(filename, has_header=True):
 
 
 if __name__ == "__main__":
-    file_dir = source_document_directory / 'vscode'
-    files = list(file_dir.glob('*.md'))
+    file_dir = source_document_directory
 
-    files = random.sample(files, 10)
+    sub_dirs = list(file_dir.glob('*'))
+    for d in sub_dirs:
+        print(d)
+        files = list(d.glob('*.md'))
+        files = random.sample(files, 10)
 
-    for file in tqdm(files, leave=False, desc='Generating Synthetic Data from files:'):
-        generate_synthetic_test_data(file)
+        output_dir = project_root / 'synthetic_data_generation' / d.name
+        for file in tqdm(files, leave=False, desc='Generating Synthetic Data from files:'):
+            generate_synthetic_test_data(md_file=file, output_dir=output_dir)

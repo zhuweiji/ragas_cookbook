@@ -1,0 +1,82 @@
+Question: What software is required to follow the demo?
+Answer: Visual Studio Code Insiders build, Docker, Azure CLI, and Yarn.
+
+Question: How can one get a local MongoDB instance running?
+Answer: The simplest way is by running the command `docker run -it -p 27017:27017 mongo` after Docker is installed.
+
+
+Question: What is the purpose of the `yarn.lock` file in version control?
+Answer: The `yarn.lock` file provides a predictable way to re-acquire the exact same dependencies in the future, without any surprises in CI builds, production deployments or other developer's machines.
+
+Question: How can you quickly inspect the type of a variable in VS Code?
+Answer: You can hover over the variable to see its "type".
+
+Question: What allows you to see all other references to a variable in VS Code?
+Answer: Placing your cursor within the span of the variable name allows you to quickly see all other references to it within the same file.
+
+Question: How can you inspect the definition of a variable in VS Code?
+Answer: Right-click on the variable and select `Peek Definition` to quickly see its definition, even if it's in another file.
+
+Question: What allows you to get completion for Node.js globals and built-in modules in VS Code?
+Answer: VS Code uses TypeScript behind the scenes to provide type information, which can then be used to inform the completion list as you type. VS Code is able to detect that this is a Node.js project, and as a result, automatically downloads the TypeScript typings file for Node.js from NPM.
+
+Question: What version of Node.js should be selected for Chrome Debugging Protocol support?
+Answer: Select `Node.js v6.3+ (Experimental)`.
+
+Question: What is the purpose of the `launch.json` file created when this Node.js version is selected?
+Answer: The `launch.json` file simply tells VS Code how to launch and/or attach to the app for debugging purposes.
+
+Question: What is the effect of hitting F5 after creating the `launch.json` file?
+Answer: Hitting F5 launches the app and the Debug Console window in VS Code, which displays stdout for the newly running app.
+
+Question: How can one debug the app using VS Code?
+Answer: VS Code provides the ability to set breakpoints directly within the code, which suspends execution and allows for expression evaluation and inspection of variables, locals, watches, and call stacks.
+
+Question: How does one debug both front-end and back-end JavaScript code in a MEAN app using VS Code?
+Answer: By installing the 'Debugger for Chrome' extension and setting up a compound run configuration in the `launch.json` file, one can debug both the Node/Express back-end and Angular front-end code simultaneously.
+
+Question: What are two new capabilities added by Azure App Service for Node.js developers?
+Answer: The two new capabilities added by Azure App Service for Node.js developers are support for Linux-based VMs and support for Docker-based deployments.
+
+Question: What command is used to build the Docker image in VS Code?
+Answer: The `Docker: Build Image` command is used to build the Docker image in VS Code.
+
+Question: What is the purpose of the `docker` extension in VS Code for Node.js developers?
+Answer: The `docker` extension in VS Code for Node.js developers simplifies the onboarding process and includes features like generating a `Dockerfile` and `docker-compose.yml` file for an existing project, providing auto-completion for Docker files, and building and pushing Docker images.
+
+Question: What is the purpose of the `Call Stack` pane in the VS Code debugger?
+Answer: The `Call Stack` pane in the VS Code debugger displays two different stacks: `Node` and `Chrome`, and indicates which one is currently paused, allowing developers to step between front and back-end code.
+
+Question: What command is used to push the Docker image to DockerHub in VS Code?
+Answer: The `Docker: Push` command is used to push the Docker image to DockerHub in VS Code.
+
+Question: What is the purpose of a resource group in Azure?
+Answer: A resource group in Azure is a "namespace" or "directory" used to organize Azure resources.
+
+Question: What does the `--is-linux` flag indicate in the az appservice plan create command?
+Answer: The `--is-linux` flag in the az appservice plan create command indicates that Linux-based VMs should be used.
+
+Question: What does the App Service plan manage in Azure?
+Answer: The App Service plan manages creating and scaling the underlying VMs that an app is deployed to in Azure.
+
+Question: What is the role of the App Service web app in Azure?
+Answer: The App Service web app represents the web app that runs within the plan and resource group in Azure.
+
+Question: How can you configure the web app to use a Docker image in Azure?
+Answer: You can configure the web app to use a Docker image by setting the `-c` flag to the name of the DockerHub account/image name using the command az appservice web config container update.
+
+Question: What happens when you switch to DocumentDB instance?
+Answer: When you switch to the DocumentDB instance, you can scale up or down the reserved throughput that your MongoDB instance needs and benefit from the added traffic without needing to manage any infrastructure manually.
+
+Question: What is the advantage of DocumentDB auto-indexing feature?
+Answer: DocumentDB automatically indexes every single document and property, so you don't need to worry about profiling slow queries and/or manually fine-tuning your indexes.
+
+Question: What is the command to delete all Azure resources?
+Answer: The command to delete all Azure resources is `az group delete -n nina-demo`.
+
+Question: What is the main benefit of resource groups in Azure?
+Answer: The main benefit of resource groups in Azure is the ability to organize, deploy and delete Azure resources as a single unit.
+
+Question: What is the aim of providing a productive and low-management cloud stack for Node.js/MEAN apps in Azure?
+Answer: The aim is to provide a cloud stack that can scale as needed, without introducing additional infrastructure complexity.
+

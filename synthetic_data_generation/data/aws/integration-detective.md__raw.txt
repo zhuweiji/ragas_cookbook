@@ -1,0 +1,15 @@
+Question: What is Amazon Detective's role?
+Answer: Amazon Detective helps analyze, investigate, and identify the root cause of security findings or suspicious activities in AWS resources.
+
+Question: How does Detective collect log data?
+Answer: Detective automatically collects log data from your AWS resources.
+
+Question: What are the optional data sources for Detective?
+Answer: Amazon EKS audit logs is an optional data source package for Detective.
+
+Question: What is required to review findings for an Amazon EKS cluster in Detective?
+Answer: Detective must be enabled for at least 48 hours in the same AWS Region as the cluster.
+
+Question: How can you search for a specific EKS cluster in Detective?
+Answer: You can search for an EKS cluster in Detective by entering the cluster name or ARN after selecting EKS cluster as the type.
+

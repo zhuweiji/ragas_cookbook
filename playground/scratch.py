@@ -1,6 +1,6 @@
 import logging
 
-from agents import Agent
+from agents.basic_agents import BasicAgent
 from retrievers.chroma import ExtendedChromaMarkdownRetriever
 
 logging.basicConfig(
@@ -8,7 +8,7 @@ logging.basicConfig(
 log = logging.getLogger(__name__)
 
 retriever = ExtendedChromaMarkdownRetriever()
-agent = Agent()
+agent = BasicAgent()
 
 question = 'what is AWS Chalice?'
 answer = agent.answer_question(

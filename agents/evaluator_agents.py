@@ -9,7 +9,7 @@ from ragas import evaluate
 from ragas.metrics import answer_correctness, faithfulness
 
 from agents.basic_agents import BasicAgent
-from agents.rag_agents import RagAgent
+from agents.rag_agents import RagAgent, RAGResponse
 
 
 @dataclass
@@ -34,5 +34,18 @@ class EvaluationResult:
 
 
 class EvaluationAgent(RagAgent):
-    def evaluate_rag(self, question, answer):
-        response = self.answer_with_rag(question)
+    def evaluate_rag(self, rag_response: RAGResponse, ground_truth: str):
+        data = {
+            'question': rag_response.question,
+            'answer': rag_response.answer,
+            'contexts': [doc.page_content for doc in rag_response.documents],
+            'ground_truth': ground_truth
+        }
+        dataset = Dataset.from_dict(data)
+
+        score = evaluate(dataset,
+                         metrics=[faithfulness, answer_correctness],
+                         llm=self.llm,
+                         embeddings=self.retriever.embedding_function,
+                         )
+        return score.to_pandas()

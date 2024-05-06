@@ -10,6 +10,7 @@ from agents.basic_agents import BaseAgent, BasicAgent
 
 @dataclass
 class RAGResponse:
+    question: str
     documents: list[Document]
     answer: BaseMessage
     evaluation: BaseMessage
@@ -30,4 +31,4 @@ class RagAgent(BasicAgent):
         if match:
             evaluation_score = match.group(1)
 
-        return RAGResponse(documents, answer, evaluation, evaluation_score)
+        return RAGResponse(question, documents, answer, evaluation, evaluation_score)

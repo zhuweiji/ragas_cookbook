@@ -1,0 +1,15 @@
+Question: What is the purpose of `status_code` parameter in FastAPI?
+Answer: The `status_code` parameter is used to specify the HTTP status code for the response. It can be used in any of the path operations such as `@app.get()`, `@app.post()`, etc.
+
+Question: Where is the `status_code` parameter defined in FastAPI?
+Answer: The `status_code` parameter is defined as a parameter of the "decorator" method such as `get`, `post`, etc. It is not defined in the path operation function.
+
+Question: What type of value can be passed to the `status_code` parameter?
+Answer: The `status_code` parameter can receive a number with the HTTP status code or an `IntEnum` such as Python's `http.HTTPStatus`.
+
+Question: What is the impact of using `status_code` parameter on the OpenAPI schema?
+Answer: Using the `status_code` parameter will return that status code in the response and document it as such in the OpenAPI schema.
+
+Question: What does `204` status code indicate in HTTP?
+Answer: `204` status code indicates "No Content" which is used when there is no content to return to the client, and so the response must not have a body.
+

@@ -1,0 +1,5 @@
+What should you verify in settings for the variables to appear in the Integrated Terminal?,You should verify 'Terminal > Integrated: Inherit Env' is checked in settings.
+What is the purpose of 'containerEnv' property in 'devcontainer.json'?,The 'containerEnv' property in 'devcontainer.json' sets variables that should apply to the entire container.
+What variable can 'remoteEnv' reference in 'devcontainer.json'?,'remoteEnv' can reference both local and existing container variables in 'devcontainer.json'.
+How can you update variables that apply to the entire container in Docker Compose?,You can update (or extend) your 'docker-compose.yml' with the 'environment' property for the appropriate service.
+What is the purpose of using an 'env file' for environment variables?,The purpose of using an 'env file' is to set a large number of environment variables.

@@ -1,0 +1,24 @@
+What is the purpose of creating a namespace in Kubernetes?,A namespace in Kubernetes allows you to group resources.
+What is the recommended value for the namespace if you plan to deploy your sample application to AWS Fargate?,The recommended value for the namespace is `eks-sample-app`.
+What kind of deployment does the sample application perform in Kubernetes?,"The sample application performs a Kubernetes deployment, pulling a container image from a public repository and deploying three replicas of it to your cluster."
+What does the `kubernetes.io/os: linux` nodeSelector mean in the sample deployment?,The `kubernetes.io/os: linux` nodeSelector means that the image will only be deployed to Linux nodes if you have both Linux and Windows nodes in your cluster.
+"What does the `kubernetes.io/arch: amd64`, `kubernetes.io/arch: arm64` values under the `kubernetes.io/arch` key mean in the sample deployment?","The `kubernetes.io/arch: amd64`, `kubernetes.io/arch: arm64` values mean that the application can be deployed to either AMD64 or ARM64 hardware architecture if you have both in your cluster."
+What does the `kubernetes.io/os: windows` nodeSelector mean?,The `kubernetes.io/os: windows` nodeSelector means that the image will only be deployed to Windows nodes in the cluster.
+What is the architecture specified in the nodeAffinity?,The architecture specified in the nodeAffinity is amd64.
+What is the name of the container in the Windows deployment?,The name of the container in the Windows deployment is windows-server-iis.
+What is the image used for the Windows container?,The image used for the Windows container is mcr.microsoft.com/windows/servercore:ltsc2019.
+What is the target port for the service in the Windows deployment?,The target port for the service in the Windows deployment is 80.
+What resource maintains the number of replicas specified in the manifest?,"Kubernetes automatically creates and maintains the `ReplicaSet` resource, even though it isn't specified in the sample manifests."
+What is the role of the `Horizontal Pod Autoscaler` and `Vertical Pod Autoscaler` in a production deployment?,"In a production deployment, the `Horizontal Pod Autoscaler` and `Vertical Pod Autoscaler` can be used to horizontally scale the number of replicas or vertically scale the compute resources for the Pods."
+"Which command is used to run a shell on a Pod, replacing `65b7669776-m6qxz` with the Pod ID?
+Answer:
+- For Linux: `kubectl exec -it eks-sample-linux-deployment-65b7669776-m6qxz -n eks-sample-app -- /bin/bash`
+- For Windows: `kubectl exec -it eks-sample-windows-deployment-65b7669776-m6qxz -n eks-sample-app -- powershell.exe`
+
+Question: How can one view the DNS server for a Pod from the Pod shell on Linux?",The command to view the DNS server for a Pod from the Pod shell on Linux is not specified in the provided context.
+What is the significance of the IP address assigned to a Pod in the output of `kubectl describe pod`?,The IP address assigned to a Pod in the output of `kubectl describe pod` is a unique IP assigned to the Pod from the CIDR block assigned to the subnet that the node is in. This IP address is used for communication within the Kubernetes cluster.
+What is the DNS server for Pods in the cluster?,10.100.0.10
+Which command displays the DNS server for the Windows Pod?,Get-NetIPConfiguration
+"How can you remove the sample namespace, service, and deployment?",kubectl delete namespace eks-sample-app
+What is the command used to exit the Pod?,exit
+Which file contains the DNS server information in the Linux Pod?,/etc/resolv.conf

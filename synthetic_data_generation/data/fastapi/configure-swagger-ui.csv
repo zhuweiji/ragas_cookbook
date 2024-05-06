@@ -1,0 +1,5 @@
+What is the parameter to disable syntax highlighting in Swagger UI?,The parameter is `syntaxHighlight` and it should be set to `False`.
+How can you set the syntax highlighting theme in Swagger UI?,"You can set it with the key `""syntaxHighlight.theme""`."
+What is the default configuration for Swagger UI in FastAPI?,"FastAPI includes default configurations such as displayOperationId, defaultModelsExpandDepth, defaultModelExpandDepth, showRequestHeaders, showCommonExtensions, etc."
+How can you disable deepLinking in Swagger UI?,"You can disable it by passing `""deepLinking"": False` in the `swagger_ui_parameters` argument."
+What are the JavaScript-only settings allowed in Swagger UI?,Swagger UI allows other configurations to be JavaScript-only objects such as JavaScript functions.

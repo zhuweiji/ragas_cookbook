@@ -1,0 +1,10 @@
+What is the purpose of IntelliSense in TypeScript editing with VS Code?,"IntelliSense provides intelligent code completion, hover information, and signature help to assist users in writing code more quickly and accurately."
+How can you manually trigger signature help in TypeScript editing with VS Code?,You can manually trigger signature help using the keyboard shortcut `kb(editor.action.triggerParameterHints)`.
+What are TypeScript snippets in VS Code?,TypeScript snippets are suggested as you type and can be installed through extensions or defined by users to assist in coding.
+What are parameter name inlay hints in TypeScript editing with VS Code?,Parameter name inlay hints show the names of parameters in function calls to help users understand the meaning of each argument.
+What are return type inlay hints in TypeScript editing with VS Code?,Return type inlay hints show the return types of functions that don't have an explicit type annotation.
+What setting disables auto imports in TypeScript?,"The setting `""typescript.suggest.autoImports""` should be set to `false` to disable auto imports in TypeScript."
+What is the file extension for using JSX with TypeScript?,The file extension for using JSX with TypeScript is `*.tsx`.
+How can JSX-specific features like autoclosing of JSX tags be disabled in TypeScript?,"Setting `""typescript.autoClosingTags""` to `false` disables JSX-specific features like autoclosing of JSX tags in TypeScript."
+What is the purpose of JSDoc support in TypeScript?,"JSDoc support in TypeScript provides typing information and documentation in suggestions, hover information, and signature help, using standard JSDoc annotations."
+How to disable JSDoc comment suggestions in TypeScript?,"Setting `""typescript.suggest.completeJSDocs""` to `false` disables JSDoc comment suggestions in TypeScript."

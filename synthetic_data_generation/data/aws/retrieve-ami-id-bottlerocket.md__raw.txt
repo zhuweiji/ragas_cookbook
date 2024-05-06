@@ -1,0 +1,12 @@
+Question: What is the purpose of querying the AWS Systems Manager Parameter Store API?
+Answer: It is used to retrieve the Amazon Machine Image (AMI) ID for Amazon EKS optimized AMIs without manually looking them up.
+
+Question: What permission is required for the IAM principal to retrieve the Amazon EKS optimized AMI metadata?
+Answer: The `ssm:GetParameter` IAM permission is required.
+
+Question: How can you retrieve the image ID of the latest recommended Amazon EKS optimized Bottlerocket AMI using AWS CLI command?
+Answer: By using the sub-parameter `image_id` in the command and replacing `1.29` with a supported version and `region-code` with the desired Amazon EKS supported Region.
+
+Question: What does the `ami-1234567890abcdef0` represent in the example output?
+Answer: It is the Amazon EKS optimized Bottlerocket AMI ID.
+

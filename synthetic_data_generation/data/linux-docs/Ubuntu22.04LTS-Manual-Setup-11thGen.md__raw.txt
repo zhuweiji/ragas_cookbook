@@ -1,0 +1,15 @@
+Question: What is the purpose of the first code block?
+Answer: The first code block updates the Ubuntu install's packages and installs the recommended OEM kernel.
+
+Question: What is the role of the second code block?
+Answer: The second code block ensures GRUB is using the latest OEM D kernel at every boot, creates a desktop file as an autostart to check for OEM kernel status, and alerts the user if an OEM kernel update is available.
+
+Question: What is the condition for the OEM Kernel alert to appear?
+Answer: The OEM Kernel alert appears if the user is on the current OEM D kernel, has followed the directions to run the code, and a new version of the OEM kernel is available.
+
+Question: What are the commands for advanced users to update packages and install the recommended OEM kernel?
+Answer: The commands are: Step 1 (ADVANCED USERS) Updating packages: `sudo apt update && sudo apt upgrade -y`; Step 2 (ADVANCED USERS) Install the recommended OEM kernel: `sudo apt install linux-oem-22.04c`; Step 3 (ADVANCED USERS) Identify your OEM D kernel: `ls /boot/vmlinuz-* | awk -F"-" '{split($0, a, "-"); version=a[3]; if (version>max) {max=version; kernel=a[2] "-" a[3] "-" a[4]}} END{print kernel}'`; Step 4 (ADVANCED USERS) Change the following: `GRUB_DEFAULT="0"` into `GRUB_DEFAULT="Advanced options for Ubuntu>Ubuntu, with Linux 6.5.0.1013-oem"`; Step 5 (ADVANCED USERS) Then run: `sudo update-grub`.
+
+Question: What is the current OEM D kernel version?
+Answer: The current OEM D kernel version is 6.5.0.1013-oem.
+

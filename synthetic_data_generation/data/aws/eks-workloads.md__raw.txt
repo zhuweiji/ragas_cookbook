@@ -1,0 +1,15 @@
+Question: What is a Pod in Kubernetes?
+Answer: A Pod in Kubernetes includes one or more containers.
+
+Question: How can you balance network traffic across Pods?
+Answer: You can create an external or internal network load balancer to balance network traffic across Pods.
+
+Question: What is the role of the Kubernetes Vertical Pod Autoscaler?
+Answer: The Kubernetes Vertical Pod Autoscaler scales Pods up or down vertically to meet demand.
+
+Question: How can you restrict IP addresses that can be assigned to a service in Kubernetes?
+Answer: You can restrict IP addresses that can be assigned to a service with `externalIPs`.
+
+Question: What helps new users deploy a sample application in Kubernetes?
+Answer: The topic "Deploy a sample application" helps new users deploy a sample application in Kubernetes.
+

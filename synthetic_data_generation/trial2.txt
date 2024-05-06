@@ -1,0 +1,2206 @@
+Question
+----------------------------------------
+How can you run a simple Java AWT application in Visual Studio Code?
+
+Documents
+----------------------------------------
+This tutorial shows you how to create a Java web application with Visual Studio Code. You'll learn how to run, debug, and edit the Java web app locally and eventually on the cloud.
+
+Thanks for your interest in Java on Visual Studio Code! This FAQ will hopefully answer some of the questions you may have.
+
+You can use VS Code to read, write, run, and debug Java source file(s) without creating a project. VS Code for Java supports two modes, lightweight and standard. Lightweight mode is ideal for scenarios that only deal with source file(s). If you want to work with a full-scale project, standard mode will be required. You can easily switch from lightweight mode to standard mode, when needed. To learn more, see [Lightweight Mode](/docs/java/java-project.md#lightweight-mode).
+
+---
+Order: 12
+Area: java
+TOCTitle: GUI Applications
+ContentId: 517db620-d166-4f72-99c1-fa046710dffe
+PageTitle: Develop Java GUI Applications in Visual Studio Code
+DateApproved: 10/11/2022
+MetaDescription: How to develop Java GUI Applications (JavaFX, AWT, Swing) in Visual Studio Code
+---
+
+Answer
+----------------------------------------
+Context is irrelevant to the question.
+
+The context provided is about creating and running a Java web application in Visual Studio Code, while the question is about running a simple Java AWT (Abstract Window Toolkit) application. These are two different types of Java applications, so the information provided in the context is not relevant to the question.
+
+Evaluation
+----------------------------------------
+Score (1-5): 2
+Answered: No.
+
+Response Metadata:
+
+content='The answer explains how to set up a Java web application in Visual Studio Code, which is not relevant to running a simple Java AWT application. The answer should have provided instructions on how to create and run a Java AWT application specifically.'
+
+response\_metadata={'token\_usage': {'prompt\_tokens': 83, 'total\_tokens': 100, 'completion\_tokens': 16}, 'model': 'mistral-small', 'finish\_reason': 'stop'}
+
+id='evaluate-response-7c1d30d2-3f75-4822-8e5f-575dcf20729e'
+
+Evaluation_score
+----------------------------------------
+2
+
+Ground truth answer
+You can run a simple Java AWT application by copying and pasting the provided sample code into a new file in Visual Studio Code.
+
+====================================================================================================
+
+Question
+----------------------------------------
+How can you run a JavaFX application in Visual Studio Code?
+
+Documents
+----------------------------------------
+You can create a new JavaFX application with just a few steps in VS Code:  
+- Step 1: Install the [Extension Pack for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack).
+- Step 2: In Visual Studio Code, open the Command Palette (`kb(workbench.action.showCommands)`) and then select the command **Java: Create Java Project**.
+- Step 3: Select the option **JavaFX** in the list, follow the wizard, which will help you scaffold a new JavaFX project via Maven Archetype.  
+![create JavaFX project](images/java-gui/create-javafx.png)
+
+Thanks for your interest in Java on Visual Studio Code! This FAQ will hopefully answer some of the questions you may have.
+
+The debugger extension provides multiple ways to run and debug your Java application.
+
+Swing application development is supported by default. You can directly write your Swing application code without any setup.  
+You can find more Swing samples in the [Oracle Swing documentation](https://docs.oracle.com/javase/tutorial/uiswing/examples/components/index.html).
+
+Answer
+----------------------------------------
+To run a JavaFX application in Visual Studio Code, you can follow these steps:
+
+1. Install the Extension Pack for Java.
+2. In Visual Studio Code, open the Command Palette and select the command Java: Create Java Project.
+3. Select the option JavaFX in the list, follow the wizard, which will help you scaffold a new JavaFX project via Maven Archetype.
+
+The debugger extension provides multiple ways to run and debug your Java application.
+
+Reason: The context provided is relevant to the question.
+
+Evaluation
+----------------------------------------
+Score (1-5): 4
+Answered: Yes.
+
+The answer provides a clear and concise set of steps to run a JavaFX application in Visual Studio Code. It could be improved with additional details or resources, but it sufficiently answers the question.
+
+Evaluation_score
+----------------------------------------
+4
+
+Ground truth answer
+You can run a JavaFX application by opening the Maven Explorer, expanding `hellofx` > `Plugins` > `javafx`, and then running the Maven goal: `javafx:run`.
+
+====================================================================================================
+
+Question
+----------------------------------------
+How can you create a new JavaFX project in Visual Studio Code?
+
+Documents
+----------------------------------------
+You can create a new JavaFX application with just a few steps in VS Code:  
+- Step 1: Install the [Extension Pack for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack).
+- Step 2: In Visual Studio Code, open the Command Palette (`kb(workbench.action.showCommands)`) and then select the command **Java: Create Java Project**.
+- Step 3: Select the option **JavaFX** in the list, follow the wizard, which will help you scaffold a new JavaFX project via Maven Archetype.  
+![create JavaFX project](images/java-gui/create-javafx.png)
+
+More JavaFX project examples can be found in the [openjfx samples repository](https://github.com/openjfx/samples/tree/master/IDE/VSCode), which covers different project structures (such as Gradle and unmanaged folder projects). There is documentation on each sample to describe how to run the program.
+
+---
+Order: 12
+Area: java
+TOCTitle: GUI Applications
+ContentId: 517db620-d166-4f72-99c1-fa046710dffe
+PageTitle: Develop Java GUI Applications in Visual Studio Code
+DateApproved: 10/11/2022
+MetaDescription: How to develop Java GUI Applications (JavaFX, AWT, Swing) in Visual Studio Code
+---
+
+Thanks for your interest in Java on Visual Studio Code! This FAQ will hopefully answer some of the questions you may have.
+
+Answer
+----------------------------------------
+To create a new JavaFX project in Visual Studio Code, follow these steps:
+
+1. Install the Extension Pack for Java.
+2. Open the Command Palette and select the command `Java: Create Java Project`.
+3. Select the option `JavaFX` in the list, and follow the wizard to scaffold a new JavaFX project via Maven Archetype.
+
+Additional JavaFX project examples can be found in the openjfx samples repository, which covers different project structures such as Gradle and unmanaged folder projects.
+
+Evaluation
+----------------------------------------
+Score (1-5): 5
+Answered: Yes.
+
+The answer provides clear and concise steps to create a new JavaFX project in Visual Studio Code. It also mentions additional resources for JavaFX project examples. The answer is detailed, accurate, and relevant to the question, meeting all the criteria for a full score.
+
+Evaluation_score
+----------------------------------------
+5
+
+Ground truth answer
+You can create a new JavaFX application by installing the Extension Pack for Java, opening the Command Palette, selecting the command "Java: Create Java Project", and then following the wizard to scaffold a new JavaFX project via Maven Archetype.
+
+====================================================================================================
+
+Question
+----------------------------------------
+How can you enable code completions for AWT development in Visual Studio Code?
+
+Documents
+----------------------------------------
+Whole line completions are disabled when the [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) extension is enabled to allow you to take advantage of the more advanced [AI completion](/docs/editor/github-copilot.md) capabilities. You can verify that Copilot is enabled by checking if the Copilot logo is present in the lower right corner of VS Code.
+
+Code completion in Visual Studio Code for Java is provided by [Language Support for Java™ by Red Hat](https://marketplace.visualstudio.com/items?itemName=redhat.java). The extension is powered by the same [Java development tools (JDT)](https://www.eclipse.org/jdt/) behind Eclipse, so you can expect the same level of support.  
+In addition, there's also AI-assisted IntelliSense called [IntelliCode](https://visualstudio.microsoft.com/services/intellicode/). It saves you time by putting what you're most likely to use at the top of your completion list. IntelliCode recommendations are based on thousands of open-source projects on GitHub each with over 100 stars, so it's trained on the most common usages from high-quality projects. When combined with the context of your code, the completion list is tailored to promote those practices. Here's IntelliCode for Java in action.  
+<video autoplay loop muted playsinline controls title="IntelliSense code completion suggestions">
+<source src="/docs/java/java-editing/intellicode.mp4" type="video/mp4">
+</video>  
+IntelliCode works well with popular Java libraries and frameworks like Java SE and Spring. It will help you whether you are doing monolithic web apps or modern microservices.
+
+By default, the types from the Abstract Window Toolkit (AWT) are hidden. You may notice that code completions are not working when you are developing an AWT application. To enable completions, you can open the Command Palette  (`kb(workbench.action.showCommands)`) and then select the command **Java: Help Center**. Go to the **Student** section and select **Enable AWT Development**.  
+<video autoplay loop muted playsinline controls title="Develop AWT application">
+<source src="/docs/java/java-gui/enable-awt.mp4" type="video/mp4">
+</video>  
+> Note: This action will update a setting, `java.completion.filteredTypes` at the workspace level in `.vscode\settings.json`, so please make sure a workspace is opened in VS Code.  
+You can use the sample code below to run a simple Java AWT application in VS Code.  
+```java
+import java.awt.*;
+import java.awt.event.*;
+
+public class AwtExample extends Frame {
+public AwtExample() {
+Button btn = new Button("Button");
+btn.setBounds(50, 50, 50, 50);
+add(btn);
+setSize(150, 150);
+setTitle("This is my First AWT example");
+setLayout(new FlowLayout());
+setVisible(true);
+addWindowListener(new WindowAdapter() {
+public void windowClosing(WindowEvent we) {
+dispose();
+}
+});
+}
+
+public static void main(String args[]){
+new AwtExample();
+}
+}
+```
+
+As you type T-SQL code in the editor, VS Code provides intelligent code completion for T-SQL keywords, suggestions for schema object names (tables, columns, views), and parameter help for functions and procedures when connected to a database.  
+![tsql intellisense](images/tsql/intellisense.gif)
+
+Answer
+----------------------------------------
+To enable code completions for AWT development in Visual Studio Code, open the Command Palette and select the command "Java: Help Center". Go to the "Student" section and select "Enable AWT Development". This action will update a setting, `java.completion.filteredTypes`, at the workspace level in `.vscode\settings.json`.
+
+Evaluation
+----------------------------------------
+Score (1-5): 4
+Answered: Yes.
+
+(Note: The answer could be more specific about the actual steps to enable code completions in Visual Studio Code, but it does point the user in the right direction, so I'll give it a 4.)
+
+Evaluation_score
+----------------------------------------
+4
+
+Ground truth answer
+You can enable completions for AWT development by opening the Command Palette, selecting the command "Java: Help Center", going to the "Student" section, and selecting "Enable AWT Development".
+
+====================================================================================================
+
+Question
+----------------------------------------
+How can you disable automatic injection of the shell integration script in Visual Studio Code?
+
+Documents
+----------------------------------------
+There are several cases where automatic injection doesn't work, here are some common cases:  
+- `$PROMPT_COMMAND` is in an unsupported format, changing it to point to a single function is an easy way to work around this. For example:  
+```sh
+prompt() {
+printf "\033]0;%s@%s:%s\007" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/\~}"
+}
+PROMPT_COMMAND=prompt
+```  
+- Some shell plugins may disable VS Code's shell integration explicitly by unsetting `$VSCODE_SHELL_INTEGRATION` when they initialize.
+
+To provide enhanced functionality to the user and extensions, [shell integration](https://code.visualstudio.com/docs/terminal/shell-integration) is now automatically enabled in terminals that are launched when debugging.
+
+**Other Launch Configuration Properties**  
+You can apply [other properties normally found in launch.json](#launch-configuration-attributes) to auto attach in the **debug.javascript.terminalOptions** setting. For example, to add node internals to your skipFiles, you could add the following to your user or workspace settings:  
+```js
+"debug.javascript.terminalOptions": {
+"skipFiles": [
+"<node_internals>/**"
+]
+},
+```  
+**Auto Attach Smart Patterns**  
+In `smart` Auto Attach mode, VS Code will try to attach to your code, and not attach to build tools you aren't interested in debugging. It does this by matching the main script against a list of [glob patterns](/docs/editor/glob-patterns.md). The glob patterns are configurable in the **debug.javascript.autoAttachSmartPattern** setting, which defaults to:  
+```js
+[
+"!**/node_modules/**", // exclude scripts in node_modules folders
+"**/$KNOWN_TOOLS$/**"  // but include some common tools
+]
+```  
+`$KNOWN_TOOLS$` is replaced with a list of common 'code runners' such as `ts-node`, `mocha`, `ava`, and so on. You can modify this list if these settings don't work. For example, to exclude `mocha` and include `my-cool-test-runner`, you could add two lines:  
+```js
+[
+"!**/node_modules/**",
+"**/$KNOWN_TOOLS$/**",
+"!**/node_modules/mocha/**", // use "!" to exclude all scripts in "mocha" node modules
+"**/node_modules/my-cool-test-runner/**" // include scripts in the custom test runner
+]
+```
+
+If you don't want to permanently remove an extension, you can instead temporarily disable the extension by clicking the gear button at the right of an extension entry. You can disable an extension globally or just for your current Workspace. You will be prompted to restart the extension host (**Restart Extensions**) after you disable an extension.  
+If you want to quickly disable all installed extensions, there is a **Disable All Installed Extensions** command in the **Command Palette** and **More Actions** (`...`) dropdown menu.  
+Extensions remain disabled for all VS Code sessions until you re-enable them.
+
+Answer
+----------------------------------------
+The context provided is about debugging in Visual Studio Code, specifically for JavaScript, and the automatic attachment of debuggers. There is no information about disabling the automatic injection of the shell integration script in the terminal of Visual Studio Code.
+
+Answer: Context is irrelevant to the question.
+
+Evaluation
+----------------------------------------
+Score (1-5): 2
+Answered: No.
+
+The answer does not provide a solution to disable the automatic injection of the shell integration script in Visual Studio Code. Instead, it analyzes the context of the question and provides unrelated information.
+
+Evaluation_score
+----------------------------------------
+2
+
+Ground truth answer
+You can disable automatic injection of the shell integration script in Visual Studio Code by setting `terminal.integrated.shellIntegration.enabled` to `false`.
+
+====================================================================================================
+
+Question
+----------------------------------------
+What maintains compatibility for the terminal on Windows?
+
+Documents
+----------------------------------------
+The library used to communicate with the terminal process on Windows has been upgraded which fixes many of the problems the terminal had on Windows such as arrow keys not functioning and the prompt line going out of sync. A special thanks to [Ryan Prichard](https://github.com/rprichard) for his [winpty](https://github.com/rprichard/winpty) library and for assisting with the upgrade.
+
+Windows is a popular operating system and it can be a great cross-platform development environment. This section describes cross-platform features such as the [Windows Subsystem for Linux](https://learn.microsoft.com/windows/wsl/install) (WSL) and the new Windows Terminal.
+
+The terminal has both Unicode and emoji support. When these characters are used in the terminal, there are some caveats to that support:  
+* Some Unicode symbols have ambiguous width that may change between Unicode versions. Currently we support Unicode version 6 and 11 widths, which can be configured with the `terminal.integrated.unicodeVersion` setting. The version specified should match the Unicode version used by the shell/operating system, otherwise there could be rendering issues. Note that the Unicode version of the shell/OS may not match the font's actual width.
+* Some emojis comprised of multiple characters may not render correctly, for example, skin tone modifiers.
+* Emoji support is limited on Windows.
+
+[PowerShell 7](https://github.com/PowerShell/PowerShell) is the latest and greatest version of PowerShell, which can be installed on Windows, macOS, and Linux. If you install PowerShell 7 on Windows, VS Code will use that as the default shell. If you don't have PowerShell 7 installed, VS Code will continue to use Windows PowerShell as the default.  
+Additionally, if you open the **Select Default Shell** Quick Pick, the enumeration of all of the installed PowerShell versions will show up (MSI installation, Microsoft Store installation, etc.).  
+![Select Default Shell showing possible PowerShell options](images/1_53/choose-default-shell.png)  
+> **Note**: macOS and Linux default shell discovery and shell enumeration are unaffected by this because they use the default set by the OS and /etc/shells respectively.
+> Additionally, the `terminal.integrated.shell.windows` setting is still honored.
+
+Answer
+----------------------------------------
+The `winpty` library, developed by Ryan Prichard, maintains compatibility for the terminal on Windows. It was recently upgraded, fixing issues such as arrow keys not functioning and the prompt line going out of sync.
+
+Evaluation
+----------------------------------------
+Score (1-5): 4
+Answered: Yes.
+
+The answer does provide the name of the library that maintains compatibility for the terminal on Windows. However, it would be better if it directly gave the name without any extra context. The score is slightly lowered due to the unnecessary detail.
+
+Evaluation_score
+----------------------------------------
+4
+
+Ground truth answer
+ConPTY, an emulated pseudoterminal (pty) backend, maintains compatibility for the terminal on Windows by working differently than a regular pty and handling rendering in a special way.
+
+====================================================================================================
+
+Question
+----------------------------------------
+What is the recommended way to enable shell integration for advanced use cases in Visual Studio Code?
+
+Documents
+----------------------------------------
+To provide enhanced functionality to the user and extensions, [shell integration](https://code.visualstudio.com/docs/terminal/shell-integration) is now automatically enabled in terminals that are launched when debugging.
+
+By default, the shell integration script should automatically activate on supported shells launched from VS Code. This is done by injecting arguments and/or environment variables when the shell session launches. This automatic injection can be disabled by setting `terminal.integrated.shellIntegration.enabled` to `false`.  
+This standard, easy way will not work for some advanced use cases like in sub-shells, through a regular `ssh` session (when not using the [Remote - SSH extension](/docs/remote/ssh.md)) or for some complex shell setups. The recommended way to enable shell integration for those is [manual installation](#manual-installation).  
+>**Note**: Automatic injection may not work on old versions of the shell, for example older versions of fish do not support the `$XDG_DATA_DIRS` environment variable which is how injection works. You may still be able to manually install to get it working.
+
+You may create and use tunnels through the `code` [CLI](/docs/editor/command-line.md).  
+1. Install the `code` CLI on a remote machine you'd like to develop against from a VS Code client. The CLI establishes a tunnel between a VS Code client and your remote machine. The CLI is automatically built into VS Code Desktop – no additional setup required.
+
+The above shell integration installation is cross-platform and compatible with any installation type if `code` is in the `$PATH`. However, this recommended approach starts Node.js to fetch the script path, leading to a slight delay in shell startup. To mitigate this delay, inline the script above by resolving the path ahead of time and adding it directly into your init script.  
+```sh
+# Output the executable's path first:
+code --locate-shell-integration-path bash
+
+# Add the result of the above to the source statement:
+[[ "$TERM_PROGRAM" == "vscode" ]] && . "/path/to/shell/integration/script.sh"
+```
+
+Answer
+----------------------------------------
+The recommended way to enable shell integration for advanced use cases in Visual Studio Code is manual installation. This is necessary for sub-shells, through a regular ssh session (when not using the Remote - SSH extension), or for some complex shell setups. The manual installation process involves resolving the path to the shell integration script and adding it directly into your init script. This approach may lead to a slight delay in shell startup, but it ensures compatibility across different platforms and installation types.
+
+Evaluation
+----------------------------------------
+Score (1-5): 4
+Answered: Yes.
+
+Evaluation_score
+----------------------------------------
+4
+
+Ground truth answer
+The recommended way to enable shell integration for advanced use cases in Visual Studio Code is through manual installation.
+
+====================================================================================================
+
+Question
+----------------------------------------
+What is the effect of the "terminal.integrated.shellIntegration.decorationsEnabled": never setting?
+
+Documents
+----------------------------------------
+A terminal's "status", if any, is signified by an icon that appears on the right of the tab. Some statuses involve animation. If this is distracting the animation can be disabled with:  
+```json
+"terminal.integrated.tabs.enableAnimation": false
+```
+
+* We added an `onWillSaveTextDocument` event that is fired before a document is saved to disk. It allows an extension to change the document before saving and enables features like *remove unused imports on save*, *insert final newline*, etc.  
+* There is now `WorkspaceConfiguration#update` which allows extensions to add/update/remove configuration options. This should ease configuring the editor and extensions. For example, an extension would be able to configure a linter from a warning via a code action.  
+* `Terminal#processId` returns a `Thenable<number>` containing the process ID of the terminal's shell process (eg. bash or cmd).  
+* `window.createTerminal` now includes parameters to set the path and arguments of the shell. This will allows an extension to consistently launch the shell of choice, for example a Python or PowerShell REPL.  
+* `window.onDidCloseTerminal` is a new event that allows extensions to easily track when terminals are closed by the user. Currently, like the rest of the API, this is restricted to only terminals created by the API.
+
+The setting `terminal.integrated.experimentalUseTitleEvent` setting has been promoted to stable as `terminal.integrated.titleMode`. By default, this setting will be `executable`, which names terminals based on the detected foreground process:  
+![Running 'git show' will result in the terminal's title changing to 'git'](images/1_57/terminal-title-executable.png)  
+When this is set to `sequence`, the title will be based on what the shell sets it to. This needs shell support to work, an example of this in action is oh-my-zsh's default prompt, which shows additional information about the session:  
+![The oh-my-zsh default prompt will show the computer's name and current working directory](images/1_57/terminal-title-sequence.png)
+
+The terminal profile system has many improvements in this release, here are some highlights:  
+* `defaultProfile` will be respected if the terminal is restored upon launching VS Code and will be used for tasks and debugging.
+* Intellisense now works in `settings.json` for `icon` and `defaultProfile`.
+* `overrideName` now works for the default profile.
+* `defaultProfile` can now be set in workspace settings. This is also now controlled by the new Workspace Trust feature.
+* If `defaultProfile` and `shell` or `shellArgs` settings are used, you will now be asked to migrate the deprecated settings to the profiles system.
+* `color` can now be set on a profile.
+
+Answer
+----------------------------------------
+The setting `"terminal.integrated.shellIntegration.decorationsEnabled": never` will disable the display of any decorations (such as icons or animations) on the right of the terminal tab for the integrated terminal in Visual Studio Code, except when the terminal is being actively interacted with (for example, when the user is typing in it or a command is running). This can help minimize distractions while using the terminal.
+
+Evaluation
+----------------------------------------
+Score (1-5): 3
+Answered: Yes, but incomplete.
+
+The answer does provide some information about what the setting does, but it doesn't actually explain the "effect" of the setting, which is what the question asked for. Additionally, the answer focuses on the specific case of "disabling the display of any decorations," but doesn't mention any other potential effects of the setting.
+
+Evaluation_score
+----------------------------------------
+3
+
+Ground truth answer
+This setting disables command decorations in the integrated terminal, meaning command-aware features like command navigation will not be available.
+
+====================================================================================================
+
+Question
+----------------------------------------
+How can you balance network traffic across Pods?
+
+Documents
+----------------------------------------
+Your workloads are deployed in containers, which are deployed in Pods in Kubernetes\. A Pod includes one or more containers\. Typically, one or more Pods that provide the same service are deployed in a Kubernetes service\. Once you've deployed multiple Pods that provide the same service, you can:
++ [View information about the workloads](view-kubernetes-resources.md) running on each of your clusters using the AWS Management Console\.
++ Vertically scale Pods up or down with the Kubernetes [Vertical Pod Autoscaler](vertical-pod-autoscaler.md)\.
++ Horizontally scale the number of Pods needed to meet demand up or down with the Kubernetes [Horizontal Pod Autoscaler](horizontal-pod-autoscaler.md)\.
++ Create an external \(for internet\-accessible Pods\) or an internal \(for private Pods\) [network load balancer](network-load-balancing.md) to balance network traffic across Pods\. The load balancer routes traffic at Layer 4 of the OSI model\.
++ Create an [Application load balancing on Amazon EKS](alb-ingress.md) to balance application traffic across Pods\. The application load balancer routes traffic at Layer 7 of the OSI model\.
++ If you're new to Kubernetes, this topic helps you [Deploy a sample application](sample-deployment.md)\.
++ You can [restrict IP addresses that can be assigned to a service](restrict-service-external-ip.md) with `externalIPs`\.
+
+Security groups for Pods integrate Amazon EC2 security groups with Kubernetes Pods\. You can use Amazon EC2 security groups to define rules that allow inbound and outbound network traffic to and from Pods that you deploy to nodes running on many Amazon EC2 instance types and Fargate\. For a detailed explanation of this capability, see the [Introducing security groups for Pods](https://aws.amazon.com/blogs/containers/introducing-security-groups-for-pods/) blog post\.
+
+To implement Kubernetes network policies you create Kubernetes `NetworkPolicy` objects and deploy them to your cluster\. `NetworkPolicy` objects are scoped to a namespace\. You implement policies to allow or deny traffic between Pods based on label selectors, namespaces, and IP address ranges\. For more information about creating `NetworkPolicy` objects, see [Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/#networkpolicy-resource) in the Kubernetes documentation\.  
+Enforcement of Kubernetes `NetworkPolicy` objects is implemented using the Extended Berkeley Packet Filter \(eBPF\)\. Relative to `iptables` based implementations, it offers lower latency and performance characteristics, including reduced CPU utilization and avoiding sequential lookups\. Additionally, eBPF probes provide access to context rich data that helps debug complex kernel level issues and improve observability\. Amazon EKS supports an eBPF\-based exporter that leverages the probes to log policy results on each node and export the data to external log collectors to aid in debugging\. For more information, see the [eBPF documentation](https://ebpf.io/what-is-ebpf/#what-is-ebpf)\.
+
+You can create a network load balancer with IP or instance targets\.  
+------
+
+Answer
+----------------------------------------
+To balance network traffic across Pods, you can create either an external or internal network load balancer (which routes traffic at Layer 4 of the OSI model) or an Application load balancer (which routes traffic at Layer 7 of the OSI model) in Kubernetes. These load balancers distribute network traffic across the Pods that provide the same service.
+
+Evaluation
+----------------------------------------
+Score (1-5): 5
+Answered: Yes.
+
+The answer provides detailed information on how to balance network traffic across Pods in Kubernetes using both network load balancers and application load balancers. It explains how these load balancers operate at different layers of the OSI model and distribute traffic across Pods providing the same service.
+
+Evaluation_score
+----------------------------------------
+5
+
+Ground truth answer
+You can create an external or internal network load balancer to balance network traffic across Pods.
+
+====================================================================================================
+
+Question
+----------------------------------------
+How can you restrict IP addresses that can be assigned to a service in Kubernetes?
+
+Documents
+----------------------------------------
+Kubernetes services can be reached from inside of a cluster through:
++ A cluster IP address that is assigned automatically by Kubernetes
++ Any IP address that you specify for the `externalIPs` property in a service spec\. External IP addresses are not managed by Kubernetes and are the responsibility of the cluster administrator\. External IP addresses specified with `externalIPs` are different than the external IP address assigned to a service of type `LoadBalancer` by a cloud provider\.  
+To learn more about Kubernetes services, see [Service](https://kubernetes.io/docs/concepts/services-networking/service/) in the Kubernetes documentation\. You can restrict the IP addresses that can be specified for `externalIPs` in a service spec\.  
+**To restrict the IP addresses that can be specified for `externalIPs` in a service spec**  
+1. Deploy `cert-manager` to manage webhook certificates\. For more information, see the [https://cert-manager.io/docs/](https://cert-manager.io/docs/) documentation\.  
+```
+kubectl apply -f https://github.com/jetstack/cert-manager/releases/download/v1.5.4/cert-manager.yaml
+```  
+1. Verify that the `cert-manager` Pods are running\.  
+```
+kubectl get pods -n cert-manager
+```  
+An example output is as follows\.  
+```
+NAME                                       READY   STATUS    RESTARTS   AGE
+cert-manager-58c8844bb8-nlx7q              1/1     Running   0          15s
+cert-manager-cainjector-745768f6ff-696h5   1/1     Running   0          15s
+cert-manager-webhook-67cc76975b-4v4nk      1/1     Running   0          14s
+```  
+1. Review your existing services to ensure that none of them have external IP addresses assigned to them that aren't contained within the CIDR block you want to limit addresses to\.  
+```
+kubectl get services -A
+```  
+An example output is as follows\.  
+```
+NAMESPACE                      NAME                                    TYPE           CLUSTER-IP       EXTERNAL-IP     PORT(S)         AGE
+cert-manager                   cert-manager                            ClusterIP      10.100.102.137   <none>          9402/TCP        20m
+cert-manager                   cert-manager-webhook                    ClusterIP      10.100.6.136     <none>          443/TCP         20m
+default                        kubernetes                              ClusterIP      10.100.0.1       <none>          443/TCP         2d1h
+externalip-validation-system   externalip-validation-webhook-service   ClusterIP      10.100.234.179   <none>          443/TCP         16s
+kube-system                    kube-dns                                ClusterIP      10.100.0.10      <none>          53/UDP,53/TCP   2d1h
+my-namespace                   my-service                              ClusterIP      10.100.128.10    192.168.1.1     80/TCP          149m
+```  
+If any of the values are IP addresses that are not within the block you want to restrict access to, you'll need to change the addresses to be within the block, and redeploy the services\. For example, the `my-service` service in the previous output has an external IP address assigned to it that isn't within the CIDR block example in step 5\.  
+1. Download the external IP webhook manifest\. You can also view the [source code for the webhook](https://github.com/kubernetes-sigs/externalip-webhook) on GitHub\.  
+```
+curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/docs/externalip-webhook.yaml
+```  
+1. <a name="restrict-external-ip-addresses-cidr-block"></a>Specify CIDR blocks\. Open the downloaded file in your editor and remove the `#` at the start of the following lines\.  
+```
+#args:
+#- --allowed-external-ip-cidrs=10.0.0.0/8
+```  
+Replace `10.0.0.0/8` with your own CIDR block\. You can specify as many blocks as you like\. If specifying mutiple blocks, add a comma between blocks\.  
+1. If your cluster is not in the `us-west-2` AWS Region, then replace `us-west-2`, `602401143452`, and `amazonaws.com` in the file with the following commands\. Before running the commands, replace `region-code` and `111122223333` with the value for your AWS Region from the list in [Amazon container image registries](add-ons-images.md)\.  
+```
+sed -i.bak -e 's|602401143452|111122223333|' externalip-webhook.yaml
+sed -i.bak -e 's|us-west-2|region-code|' externalip-webhook.yaml
+sed -i.bak -e 's|amazonaws.com||' externalip-webhook.yaml
+```  
+1. Apply the manifest to your cluster\.  
+```
+kubectl apply -f externalip-webhook.yaml
+```  
+An attempt to deploy a service to your cluster with an IP address specified for `externalIPs` that is not contained in the blocks that you specified in the [Specify CIDR blocks](#restrict-external-ip-addresses-cidr-block) step will fail\.
+
+By default, there are no restrictions in Kubernetes for IP addresses, ports, or connections between any Pods in your cluster or between your Pods and resources in any other network\. You can use Kubernetes *network policy* to restrict network traffic to and from your Pods\. For more information, see [Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/) in the Kubernetes documentation\.  
+If you have version `1.13` or earlier of the Amazon VPC CNI plugin for Kubernetes on your cluster, you need to implement a third party solution to apply Kubernetes network policies to your cluster\. Version `1.14` or later of the plugin can implement network policies, so you don't need to use a third party solution\. In this topic, you learn how to configure your cluster to use Kubernetes network policy on your cluster without using a third party add\-on\.  
+Network policies in the Amazon VPC CNI plugin for Kubernetes are supported in the following configurations\.
++ Amazon EKS clusters of version `1.25` and later\.
++ Version 1\.14 or later of the Amazon VPC CNI plugin for Kubernetes on your cluster\.
++ Cluster configured for `IPv4` or `IPv6` addresses\.
++ You can use network policies with [security groups for Pods](security-groups-for-pods.md)\. With network policies, you can control all in\-cluster communication\. With security groups for Pods, you can control access to AWS services from applications within a Pod\.
++ You can use network policies with *custom networking* and *prefix delegation*\.
+
+If you create more restrictive policies for your Pods, then after doing so, you can delete the default Amazon EKS `eks.privileged` Pod security policy to enable your custom policies\.  
+**Important**
+If you are using version `1.7.0` or later of the CNI plugin and you assign a custom Pod security policy to the `aws-node` Kubernetes service account used for the `aws-node` Pods deployed by the Daemonset, then the policy must have `NET_ADMIN` in its `allowedCapabilities` section along with `hostNetwork: true` and `privileged: true` in the policy's `spec`\.  
+**To delete the default Pod security policy**  
+1. Create a file named *`privileged-podsecuritypolicy.yaml`* with the contents in the example file in [Install or restore the default Pod security policy](#psp-install-or-restore-default)\.  
+1. Delete the YAML with the following command\. This deletes the default Pod security policy, the `ClusterRole`, and the `ClusterRoleBinding` associated with it\.  
+```
+kubectl delete -f privileged-podsecuritypolicy.yaml
+```
+
+By default, Kubernetes assigns `IPv4` addresses to your Pods and services\. Instead of assigning `IPv4` addresses to your Pods and services, you can configure your cluster to assign `IPv6` addresses to them\. Amazon EKS doesn't support dual\-stacked Pods or services, even though Kubernetes does in version `1.23` and later\. As a result, you can't assign both `IPv4` and `IPv6` addresses to your Pods and services\.  
+You select which IP family you want to use for your cluster when you create it\. You can't change the family after you create the cluster\.
+
+Answer
+----------------------------------------
+To restrict the IP addresses that can be specified for `externalIPs` in a Kubernetes service, you can follow these steps:
+
+1. Deploy `cert-manager` to manage webhook certificates.
+2. Verify that the `cert-manager` Pods are running.
+3. Review your existing services to ensure that none of them have external IP addresses assigned to them that aren't contained within the CIDR block you want to limit addresses to.
+4. Download the external IP webhook manifest.
+5. Specify CIDR blocks in the downloaded file.
+6. If your cluster is not in the `us-west-2` AWS Region, replace `us-west-2`, `602401143452`, and `amazonaws.com` in the file with the values for your AWS Region.
+7. Apply the manifest to your cluster.
+
+An attempt to deploy a service to your cluster with an IP address specified for `externalIPs` that is not contained in the blocks that you specified in the "Specify CIDR blocks" step will fail.
+
+Reason: The context provides the instructions on how to restrict IP addresses that can be assigned to a service in Kubernetes, so it is not irrelevant. The answer is also provided confidently, so no "I do not know the answer" reason is necessary.
+
+Evaluation
+----------------------------------------
+Score (1-5): 5
+Answered: Yes.
+
+The response provides detailed, step-by-step instructions on how to restrict IP addresses that can be assigned to a service in Kubernetes, so it thoroughly answers the question.
+
+Evaluation_score
+----------------------------------------
+5
+
+Ground truth answer
+You can restrict IP addresses that can be assigned to a service with `externalIPs`.
+
+====================================================================================================
+
+Question
+----------------------------------------
+What helps new users deploy a sample application in Kubernetes?
+
+Documents
+----------------------------------------
+The Kubernetes extension provides autocompletion, code snippets, and verification for the Kubernetes manifest file. For example, once you type 'Deployment' in an empty YAML file, a manifest file with fundamental structure is autogenerated for you. You only need to enter your app name, image, and port manually.  
+![Create manifest](images/kubernetes/create-manifest.gif)  
+Below is an example manifest file:  
+![Manifest example](images/kubernetes/manifest-example.png)  
+Once your manifest file is ready, you only need one command to start a deployment. Open the **Command Palette** (`kb(workbench.action.showCommands)`) and run **Kubernetes: Create**. It will deploy the application to your Kubernetes cluster and create objects according to the configuration in the open Kubernetes manifest file.  
+![Start deployment](images/kubernetes/start-deployment.gif)
+
+Applications in a Pod's containers can use an AWS SDK or the AWS CLI to make API requests to AWS services using AWS Identity and Access Management \(IAM\) permissions\. Applications must sign their AWS API requests with AWS credentials\. IAM roles for service accounts provide the ability to manage credentials for your applications, similar to the way that Amazon EC2 instance profiles provide credentials to Amazon EC2 instances\. Instead of creating and distributing your AWS credentials to the containers or using the Amazon EC2 instance's role, you associate an IAM role with a Kubernetes service account and configure your Pods to use the service account\. You can't use IAM roles for service accounts with [local clusters for Amazon EKS on AWS Outposts](eks-outposts-local-cluster-overview.md)\.  
+IAM roles for service accounts provide the following benefits:
++ **Least privilege** – You can scope IAM permissions to a service account, and only Pods that use that service account have access to those permissions\. This feature also eliminates the need for third\-party solutions such as `kiam` or `kube2iam`\.
++ **Credential isolation** – A Pod's containers can only retrieve credentials for the IAM role that's associated with the service account that the container uses\. A container never has access to credentials that are used by other containers in other Pods\. When using IAM roles for service accounts, the Pod's containers also have the permissions assigned to the [Amazon EKS node IAM role](create-node-role.md), unless you block Pod access to the [Amazon EC2 Instance Metadata Service \(IMDS\)](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-service.html)\. For more information, see [Restrict access to the instance profile assigned to the worker node](https://aws.github.io/aws-eks-best-practices/security/docs/iam/#restrict-access-to-the-instance-profile-assigned-to-the-worker-node)\.
++ **Auditability** – Access and event logging is available through AWS CloudTrail to help ensure retrospective auditing\.  
+Enable IAM roles for service accounts by completing the following procedures:  
+1. [Create an IAM OIDC provider for your cluster](enable-iam-roles-for-service-accounts.md) – You only complete this procedure once for each cluster\.
+**Note**
+If you enable the EKS VPC endpoint, the EKS OIDC service endpoint can't be accessed from inside that VPC\. Consequently, your operations such as creating an OIDC provider with `eksctl` in the VPC will not work and will result in a timeout when attempting to request `https://oidc.eks.region.amazonaws.com`\. An example error message follows:  
+```
+** server can't find oidc.eks.region.amazonaws.com: NXDOMAIN
+```
+To complete this step, you can run the command outside the VPC, for example in AWS CloudShell or on a computer connected to the internet\.  
+1. [Configure a Kubernetes service account to assume an IAM role](associate-service-account-role.md) – Complete this procedure for each unique set of permissions that you want an application to have\.  
+1. [Configure Pods to use a Kubernetes service account](pod-configuration.md) – Complete this procedure for each Pod that needs access to AWS services\.  
+1. [Using a supported AWS SDK](iam-roles-for-service-accounts-minimum-sdk.md) – Confirm that the workload uses an AWS SDK of a supported version and that the workload uses the default credential chain\.
+
+---
+Order: 11
+Area: containers
+TOCTitle: Develop with Kubernetes
+ContentId: 80bd336b-0d2d-4d63-a771-8b3ea22a64d3
+PageTitle: Use Bridge to Kubernetes to run and debug locally with Kubernetes
+DateApproved: 02/1/2024
+MetaDescription: Learn how to use Bridge to Kubernetes.
+---
+
++ Maintaining, building, and delivering Amazon EKS Connector, which is an [open source component](https://github.com/aws/amazon-eks-connector) that runs on a customer's Kubernetes cluster and communicates with AWS\.
++ Maintaining transport and application layer communication security between the connected Kubernetes cluster and AWS services\.
+
+Answer
+----------------------------------------
+The Kubernetes extension provides autocompletion, code snippets, and verification for the Kubernetes manifest file, which helps new users deploy a sample application in Kubernetes. Once the manifest file is ready, they can use the "Kubernetes: Create" command to start a deployment. This workflow is demonstrated in the context provided.
+
+Evaluation
+----------------------------------------
+Score (1-5): 4
+Answered: Yes.
+
+Evaluation_score
+----------------------------------------
+4
+
+Ground truth answer
+The topic "Deploy a sample application" helps new users deploy a sample application in Kubernetes.
+
+====================================================================================================
+
+Question
+----------------------------------------
+What is the role of the Kubernetes Vertical Pod Autoscaler?
+
+Documents
+----------------------------------------
+In this section, you deploy the Vertical Pod Autoscaler to your cluster\.  
+**To deploy the Vertical Pod Autoscaler**  
+1. Open a terminal window and navigate to a directory where you would like to download the Vertical Pod Autoscaler source code\.  
+1. Clone the [kubernetes/autoscaler](https://github.com/kubernetes/autoscaler) GitHub repository\.  
+```
+git clone https://github.com/kubernetes/autoscaler.git
+```  
+1. Change to the `vertical-pod-autoscaler` directory\.  
+```
+cd autoscaler/vertical-pod-autoscaler/
+```  
+1. \(Optional\) If you have already deployed another version of the Vertical Pod Autoscaler, remove it with the following command\.  
+```
+./hack/vpa-down.sh
+```  
+1. If your nodes don't have internet access to the `registry.k8s.io` container registry, then you need to pull the following images and push them to your own private repository\. For more information about how to pull the images and push them to your own private repository, see [Copy a container image from one repository to another repository](copy-image-to-repository.md)\.  
+```
+registry.k8s.io/autoscaling/vpa-admission-controller:0.10.0
+registry.k8s.io/autoscaling/vpa-recommender:0.10.0
+registry.k8s.io/autoscaling/vpa-updater:0.10.0
+```  
+If you're pushing the images to a private Amazon ECR repository, then replace `registry.k8s.io` in the manifests with your registry\. Replace `111122223333` with your account ID\. Replace `region-code` with the AWS Region that your cluster is in\. The following commands assume that you named your repository the same as the repository name in the manifest\. If you named your repository something different, then you'll need to change it too\.  
+```
+sed -i.bak -e 's/registry.k8s.io/111122223333.dkr.ecr.region-code.amazonaws.com/' ./deploy/admission-controller-deployment.yaml
+sed -i.bak -e 's/registry.k8s.io/111122223333.dkr.ecr.region-code.amazonaws.com/' ./deploy/recommender-deployment.yaml
+sed -i.bak -e 's/registry.k8s.io/111122223333.dkr.ecr.region-code.amazonaws.com/' ./deploy/updater-deployment.yaml
+```  
+1. Deploy the Vertical Pod Autoscaler to your cluster with the following command\.  
+```
+./hack/vpa-up.sh
+```  
+1. Verify that the Vertical Pod Autoscaler Pods have been created successfully\.  
+```
+kubectl get pods -n kube-system
+```  
+An example output is as follows\.  
+```
+NAME                                        READY   STATUS    RESTARTS   AGE
+[...]
+metrics-server-8459fc497-kfj8w              1/1     Running   0          83m
+vpa-admission-controller-68c748777d-ppspd   1/1     Running   0          7s
+vpa-recommender-6fc8c67d85-gljpl            1/1     Running   0          8s
+vpa-updater-786b96955c-bgp9d                1/1     Running   0          8s
+```
+
+Escalator is a batch or job optimized horizontal autoscaler for Kubernetes\.
++ [Project URL](https://github.com/atlassian/escalator)
++ [Project documentation](https://github.com/atlassian/escalator/blob/master/docs/README.md)
+
+Autoscaling is a function that automatically scales your resources out and in to meet changing demands\. This is a major Kubernetes function that would otherwise require extensive human resources to perform manually\.  
+Amazon EKS supports two autoscaling products:  
+**Karpenter**
+Karpenter is a flexible, high\-performance Kubernetes cluster autoscaler that helps improve application availability and cluster efficiency\. Karpenter launches right\-sized compute resources \(for example, Amazon EC2 instances\) in response to changing application load in under a minute\. Through integrating Kubernetes with AWS, Karpenter can provision just\-in\-time compute resources that precisely meet the requirements of your workload\. Karpenter automatically provisions new compute resources based on the specific requirements of cluster workloads\. These include compute, storage, acceleration, and scheduling requirements\. Amazon EKS supports clusters using Karpenter, although Karpenter works with any conformant Kubernetes cluster\. For more information, see the [https://karpenter.sh/docs/](https://karpenter.sh/docs/) documentation\.  
+**Cluster Autoscaler**
+The Kubernetes Cluster Autoscaler automatically adjusts the number of nodes in your cluster when pods fail or are rescheduled onto other nodes\. The Cluster Autoscaler uses Auto Scaling groups\. For more information, see [Cluster Autoscaler on AWS](https://github.com/kubernetes/autoscaler/blob/master/cluster-autoscaler/cloudprovider/aws/README.md)\.
+
+With Kubernetes, you can define requests, a minimum vCPU amount, and memory resources that are allocated to each container in a Pod\. Pods are scheduled by Kubernetes to ensure that at least the requested resources for each Pod are available on the compute resource\. For more information, see [Managing compute resources for containers](https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/) in the Kubernetes documentation\.  
+**Note**
+Since Amazon EKS Fargate runs only one Pod per node, the scenario of evicting Pods in case of fewer resources doesn't occur\. All Amazon EKS Fargate Pods run with guaranteed priority, so the requested CPU and memory must be equal to the limit for all of the containers\. For more information, see [Configure Quality of Service for Pods](https://kubernetes.io/docs/tasks/configure-pod-container/quality-service-pod/) in the Kubernetes documentation\.  
+When Pods are scheduled on Fargate, the vCPU and memory reservations within the Pod specification determine how much CPU and memory to provision for the Pod\.
++ The maximum request out of any Init containers is used to determine the Init request vCPU and memory requirements\.
++ Requests for all long\-running containers are added up to determine the long\-running request vCPU and memory requirements\.
++ The larger of the previous two values is chosen for the vCPU and memory request to use for your Pod\.
++ Fargate adds 256 MB to each Pod's memory reservation for the required Kubernetes components \(`kubelet`, `kube-proxy`, and `containerd`\)\.  
+Fargate rounds up to the following compute configuration that most closely matches the sum of vCPU and memory requests in order to ensure Pods always have the resources that they need to run\.  
+If you don't specify a vCPU and memory combination, then the smallest available combination is used \(\.25 vCPU and 0\.5 GB memory\)\.  
+The following table shows the vCPU and memory combinations that are available for Pods running on Fargate\.  
+|  vCPU value  |  Memory value  |
+| --- | --- |
+|  \.25 vCPU  |  0\.5 GB, 1 GB, 2 GB  |
+|  \.5 vCPU  |  1 GB, 2 GB, 3 GB, 4 GB  |
+|  1 vCPU  |  2 GB, 3 GB, 4 GB, 5 GB, 6 GB, 7 GB, 8 GB  |
+|  2 vCPU  |  Between 4 GB and 16 GB in 1\-GB increments  |
+|  4 vCPU  |  Between 8 GB and 30 GB in 1\-GB increments  |
+|  8 vCPU  |  Between 16 GB and 60 GB in 4\-GB increments  |
+|  16 vCPU  |  Between 32 GB and 120 GB in 8\-GB increments  |  
+The additional memory reserved for the Kubernetes components can cause a Fargate task with more vCPUs than requested to be provisioned\. For example, a request for 1 vCPU and 8 GB memory will have 256 MB added to its memory request, and will provision a Fargate task with 2 vCPUs and 9 GB memory, since no task with 1 vCPU and 9 GB memory is available\.  
+There is no correlation between the size of the Pod running on Fargate and the node size reported by Kubernetes with `kubectl get nodes`\. The reported node size is often larger than the Pod's capacity\. You can verify Pod capacity with the following command\. Replace `default` with your Pod's namespace and `pod-name` with the name of your Pod\.  
+```
+kubectl describe pod --namespace default pod-name
+```  
+An example output is as follows\.  
+```
+[...]
+annotations:
+CapacityProvisioned: 0.25vCPU 0.5GB
+[...]
+```  
+The `CapacityProvisioned` annotation represents the enforced Pod capacity and it determines the cost of your Pod running on Fargate\. For pricing information for the compute configurations, see [AWS Fargate Pricing](https://aws.amazon.com/fargate/pricing/)\.
+
+Answer
+----------------------------------------
+The Vertical Pod Autoscaler in Kubernetes is used to automatically adjust the resource requests and limits of a container in a pod, based on the observed resource usage. It is used to ensure that the container has enough resources to run properly, while also making sure that resources are not being wasted. The Vertical Pod Autoscaler can be deployed to a Kubernetes cluster using the provided steps in the context. It is different from the Kubernetes Cluster Autoscaler, which adjusts the number of nodes in a cluster based on the resource usage of the pods.
+
+Evaluation
+----------------------------------------
+Score (1-5): 5
+Answered: Yes.
+
+The response correctly and clearly explains the role of the Kubernetes Vertical Pod Autoscaler. It includes relevant details and distinguishes it from the Kubernetes Cluster Autoscaler. The answer is concise and easy to understand.
+
+Evaluation_score
+----------------------------------------
+5
+
+Ground truth answer
+The Kubernetes Vertical Pod Autoscaler scales Pods up or down vertically to meet demand.
+
+====================================================================================================
+
+Question
+----------------------------------------
+What action should be taken after executing the command in Step 2?
+
+Documents
+----------------------------------------
+Command|Key|Command id
+-------|---|----------
+Run Build Task|`kb(workbench.action.tasks.build)`|`workbench.action.tasks.build`
+Run Test Task|`kb(workbench.action.tasks.test)`|`workbench.action.tasks.test`
+
+If you would rather enter the commands individually **instead** of using the code block provided previously:
+
+> If you are someone who is not super comforable with the command line, **please use the steps above instead**.
+> Additionally, if a new OEM kernel is released, **you will be NOT be alerted** if you use the advanced method as nothing is checking for updates to alert you.  
+If you would rather enter the commands individually **instead** of using the code block provided previously:
+
+Command|Key|Command id
+-------|---|----------
+Cut line (empty selection)|`kb(editor.action.clipboardCutAction)`|`editor.action.clipboardCutAction`
+Copy line (empty selection)|`kb(editor.action.clipboardCopyAction)`|`editor.action.clipboardCopyAction`
+Paste|`kb(editor.action.clipboardPasteAction)`|`editor.action.clipboardPasteAction`
+Delete Line|`kb(editor.action.deleteLines)`|`editor.action.deleteLines`
+Insert Line Below|`kb(editor.action.insertLineAfter)`|`editor.action.insertLineAfter`
+Insert Line Above|`kb(editor.action.insertLineBefore)`|`editor.action.insertLineBefore`
+Move Line Down|`kb(editor.action.moveLinesDownAction)`|`editor.action.moveLinesDownAction`
+Move Line Up|`kb(editor.action.moveLinesUpAction)`|`editor.action.moveLinesUpAction`
+Copy Line Down|`kb(editor.action.copyLinesDownAction)`|`editor.action.copyLinesDownAction`
+Copy Line Up|`kb(editor.action.copyLinesUpAction)`|`editor.action.copyLinesUpAction`
+Undo|`kb(undo)`|`undo`
+Redo|`kb(redo)`|`redo`
+Add Selection To Next Find Match|`kb(editor.action.addSelectionToNextFindMatch)`|`editor.action.addSelectionToNextFindMatch`
+Move Last Selection To Next Find Match|`kb(editor.action.moveSelectionToNextFindMatch)`|`editor.action.moveSelectionToNextFindMatch`
+Undo last cursor operation|`kb(cursorUndo)`|`cursorUndo`
+Insert cursor at end of each line selected|`kb(editor.action.insertCursorAtEndOfEachLineSelected)`|`editor.action.insertCursorAtEndOfEachLineSelected`
+Select all occurrences of current selection|`kb(editor.action.selectHighlights)`|`editor.action.selectHighlights`
+Select all occurrences of current word|`kb(editor.action.changeAll)`|`editor.action.changeAll`
+Select current line|`kb(expandLineSelection)`|`expandLineSelection`
+Insert Cursor Below|`kb(editor.action.insertCursorBelow)`|`editor.action.insertCursorBelow`
+Insert Cursor Above|`kb(editor.action.insertCursorAbove)`|`editor.action.insertCursorAbove`
+Jump to matching bracket|`kb(editor.action.jumpToBracket)`|`editor.action.jumpToBracket`
+Indent Line|`kb(editor.action.indentLines)`|`editor.action.indentLines`
+Outdent Line|`kb(editor.action.outdentLines)`|`editor.action.outdentLines`
+Go to Beginning of Line|`kb(cursorHome)`|`cursorHome`
+Go to End of Line|`kb(cursorEnd)`|`cursorEnd`
+Go to End of File|`kb(cursorBottom)`|`cursorBottom`
+Go to Beginning of File|`kb(cursorTop)`|`cursorTop`
+Scroll Line Down|`kb(scrollLineDown)`|`scrollLineDown`
+Scroll Line Up|`kb(scrollLineUp)`|`scrollLineUp`
+Scroll Page Down|`kb(scrollPageDown)`|`scrollPageDown`
+Scroll Page Up|`kb(scrollPageUp)`|`scrollPageUp`
+Fold (collapse) region|`kb(editor.fold)`|`editor.fold`
+Unfold (uncollapse) region|`kb(editor.unfold)`|`editor.unfold`
+Fold (collapse) all subregions|`kb(editor.foldRecursively)`|`editor.foldRecursively`
+Unfold (uncollapse) all subregions|`kb(editor.unfoldRecursively)`|`editor.unfoldRecursively`
+Fold (collapse) all regions|`kb(editor.foldAll)`|`editor.foldAll`
+Unfold (uncollapse) all regions|`kb(editor.unfoldAll)`|`editor.unfoldAll`
+Add Line Comment|`kb(editor.action.addCommentLine)`|`editor.action.addCommentLine`
+Remove Line Comment|`kb(editor.action.removeCommentLine)`|`editor.action.removeCommentLine`
+Toggle Line Comment|`kb(editor.action.commentLine)`|`editor.action.commentLine`
+Toggle Block Comment|`kb(editor.action.blockComment)`|`editor.action.blockComment`
+Find|`kb(actions.find)`|`actions.find`
+Replace|`kb(editor.action.startFindReplaceAction)`|`editor.action.startFindReplaceAction`
+Find Next|`kb(editor.action.nextMatchFindAction)`|`editor.action.nextMatchFindAction`
+Find Previous|`kb(editor.action.previousMatchFindAction)`|`editor.action.previousMatchFindAction`
+Select All Occurrences of Find Match|`kb(editor.action.selectAllMatches)`|`editor.action.selectAllMatches`
+Toggle Find Case Sensitive|`kb(toggleFindCaseSensitive)`|`toggleFindCaseSensitive`
+Toggle Find Regex|`kb(toggleFindRegex)`|`toggleFindRegex`
+Toggle Find Whole Word|`kb(toggleFindWholeWord)`|`toggleFindWholeWord`
+Toggle Use of Tab Key for Setting Focus|`kb(editor.action.toggleTabFocusMode)`|`editor.action.toggleTabFocusMode`
+Toggle Render Whitespace|`kb(toggleRenderWhitespace)`|`toggleRenderWhitespace`
+Toggle Word Wrap|`kb(editor.action.toggleWordWrap)`|`editor.action.toggleWordWrap`
+
+Answer
+----------------------------------------
+The context does not provide information on what action should be taken after executing the command in Step 2. It only provides a list of commands with their corresponding keybindings and command identifiers.
+
+Response: Context is irrelevant to the question.
+
+Evaluation
+----------------------------------------
+Score (1-5): 2
+Answered: No.
+
+The answer does not provide a clear and specific action that should be taken after executing the command in Step 2. Instead, it simply provides information about the context and the model.
+
+Evaluation_score
+----------------------------------------
+2
+
+Ground truth answer
+After executing the command in Step 2, one should browse to the horizontal line in the upper left corner, type 'Displays', look for 'Scale', set it to their preference, and click 'Apply'.
+
+====================================================================================================
+
+Question
+----------------------------------------
+How can one enable fractional scaling on Wayland in Step 2?
+
+Documents
+----------------------------------------
+- Getting  your laptop fully updated.
+- Enable improved fractional scaling support Fedora's GNOME environment using Wayland.
+- Enabling tap to click on the touchpad.  
+&nbsp;
+&nbsp;
+&nbsp;
+
+- Getting  your laptop fully updated.
+- Enable improved fractional scaling support Fedora's GNOME environment using Wayland.
+- Enabling tap to click on the touchpad.
+- Enabling brightness keys.  
+&nbsp;
+&nbsp;
+&nbsp;
+
+``
+gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffer']"
+``
+
+- Browse to the horizontal line in the upper left corner, click to open it.
+- Type out the word terminal, click to open it.
+- Left click and drag to highlight and copy the code below in the gray box, right click/paste it into the terminal window.
+- Then press the enter key.
+- Browse to the horizontal line in the upper left corner, click to open it.
+- Type out the word Displays.
+- Look for "Scale", set it to your preference, click Apply.  
+```
+gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffer']"
+```
+> **TIP:** You can use the little clipboard icon to the right of the code to copy to your clipboard.  
+&nbsp;
+&nbsp;
+&nbsp;
+
+Answer
+----------------------------------------
+To enable fractional scaling on Wayland in Step 2, follow these steps:
+
+- Browse to the horizontal line in the upper left corner, click to open it.
+- Type out the word terminal, click to open it.
+- Copy the code (gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffer']"):
+  - You can use the little clipboard icon to the right of the code to copy to your clipboard.
+- Paste the copied code in the terminal window by right-clicking and pressing Enter.
+- After that, look for "Scale" in the Displays settings and set it to your preference.
+
+Evaluation
+----------------------------------------
+Score (1-5): 3
+Answered: Yes, but incomplete.
+
+The answer explains how to enable fractional scaling on Wayland in a general sense, but it doesn't specifically address Step 2. The response lacks clarity on what the exact Step 2 is, making it difficult to evaluate if the answer directly addresses that step.
+
+Evaluation_score
+----------------------------------------
+3
+
+Ground truth answer
+In Step 2, one can enable fractional scaling on Wayland by executing a command in the terminal, setting the 'Scale' to their preference, and clicking 'Apply'.
+
+====================================================================================================
+
+Question
+----------------------------------------
+What should be clicked to open 'Mouse and Touchpad' in Step 3?
+
+Documents
+----------------------------------------
+- Browse to the Activities menu in the upper left corner, click to open it.
+- Type out the word mouse, look for Mouse and Touchpad, click to open it.
+- Click the touchpad option at the top.
+- Under "Clicking", select Tap to Click and enable it.  
+&nbsp;
+&nbsp;
+&nbsp;
+
+- Browse to the horizontal line in the upper left corner, click to open it.
+- Type out the word mouse, look for Mouse and Touchpad, click to open it.
+- Click the touchpad option at the top.
+- Under "Clicking", select Tap to Click and enable it.  
+&nbsp;
+&nbsp;
+&nbsp;
+
+``
+gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
+``
+
+- Getting  your laptop fully updated.
+- Enable improved fractional scaling support Fedora's GNOME environment using Wayland.
+- Enabling tap to click on the touchpad.  
+&nbsp;
+&nbsp;
+&nbsp;
+
+Answer
+----------------------------------------
+Type out the word mouse, look for Mouse and Touchpad, click to open it.
+Reason: The context provided describes how to enable tap to click on the touchpad, and the steps include typing "mouse" in the activities menu, looking for "Mouse and Touchpad", and clicking to open it.
+
+Evaluation
+----------------------------------------
+Score (1-5): 2
+Answered: No.
+
+The answer is not specific about what should be clicked to open 'Mouse and Touchpad'. It just states that we need to type "mouse", look for "Mouse and Touchpad", and click to open it. It would have been better if it explicitly mentioned clicking on the "Mouse and Touchpad" option.
+
+Evaluation_score
+----------------------------------------
+2
+
+Ground truth answer
+In Step 3, 'Mouse and Touchpad' can be clicked to open by looking for it under the 'mouse' option in the horizontal line in the upper left corner.
+
+====================================================================================================
+
+Question
+----------------------------------------
+Which option should be enabled under 'Clicking' in Step 3 to enable 'tap-to-click' on the touchpad?
+
+Documents
+----------------------------------------
+``
+gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
+``
+
+``
+gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
+``
+
+- Browse to the horizontal line in the upper left corner, click to open it.
+- Type out the word mouse, look for Mouse and Touchpad, click to open it.
+- Click the touchpad option at the top.
+- Under "Clicking", select Tap to Click and enable it.  
+&nbsp;
+&nbsp;
+&nbsp;
+
+- Getting  your laptop fully updated.
+- Enable improved fractional scaling support Fedora's GNOME environment using Wayland.
+- Enabling tap to click on the touchpad.  
+&nbsp;
+&nbsp;
+&nbsp;
+
+Answer
+----------------------------------------
+Under "Clicking", select Tap to Click and enable it.
+Reason: The context provided is relevant and the answer is based on the step-by-step instructions given.
+
+Evaluation
+----------------------------------------
+Score (1-5): 4
+Answered: Yes.
+
+The answer correctly identifies the option that should be enabled to enable tap-to-click on the touchpad. However, the response could have been more concise and to the point, as it includes some unnecessary text that is already provided in the question.
+
+Evaluation_score
+----------------------------------------
+4
+
+Ground truth answer
+To enable 'tap-to-click' on the touchpad in Step 3, 'Tap to Click' should be selected and enabled under 'Clicking'.
+
+====================================================================================================
+
+Question
+----------------------------------------
+When will knowledge about declaring dependencies for a group of path operations be covered?
+
+Documents
+----------------------------------------
+In some cases you don't really need the return value of a dependency inside your *path operation function*.  
+Or the dependency doesn't return a value.  
+But you still need it to be executed/solved.  
+For those cases, instead of declaring a *path operation function* parameter with `Depends`, you can add a `list` of `dependencies` to the *path operation decorator*.
+
+You can use `SecurityScopes` at any point, and in multiple places, it doesn't have to be at the "root" dependency.  
+It will always have the security scopes declared in the current `Security` dependencies and all the dependants for **that specific** *path operation* and **that specific** dependency tree.  
+Because the `SecurityScopes` will have all the scopes declared by dependants, you can use it to verify that a token has the required scopes in a central dependency function, and then declare different scope requirements in different *path operations*.  
+They will be checked independently for each *path operation*.
+
+Later, when reading about how to structure bigger applications ([Bigger Applications - Multiple Files](../../tutorial/bigger-applications.md){.internal-link target=_blank}), possibly with multiple files, you will learn how to declare a single `dependencies` parameter for a group of *path operations*.
+
+The extension determines the system includePath and defines to send to the IntelliSense engine in the following manner:  
+1. If `compileCommands` has a valid value and the file open in the editor is in the database, use the compile command in the database entry to determine the include path and defines.
+- The system include path and defines are determined using the following logic (in order):
+1. If `systemIncludePath` has a value, use it (continue to the next step to search for system defines).
+2. If `compilerPath` is valid, query it.
+3. Interpret the first argument in the command as the compiler and attempt to query it.
+4. If `compilerPath` is "", use an empty array for system include path and defines.
+5. If `compilerPath` is undefined, look for a compiler on the system and query it.  
+2. If `compileCommands` is invalid or the current file is not listed in the database, use the `includePath` and `defines` properties in the configuration for IntelliSense.
+- The system include path and defines are determined using the following logic (in order):
+1. If `systemIncludePath` has a value, use it (continue to the next step to search for system defines).
+2. If `compilerPath` is valid, query it.
+3. If `compilerPath` is "", use an empty array for system include path and defines (they are assumed to be in the `includePath` and `defines` for the current config already).
+4. If `compilerPath` is undefined, look for a compiler on the system and query it.  
+System includes should not be added to the `includePath` or `browse.path` variables. If the extension detects any system include paths in the `includePath` property it will silently remove them so that it can ensure system include paths are added last and in the correct order (this is especially important for GCC/Clang).
+
+Answer
+----------------------------------------
+The context provided is about declaring dependencies for a path operation in the context of some framework or library. The information about declaring a single `dependencies` parameter for a group of path operations is covered when reading about structuring bigger applications in multiple files. However, the specific topic of when knowledge about declaring dependencies for a group of path operations will be covered is not mentioned in the provided context.
+
+Response: The context is relevant to the question, but I do not know the answer. Reason: The specific topic of when knowledge about declaring dependencies for a group of path operations will be covered is not mentioned in the provided context.
+
+Evaluation
+----------------------------------------
+Score (1-5): 3
+Answered: No.
+
+The answer provides a relevant response and admits that the specific information is not mentioned in the provided context. However, it could have been more concise and direct in stating that the answer to the question is not provided in the context.
+
+Evaluation_score
+----------------------------------------
+3
+
+Ground truth answer
+Knowledge about declaring dependencies for a group of path operations will be covered in the section about structuring bigger applications with multiple files.
+
+====================================================================================================
+
+Question
+----------------------------------------
+How can dependencies be added to FastAPI application?
+
+Documents
+----------------------------------------
+Next we will see how to add dependencies to the whole `FastAPI` application, so that they apply to each *path operation*.
+
+Dependencies are handled mainly with the special function `Depends()` that takes a callable.  
+Here is the reference for it and its parameters.  
+You can import it directly from `fastapi`:  
+```python
+from fastapi import Depends
+```  
+::: fastapi.Depends
+
+You can create dependencies that have **sub-dependencies**.  
+They can be as **deep** as you need them to be.  
+**FastAPI** will take care of solving them.
+
+FastAPI includes an extremely easy to use, but extremely powerful <abbr title='also known as "components", "resources", "services", "providers"'><strong>Dependency Injection</strong></abbr> system.  
+* Even dependencies can have dependencies, creating a hierarchy or **"graph" of dependencies**.
+* All **automatically handled** by the framework.
+* All the dependencies can require data from requests and **augment the path operation** constraints and automatic documentation.
+* **Automatic validation** even for *path operation* parameters defined in dependencies.
+* Support for complex user authentication systems, **database connections**, etc.
+* **No compromise** with databases, frontends, etc. But easy integration with all of them.
+
+Answer
+----------------------------------------
+To add dependencies to a FastAPI application, you can use the `Depends()` function from the `fastapi` module. This function takes a callable and allows you to create dependencies that can have sub-dependencies, creating a hierarchy of dependencies. These dependencies can automatically handle data from requests and augment the path operation constraints and automatic documentation. They also support complex systems like user authentication and database connections, with no compromise to databases or frontends. FastAPI will automatically handle solving the dependencies.
+
+Evaluation
+----------------------------------------
+Score (1-5): 4
+Answered: Yes.
+
+Although the answer is informative and covers the main points about adding dependencies to a FastAPI application, it could be more concise and directly address the question. Also, the response seems to be copied from AI model generated text, which may lead to lower scores in other contexts.
+
+Evaluation_score
+----------------------------------------
+4
+
+Ground truth answer
+Dependencies can be added to FastAPI application by using the `dependencies` parameter in the application constructor.
+
+====================================================================================================
+
+Question
+----------------------------------------
+What is the effect of adding dependencies to all path operations?
+
+Documents
+----------------------------------------
+In some cases you don't really need the return value of a dependency inside your *path operation function*.  
+Or the dependency doesn't return a value.  
+But you still need it to be executed/solved.  
+For those cases, instead of declaring a *path operation function* parameter with `Depends`, you can add a `list` of `dependencies` to the *path operation decorator*.
+
+Later, when reading about how to structure bigger applications ([Bigger Applications - Multiple Files](../../tutorial/bigger-applications.md){.internal-link target=_blank}), possibly with multiple files, you will learn how to declare a single `dependencies` parameter for a group of *path operations*.
+
+A new setting will be added that allows you specify the system include path separate from the folder's include path. If this setting has a value, then the system include path the extension gets from the compiler specified in the `compilerPath` setting will not be added to the path array that the extension uses for IntelliSense. We may want to provide a VS Code command to populate this value from the compiler's default for users who are interested in using it in case they want to make some modifications to the defaults.  
+```json
+C_Cpp.default.systemIncludePath : string[]
+```
+
+Apart from all the fancy words used here, the **Dependency Injection** system is quite simple.  
+Just functions that look the same as the *path operation functions*.  
+But still, it is very powerful, and allows you to declare arbitrarily deeply nested dependency "graphs" (trees).  
+!!! tip
+All this might not seem as useful with these simple examples.  
+But you will see how useful it is in the chapters about **security**.  
+And you will also see the amounts of code it will save you.
+
+Answer
+----------------------------------------
+Context is irrelevant to the question.
+
+or
+
+I do not know the answer. Reason: The provided context discusses the concept of dependency injection, its usage in path operations, and the configuration of a system include path, but it does not mention or discuss the effect of adding dependencies to all path operations.
+
+Evaluation
+----------------------------------------
+Score (1-5): 2
+Answered: No.
+
+The answer does not provide any information about the effect of adding dependencies to all path operations. Instead, it explains that the context provided is irrelevant to the question.
+
+Evaluation_score
+----------------------------------------
+2
+
+Ground truth answer
+When dependencies are added to all path operations, they will be applied to all the path operations in the application.
+
+====================================================================================================
+
+Question
+----------------------------------------
+What is the recommended way to declare dependencies in FastAPI?
+
+Documents
+----------------------------------------
+Next we will see how to add dependencies to the whole `FastAPI` application, so that they apply to each *path operation*.
+
+You can create dependencies that have **sub-dependencies**.  
+They can be as **deep** as you need them to be.  
+**FastAPI** will take care of solving them.
+
+Dependencies are handled mainly with the special function `Depends()` that takes a callable.  
+Here is the reference for it and its parameters.  
+You can import it directly from `fastapi`:  
+```python
+from fastapi import Depends
+```  
+::: fastapi.Depends
+
+You can use the same dependency *functions* you use normally.
+
+Answer
+----------------------------------------
+The recommended way to declare dependencies in FastAPI is by using the `Depends()` function, which takes a callable. You can import it directly from `fastapi`. You can use the same dependency functions you use normally when declaring dependencies. FastAPI will take care of solving them, including any sub-dependencies, which can be as deep as needed.
+
+Evaluation
+----------------------------------------
+Score (1-5): 5
+Answered: Yes.
+
+The answer provides a clear and correct explanation of how to declare dependencies in FastAPI, including an example of how to import the `Depends()` function and how it can be used with callables.
+
+Evaluation_score
+----------------------------------------
+5
+
+Ground truth answer
+The recommended way to declare dependencies in FastAPI is by using the `Annotated` version, as it provides better type checking and error messages.
+
+====================================================================================================
+
+Question
+----------------------------------------
+What does the `jsonable_encoder` do in this context?
+
+Documents
+----------------------------------------
+::: fastapi.encoders.jsonable_encoder
+
+Let's imagine that you have a database `fake_db` that only receives JSON compatible data.  
+For example, it doesn't receive `datetime` objects, as those are not compatible with JSON.  
+So, a `datetime` object would have to be converted to a `str` containing the data in <a href="https://en.wikipedia.org/wiki/ISO_8601" class="external-link" target="_blank">ISO format</a>.  
+The same way, this database wouldn't receive a Pydantic model (an object with attributes), only a `dict`.  
+You can use `jsonable_encoder` for that.  
+It receives an object, like a Pydantic model, and returns a JSON compatible version:  
+=== "Python 3.10+"  
+```Python hl_lines="4  21"
+{!> ../../../docs_src/encoder/tutorial001_py310.py!}
+```  
+=== "Python 3.8+"  
+```Python hl_lines="5  22"
+{!> ../../../docs_src/encoder/tutorial001.py!}
+```  
+In this example, it would convert the Pydantic model to a `dict`, and the `datetime` to a `str`.  
+The result of calling it is something that can be encoded with the Python standard <a href="https://docs.python.org/3/library/json.html#json.dumps" class="external-link" target="_blank">`json.dumps()`</a>.  
+It doesn't return a large `str` containing the data in JSON format (as a string). It returns a Python standard data structure (e.g. a `dict`) with values and sub-values that are all compatible with JSON.  
+!!! note
+`jsonable_encoder` is actually used by **FastAPI** internally to convert data. But it is useful in many other scenarios.
+
+We've optimized how we deal with large outputs in notebooks to significantly improve performance.  
+Behind the scenes, VS Code stores notebook outputs as binary data using [Uint8Arrays](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array). Previously, when transferring output data between the extension host process and the renderer process, data was first converted to an array of number values and then serialized to JSON.  
+To understand why this is bad for performance, consider a notebook that outputs the text: `Hello Code!`. This is stored internally as a `Uint8Array`:  
+```js
+new Uint8Array([72, 101, 108, 108, 111, 32, 67, 111, 100, 101, 33])
+```  
+That data is 11 bytes long. The old implementation would then convert the binary data to a JSON string:  
+```js
+"[72,101,108,108,111,32,67,111,100,101,33]"
+```  
+This string is 41 bytes long, which is over 3.5x times the size of our original data! That's a lot extra bytes to transfer and the receiver now has to parse that string as JSON to convert it back into a `Uint8Array`. This parsing can become a significant bottleneck for notebook outputs that are tens of MB in size.  
+With the new implementation, notebook outputs are kept as binary data while transferring them. You can read more about the details of how this was implemented [in the pull request](https://github.com/microsoft/vscode/pull/130452).  
+This fix significantly improves both loading of notebooks with large outputs saved into them, as well as improving performance when notebooks generate large outputs during execution.
+
+The presence of `jsconfig.json` file in a directory indicates that the directory is the root of a JavaScript Project. The `jsconfig.json` file specifies the root files and the options for the features provided by the [JavaScript language service](https://github.com/microsoft/TypeScript/wiki/JavaScript-Language-Service-in-Visual-Studio).  
+> **Tip:** If you are not using JavaScript, you do not need to worry about `jsconfig.json`.  
+> **Tip:** `jsconfig.json` is a descendant of [tsconfig.json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html), which is a configuration file for TypeScript. `jsconfig.json` is `tsconfig.json` with `"allowJs"` attribute set to `true`.
+
+Answer
+----------------------------------------
+The `jsonable_encoder` function converts Python objects, like Pydantic models, into JSON-compatible dictionaries. It also handles the conversion of non-JSON compatible types, such as `datetime` objects, into their JSON-compatible equivalents, like strings in ISO format. This function is useful when you need to store data in a JSON-compatible format in a database or send it as a response in a FastAPI application.
+
+Evaluation
+----------------------------------------
+Score (1-5): 5
+Answered: Yes.
+
+The `jsonable_encoder` converts Python objects into JSON-compatible dictionaries and handles the conversion of non-JSON compatible types into their JSON-compatible equivalents. It is useful when storing data in a JSON-compatible format in a database or sending it as a response in a FastAPI application.
+
+Evaluation_score
+----------------------------------------
+5
+
+Ground truth answer
+The `jsonable_encoder` is used to convert input data to data that can be stored as JSON, such as converting `datetime` to `str`.
+
+====================================================================================================
+
+Question
+----------------------------------------
+What does the `update` parameter do in Pydantic's `.model_copy()`?
+
+Documents
+----------------------------------------
+Now, you can create a copy of the existing model using `.model_copy()`, and pass the `update` parameter with a `dict` containing the data to update.  
+!!! info
+In Pydantic v1 the method was called `.copy()`, it was deprecated (but still supported) in Pydantic v2, and renamed to `.model_copy()`.  
+The examples here use `.copy()` for compatibility with Pydantic v1, but you should use `.model_copy()` instead if you can use Pydantic v2.  
+Like `stored_item_model.model_copy(update=update_data)`:  
+=== "Python 3.10+"  
+```Python hl_lines="33"
+{!> ../../../docs_src/body_updates/tutorial002_py310.py!}
+```  
+=== "Python 3.9+"  
+```Python hl_lines="35"
+{!> ../../../docs_src/body_updates/tutorial002_py39.py!}
+```  
+=== "Python 3.8+"  
+```Python hl_lines="35"
+{!> ../../../docs_src/body_updates/tutorial002.py!}
+```
+
+As in the example above we got `user_dict` from `user_in.dict()`, this code:  
+```Python
+user_dict = user_in.dict()
+UserInDB(**user_dict)
+```  
+would be equivalent to:  
+```Python
+UserInDB(**user_in.dict())
+```  
+...because `user_in.dict()` is a `dict`, and then we make Python "unwrap" it by passing it to `UserInDB` prefixed with `**`.  
+So, we get a Pydantic model from the data in another Pydantic model.
+
+That means that if you want to update the item `bar` using `PUT` with a body containing:  
+```Python
+{
+"name": "Barz",
+"price": 3,
+"description": None,
+}
+```  
+because it doesn't include the already stored attribute `"tax": 20.2`, the input model would take the default value of `"tax": 10.5`.  
+And the data would be saved with that "new" `tax` of `10.5`.
+
+If you don't want to use Pydantic models, you can also use **Body** parameters. See the docs for [Body - Multiple Parameters: Singular values in body](body-multiple-params.md#singular-values-in-body){.internal-link target=_blank}.
+
+Answer
+----------------------------------------
+The `update` parameter in Pydantic's `.model_copy()` is used to create a copy of the existing model with updated data. It takes a `dict` containing the data to update.
+
+In the provided context, `user_dict` is created from `user_in.dict()` and then used as an argument in `UserInDB(**user_dict)`. This is equivalent to `UserInDB(**user_in.dict())`, where `user_in.dict()` takes the data from the user input and "unwrapps" it to be passed to `UserInDB`.
+
+If a PUT request is made to update the item `bar` with a body that doesn't include the already stored attribute `"tax": 20.2`, the input model would take the default value of `"tax": 10.5`. The updated data would then be saved with the new `tax` value of `10.5`.
+
+Evaluation
+----------------------------------------
+Score (1-5): 5
+Answered: Yes.
+
+The response correctly explains what the `update` parameter does in Pydantic's `.model_copy()` method. It provides a clear and accurate description, using the provided example to reinforce the explanation.
+
+Evaluation_score
+----------------------------------------
+5
+
+Ground truth answer
+The `update` parameter in Pydantic's `.model_copy()` creates a copy of the existing model and updates its attributes with the data to update.
+
+====================================================================================================
+
+Question
+----------------------------------------
+What happens if an attribute is not included in a `PUT` request?
+
+Documents
+----------------------------------------
+That means that if you want to update the item `bar` using `PUT` with a body containing:  
+```Python
+{
+"name": "Barz",
+"price": 3,
+"description": None,
+}
+```  
+because it doesn't include the already stored attribute `"tax": 20.2`, the input model would take the default value of `"tax": 10.5`.  
+And the data would be saved with that "new" `tax` of `10.5`.
+
+Now that we have seen how to use `Path` and `Query`, let's see more advanced uses of request body declarations.
+
+!!! warning
+These are technical details that you might skip if it's not important for you now.  
+`RequestValidationError` is a sub-class of Pydantic's <a href="https://docs.pydantic.dev/latest/concepts/models/#error-handling" class="external-link" target="_blank">`ValidationError`</a>.  
+**FastAPI** uses it so that, if you use a Pydantic model in `response_model`, and your data has an error, you will see the error in your log.  
+But the client/user will not see it. Instead, the client will receive an "Internal Server Error" with a HTTP status code `500`.  
+It should be this way because if you have a Pydantic `ValidationError` in your *response* or anywhere in your code (not in the client's *request*), it's actually a bug in your code.  
+And while you fix it, your clients/users shouldn't have access to internal information about the error, as that could expose a security vulnerability.
+
+`UploadFile` has the following attributes:  
+* `filename`: A `str` with the original file name that was uploaded (e.g. `myimage.jpg`).
+* `content_type`: A `str` with the content type (MIME type / media type) (e.g. `image/jpeg`).
+* `file`: A <a href="https://docs.python.org/3/library/tempfile.html#tempfile.SpooledTemporaryFile" class="external-link" target="_blank">`SpooledTemporaryFile`</a> (a <a href="https://docs.python.org/3/glossary.html#term-file-like-object" class="external-link" target="_blank">file-like</a> object). This is the actual Python file that you can pass directly to other functions or libraries that expect a "file-like" object.  
+`UploadFile` has the following `async` methods. They all call the corresponding file methods underneath (using the internal `SpooledTemporaryFile`).  
+* `write(data)`: Writes `data` (`str` or `bytes`) to the file.
+* `read(size)`: Reads `size` (`int`) bytes/characters of the file.
+* `seek(offset)`: Goes to the byte position `offset` (`int`) in the file.
+* E.g., `await myfile.seek(0)` would go to the start of the file.
+* This is especially useful if you run `await myfile.read()` once and then need to read the contents again.
+* `close()`: Closes the file.  
+As all these methods are `async` methods, you need to "await" them.  
+For example, inside of an `async` *path operation function* you can get the contents with:  
+```Python
+contents = await myfile.read()
+```  
+If you are inside of a normal `def` *path operation function*, you can access the `UploadFile.file` directly, for example:  
+```Python
+contents = myfile.file.read()
+```  
+!!! note "`async` Technical Details"
+When you use the `async` methods, **FastAPI** runs the file methods in a threadpool and awaits for them.  
+!!! note "Starlette Technical Details"
+**FastAPI**'s `UploadFile` inherits directly from **Starlette**'s `UploadFile`, but adds some necessary parts to make it compatible with **Pydantic** and the other parts of FastAPI.
+
+Answer
+----------------------------------------
+If an attribute is not included in a `PUT` request, the input model would take the default value for that attribute. In the provided context, if "tax" is not included in the request body, it would be saved with the default tax value of 10.5.
+
+Evaluation
+----------------------------------------
+Score (1-5): 3
+Answered: Yes, but incomplete.
+
+The answer correctly identifies that if an attribute is not included in a `PUT` request, the input model would take the default value for that attribute. However, it does not explicitly state what happens in this scenario, it only gives an example of what might happen in a specific context.
+
+Evaluation_score
+----------------------------------------
+3
+
+Ground truth answer
+If an attribute is not included in a `PUT` request, the input model would take the default value of that attribute.
+
+====================================================================================================
+
+Question
+----------------------------------------
+What is the purpose of using the `exclude_unset` parameter in Pydantic's model's `.model_dump()`?
+
+Documents
+----------------------------------------
+If you want to receive partial updates, it's very useful to use the parameter `exclude_unset` in Pydantic's model's `.model_dump()`.  
+Like `item.model_dump(exclude_unset=True)`.  
+!!! info
+In Pydantic v1 the method was called `.dict()`, it was deprecated (but still supported) in Pydantic v2, and renamed to `.model_dump()`.  
+The examples here use `.dict()` for compatibility with Pydantic v1, but you should use `.model_dump()` instead if you can use Pydantic v2.  
+That would generate a `dict` with only the data that was set when creating the `item` model, excluding default values.  
+Then you can use this to generate a `dict` with only the data that was set (sent in the request), omitting default values:  
+=== "Python 3.10+"  
+```Python hl_lines="32"
+{!> ../../../docs_src/body_updates/tutorial002_py310.py!}
+```  
+=== "Python 3.9+"  
+```Python hl_lines="34"
+{!> ../../../docs_src/body_updates/tutorial002_py39.py!}
+```  
+=== "Python 3.8+"  
+```Python hl_lines="34"
+{!> ../../../docs_src/body_updates/tutorial002.py!}
+```
+
+`user_in` is a Pydantic model of class `UserIn`.  
+Pydantic models have a `.dict()` method that returns a `dict` with the model's data.  
+So, if we create a Pydantic object `user_in` like:  
+```Python
+user_in = UserIn(username="john", password="secret", email="john.doe@example.com")
+```  
+and then we call:  
+```Python
+user_dict = user_in.dict()
+```  
+we now have a `dict` with the data in the variable `user_dict` (it's a `dict` instead of a Pydantic model object).  
+And if we call:  
+```Python
+print(user_dict)
+```  
+we would get a Python `dict` with:  
+```Python
+{
+'username': 'john',
+'password': 'secret',
+'email': 'john.doe@example.com',
+'full_name': None,
+}
+```
+
+Now, let's create a `UserInDB` model.  
+This will have the data that is actually stored in the database.  
+We don't create it as a subclass of Pydantic's `BaseModel` but as a subclass of our own `User`, because it will have all the attributes in `User` plus a couple more:  
+```Python hl_lines="31-33"
+{!../../../docs_src/nosql_databases/tutorial001.py!}
+```  
+!!! note
+Notice that we have a `hashed_password` and a `type` field that will be stored in the database.  
+But it is not part of the general `User` model (the one we will return in the *path operation*).
+
+Use the *path operation decorator's* parameter `response_model` to define response models and especially to ensure private data is filtered out.  
+Use `response_model_exclude_unset` to return only the values explicitly set.
+
+Answer
+----------------------------------------
+The `exclude_unset` parameter in Pydantic's model's `.model_dump()` is used to generate a dictionary containing only the data that was explicitly set when creating the Pydantic model instance. This can be useful for receiving partial updates, where only the provided fields are updated, and the rest are left unchanged. It omits default values from the resulting dictionary.
+
+Evaluation
+----------------------------------------
+Score (1-5): 4
+Answered: Yes.
+
+The answer provides a clear and concise explanation of the purpose of the `exclude_unset` parameter in Pydantic's model's `.model_dump()`. However, it could have been more specific by providing an example or a more detailed explanation of how it omits default values from the resulting dictionary.
+
+Evaluation_score
+----------------------------------------
+4
+
+Ground truth answer
+The `exclude_unset` parameter in Pydantic's model's `.model_dump()` generates a `dict` with only the data that was set when creating the model, excluding default values.
+
+====================================================================================================
+
+Question
+----------------------------------------
+Which folders should be excluded for `webpack` and `webpack-dev-server`?
+
+Documents
+----------------------------------------
+Whenever possible, you should exclude folders with JavaScript files that are not part of the source code for your project.  
+>**Tip:** If you do not have a `jsconfig.json` in your workspace, VS Code will by default exclude the `node_modules` folder.  
+Below is a table, mapping common project components to their installation folders that are recommended to exclude:  
+Component | folder to exclude
+----------|-----------
+`node` | exclude the `node_modules` folder
+`webpack`, `webpack-dev-server` | exclude the content folder, for example `dist`.
+`bower` | exclude the `bower_components` folder
+`ember` | exclude the `tmp` and `temp` folders
+`jspm` | exclude the `jspm_packages` folder  
+When your JavaScript project is growing too large and performance slows, it is often because of library folders like `node_modules`. If VS Code detects that your project is growing too large, it will prompt you to edit the `exclude` list.
+
+With the `webpack.config.js` file created, webpack can be invoked. You can run webpack from the command line but to reduce repetition, using npm scripts is helpful.  
+Merge these entries into the `scripts` section in `package.json`:  
+```json
+"scripts": {
+"vscode:prepublish": "npm run package",
+"webpack": "webpack --mode development",
+"webpack-dev": "webpack --mode development --watch",
+"package": "webpack --mode production --devtool hidden-source-map",
+"test-compile": "tsc -p ./"
+},
+```  
+The `webpack` and `webpack-dev` scripts are for development and they produce the bundle file. The `vscode:prepublish` is used by `vsce`, the VS Code packaging and publishing tool, and run before publishing an extension. The difference is in the [mode](https://webpack.js.org/concepts/mode/) and that controls the level of optimization. Using `production` yields the smallest bundle but also takes longer, so else `development` is used. To run above scripts, open a terminal and type `npm run webpack` or select **Tasks: Run Task** from the Command Palette (`kb(workbench.action.showCommands)`).
+
+By default, only source maps in your `outFiles` will be resolved. This behavior is used to prevent dependencies from interfering with breakpoints you set. For example, if you had a file `src/index.ts` and a dependency had a source map that referenced `webpack:///./src/index.ts`, that would incorrectly resolve to your source file and could lead to surprising results.  
+You can configure this behavior by setting the `resolveSourceMapLocations` option. If set to `null`, every source map will be resolved. For example, this configuration will additionally allow source maps in `node_modules/some-dependency` to be resolved:  
+```js
+"resolveSourceMapLocations": [
+"out/**/*.js",
+"node_modules/some-dependency/**/*.js",
+]
+```
+
+For production deployments, you typically collect all the static files from your apps into a single folder using the `python manage.py collectstatic` command. You can then use a dedicated static file server to serve those files, which typically results in better overall performance. The following steps show how this collection is made, although you don't use the collection when running with the Django development server.  
+1. In `web_project/settings.py`, add the following line that defines a location where static files are collected when you use the `collectstatic` command:  
+```python
+STATIC_ROOT = BASE_DIR / 'static_collected'
+```  
+1. In the Terminal, run the command `python manage.py collectstatic` and observe that `hello/site.css` is copied into the top level `static_collected` folder alongside `manage.py`.  
+1. In practice, run `collectstatic` any time you change static files and before deploying into production.
+
+Answer
+----------------------------------------
+The folders that should be excluded for `webpack` and `webpack-dev-server` are the content folder, such as the `dist` folder. Additionally, the `node_modules` folder should be excluded for `webpack`.
+
+Evaluation
+----------------------------------------
+Score (1-5): 3
+Answered: Partially.
+
+Evaluation_score
+----------------------------------------
+3
+
+Ground truth answer
+The content folder, for example `dist`, should be excluded for `webpack` and `webpack-dev-server`.
+
+====================================================================================================
+
+Question
+----------------------------------------
+Which folder should be excluded for `node` components?
+
+Documents
+----------------------------------------
+Whenever possible, you should exclude folders with JavaScript files that are not part of the source code for your project.  
+>**Tip:** If you do not have a `jsconfig.json` in your workspace, VS Code will by default exclude the `node_modules` folder.  
+Below is a table, mapping common project components to their installation folders that are recommended to exclude:  
+Component | folder to exclude
+----------|-----------
+`node` | exclude the `node_modules` folder
+`webpack`, `webpack-dev-server` | exclude the content folder, for example `dist`.
+`bower` | exclude the `bower_components` folder
+`ember` | exclude the `tmp` and `temp` folders
+`jspm` | exclude the `jspm_packages` folder  
+When your JavaScript project is growing too large and performance slows, it is often because of library folders like `node_modules`. If VS Code detects that your project is growing too large, it will prompt you to edit the `exclude` list.
+
+In some development scenarios, it can be helpful to explicitly mark some of a workspace's folders or files as read-only. For example, if the folder or file contents is being managed by a different process (such as the `node_modules` folder that is managed by Node.js package manager), marking them are read-only can avoid inadvertent changes.  
+For this use case, there are new settings to mark file paths as read-only in the Explorer and in text and notebook editors:  
+* `files.readonlyInclude` - Paths or glob patterns to make a file read-only if matching.
+* `files.readonlyExclude`- Paths or glob patterns to skip files from being read-only when they match `files.readonlyInclude`.
+* `files.readonlyFromPermissions` - Whether a file that has no write-permissions on disk should be read-only.  
+According to the rules of the settings, if a path is considered to be read-only, you cannot modify it from the Explorer (for example, delete it) and the text or notebook editor is read-only.  
+<video src="images/1_79/readonly-mode.mp4" autoplay loop controls muted title="Readonly mode set for a node_modules folder"></video>  
+For more ad-hoc toggling of the read-only mode, there are new commands to change the mode for the current session only, overruling your setting configurations:  
+* **Set Active Editor Readonly in Session** - Mark active editor read-only.
+* **Set Active Editor Writeable in Session** - Mark active editor writeable.
+* **Toggle Active Editor Readonly in Session** - Toggle between read-only and writeable.
+* **Reset Active Editor Readonly in Session** - Reset the session state.
+
+The most obvious advantage is that a multi-root workspace allows you to work with multiple projects that may not be stored inside the same parent folder on disk. You can pick folders from anywhere to add to the workspace.  
+Even if you are mainly working in a single-folder-based project, you can benefit from using `.code-workspace` files. You can store multiple `.code-workspace` files inside the folder to provide a scoped folder-view of certain aspects of the project depending on the scenario (for example `client.code-workspace`, `server.code-workspace` to filter out unrelated folders from the File Explorer). Since `.code-workspace` files support relative paths for the `folders` section, these workspace files work for everyone, independent of where the folder is stored.  
+Finally, if for some projects you want to apply the same set of workspace settings or tasks/launch configurations, consider adding these into a `.code-workspace` file and add or remove these folders from that workspace.
+
+The next sections go into detail about how sandboxing came together over the past years. The main task was to remove all Node.js dependencies from the renderer process but along that way more challenges came up, such as figuring out an efficient sandbox-ready IPC solution with the help of `MessagePort` or finding new hosts for the various Node.js child processes that we could fork from the renderer process.  
+For the most part, the order of topics follows the actual timeline. To keep each section brief, we link to other documents and tutorials explaining a certain technical aspect in greater detail. And even though we planned for this work in early 2020, it is unfair to leave out some of the previous work that helped with this task. Let's take a closer look…
+
+Answer
+----------------------------------------
+The `node_modules` folder should be excluded for `node` components.
+Reason: The context provides information that folders with JavaScript files that are not part of the source code for your project should be excluded, and specifically mentions that the `node_modules` folder should be excluded for `node` components.
+
+Evaluation
+----------------------------------------
+Score (1-5): 2
+Answered: No.
+
+The answer does not provide the specific folder name that should be excluded for `node` components. It only states that the `node_modules` folder should be excluded for `node` components, but does not explicitly answer the question.
+
+Evaluation_score
+----------------------------------------
+2
+
+Ground truth answer
+The `node_modules` folder should be excluded for `node` components.
+
+====================================================================================================
+
+Question
+----------------------------------------
+What is the role of "include" property in `jsconfig.json`?
+
+Documents
+----------------------------------------
+Alternatively, you can explicitly set the files in your project using the `include` attribute (a [glob pattern](/docs/editor/glob-patterns.md)). If no `include` attribute is present, then this defaults to including all files in the containing directory and subdirectories. When a `include` attribute is specified, only those files are included. Here is an example with an explicit `include` attribute.  
+```json
+{
+"compilerOptions": {
+"module": "CommonJS",
+"target": "ES6"
+},
+"include": [
+"src/**/*"
+]
+}
+```  
+> **Tip:** The file paths in `exclude` and `include` are relative to the location of `jsconfig.json`.
+
+We improved the [JavaScript documentation](/docs/languages/javascript.md) and added more information about the `jsconfig.json` and its attributes.
+
+The JSON language service uses JSON schemas to validate JSON documents as well as to provide completions. As a VS code specific extension to JSON schemas, you can now also specify snippets proposals in the schema for a richer experience. The snippet proposals are shown as additional completion proposals and use the snippet syntax to specify placeholders.
+See the  [JSON documentation](https://code.visualstudio.com/docs/languages/json#_json-schemas-settings) for more information.
+
+In the following example, the JSON file specifies that its contents follow the [CoffeeLint](https://coffeelint.github.io/) schema.  
+```json
+{
+"$schema": "https://json.schemastore.org/coffeelint",
+"line_endings": "unix"
+}
+```  
+Note that this syntax is VS Code-specific and not part of the [JSON Schema specification](https://json-schema.org/specification). Adding the `$schema` key changes the JSON itself, which systems consuming the JSON might not expect, for example, schema validation might fail. If this is the case, you can use one of the other mapping methods.
+
+Answer
+----------------------------------------
+The `include` property in `jsconfig.json` is used to explicitly set the files in a project using a glob pattern. If specified, only the files matching the pattern will be included. If no `include` attribute is present, it defaults to including all files in the containing directory and subdirectories. The file paths in `include` are relative to the location of `jsconfig.json`.
+
+Evaluation
+----------------------------------------
+Score (1-5): 5
+Answered: Yes.
+
+The answer provides a clear and accurate explanation of the role of the "include" property in `jsconfig.json`.
+
+Evaluation_score
+----------------------------------------
+5
+
+Ground truth answer
+The "include" property sets the files in your project explicitly. If no "include" attribute is present, then all files in the containing directory and subdirectories are included.
+
+====================================================================================================
+
+Question
+----------------------------------------
+What does the "target" option in `jsconfig.json` do?
+
+Documents
+----------------------------------------
+We improved the [JavaScript documentation](/docs/languages/javascript.md) and added more information about the `jsconfig.json` and its attributes.
+
+Object settings must have `additionalProperties` set to `false` for an object to be supported in the Settings editor. Otherwise, the Settings editor will interpret the setting as a complex setting that can take on any shape, and direct the user to the settings JSON file.
+
+Indicates the underlying debugger being used. Must be `cppvsdbg` when using the Visual Studio Windows debugger, and `cppdbg` when using GDB or LLDB. This is automatically set to the correct value when the
+`launch.json` file is created.
+
+The file icon set file is a JSON file consisting of file icon associations and icon definitions.  
+An icon association maps a file type ('file', 'folder', 'json-file'...) to an icon definition. Icon definitions define where the icon is located: That can be an image file or also glyph in a font.
+
+Answer
+----------------------------------------
+Context is irrelevant to the question.
+Reason:
+
+Evaluation
+----------------------------------------
+Score (1-5): 2
+Answered: No.
+
+The answer does not provide any information about what the "target" option in `jsconfig.json` does.
+
+Evaluation_score
+----------------------------------------
+2
+
+Ground truth answer
+The "target" option specifies which default library (lib.d.ts) to use for type checking.
+
+====================================================================================================
+
+Question
+----------------------------------------
+How can you update variables that apply to the entire container in Docker Compose?
+
+Documents
+----------------------------------------
+Let's assume your workspace has a base compose file (`docker-compose.yml`) and an override file for each environment (`docker-compose.dev.yml`, `docker-compose.test.yml` and `docker-compose.prod.yml`) and you always run `docker compose up` with the base file and an override file. In this case, the `compose up` command can be customized as in the following example. When the `compose up` command is invoked, the `${configurationFile}` is replaced by the selected file.  
+```json
+"docker.commands.composeUp": [
+{
+"label": "override",
+"template": "docker-compose -f docker-compose.yml ${configurationFile}  up -d --build",
+}
+]
+```
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vEb7hKlagAU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>  
+<br><br>  
+* **Docker Compose**: Since Docker Compose has built-in support for updating container-wide variables, only `remoteEnv` is supported in `devcontainer.json`:  
+```json
+"remoteEnv": {
+"PATH": "${containerEnv:PATH}:/some/other/path",
+"MY_REMOTE_VARIABLE": "some-other-value-here",
+"MY_REMOTE_VARIABLE2": "${localEnv:SOME_LOCAL_VAR}"
+}
+```  
+As this example illustrates, `remoteEnv` can reference both local and existing container variables.  
+To update variables that apply to the entire container, update (or [extend](/docs/devcontainers/create-dev-container.md#extend-your-docker-compose-file-for-development)) your `docker-compose.yml` with the following for the appropriate service:  
+```yaml
+version: '3'
+services:
+your-service-name-here:
+environment:
+- YOUR_ENV_VAR_NAME=your-value-goes-here
+- ANOTHER_VAR=another-value
+# ...
+```  
+If you've already built the container and connected to it, run **Dev Containers: Rebuild Container** from the Command Palette (`kbstyle(F1)`) to pick up the change. Otherwise run **Dev Containers: Open Folder in Container...** to connect to the container.
+
+You can set environment variables in your container without altering the container image by using one of the options below.  
+> You should verify **Terminal > Integrated: Inherit Env** is checked in settings or the variables you set may not appear in the Integrated Terminal. This setting is checked by default.
+
+- [Overview of Docker Compose in the Docker documentation](https://docs.docker.com/compose/)
+- [Troubleshooting](/docs/containers/troubleshooting.md)
+
+Answer
+----------------------------------------
+To update variables that apply to the entire container in Docker Compose, you should update (or extend) your `docker-compose.yml` file with the `environment` key for the appropriate service, like this:
+
+```yaml
+version: '3'
+services:
+  your-service-name-here:
+    environment:
+      - YOUR_ENV_VAR_NAME=your-value-goes-here
+      - ANOTHER_VAR=another-value
+    # ...
+```
+
+After updating the `docker-compose.yml` file, you should rebuild the container using the "Dev Containers: Rebuild Container" command from the Command Palette (`kbstyle(F1)`) to pick up the change. Alternatively, you can connect to the container using the "Dev Containers: Open Folder in Container..." command.
+
+Note that you should verify that the "Terminal > Integrated: Inherit Env" setting is enabled in your settings to ensure that the variables you set are visible in the Integrated Terminal. This setting is enabled by default.
+
+Evaluation
+----------------------------------------
+Score (1-5): 5
+Answered: Yes.
+
+The response directly addresses the question by explaining how to update variables that apply to the entire container in Docker Compose using the `environment` key in the `docker-compose.yml` file. It also provides additional information about rebuilding the container and checking the Integrated Terminal settings.
+
+Evaluation_score
+----------------------------------------
+5
+
+Ground truth answer
+You can update (or extend) your 'docker-compose.yml' with the 'environment' property for the appropriate service.
+
+====================================================================================================
+
+Question
+----------------------------------------
+What is the purpose of using an 'env file' for environment variables?
+
+Documents
+----------------------------------------
+An environment variable definitions file is a text file containing key-value pairs in the form of `environment_variable=value`, with `#` used for comments. Multiline values aren't supported, but references to previously defined environment variables are allowed. Environment variable definitions files can be used for scenarios such as debugging and tool execution (including linters, formatters, IntelliSense, and testing tools), but aren't applied to the terminal.  
+> **Note**: Environment variable definitions files are not necessarily cross-platform. For instance, while Unix uses `:` as a path separator in environment variables, Windows uses `;`. There is no normalization of such operating system differences, and so you need to make sure any environment definitions file use values that are compatible with your operating system.  
+By default, the Python extension looks for and loads a file named `.env` in the current workspace folder, then applies those definitions. The file is identified by the default entry `"python.envFile": "${workspaceFolder}/.env"` in your user settings (see [General Python settings](/docs/python/settings-reference.md#general-python-settings)). You can change the `python.envFile` setting at any time to use a different definitions file.  
+>**Note**: Environment variable definitions files are not used in all situations where environment variables are available for use. Unless Visual Studio Code documentation states otherwise, these only affect certain scenarios as per their definition. For example, the extension doesn't use environment variable definitions files when resolving setting values.  
+A debug configuration also contains an `envFile` property that also defaults to the `.env` file in the current workspace (see [Debugging - Set configuration options](/docs/python/debugging.md#set-configuration-options)). This property allows you to easily set variables for debugging purposes that replace variables specified in the default `.env` file.  
+For example, when developing a web application, you might want to easily switch between development and production servers. Instead of coding the different URLs and other settings into your application directly, you could use separate definitions files for each. For example:  
+**dev.env file**  
+```bash
+# dev.env - development configuration
+
+# API endpoint
+MYPROJECT_APIENDPOINT=https://my.domain.com/api/dev/
+
+# Variables for the database
+MYPROJECT_DBURL=https://my.domain.com/db/dev
+MYPROJECT_DBUSER=devadmin
+MYPROJECT_DBPASSWORD=!dfka**213=
+```  
+**prod.env file**  
+```bash
+# prod.env - production configuration
+
+# API endpoint
+MYPROJECT_APIENDPOINT=https://my.domain.com/api/
+
+# Variables for the database
+MYPROJECT_DBURL=https://my.domain.com/db/
+MYPROJECT_DBUSER=coreuser
+MYPROJECT_DBPASSWORD=kKKfa98*11@
+```  
+You can then set the `python.envFile` setting to `${workspaceFolder}/prod.env`, then set the `envFile` property in the debug configuration to `${workspaceFolder}/dev.env`.  
+> **Note**: When environment variables are specified using multiple methods, be aware that there is an order of precedence. All `env` variables defined in the `launch.json` file will override variables contained in the `.env` file, specified by the `python.envFile` setting (user or workspace). Similarly, `env` variables defined in the `launch.json` file will override the environment variables defined in the `envFile` that are specified in `launch.json`.
+
+The `.env` namespace now includes the application host `appHost` property. `appHost` allows extension developers to determine the environment VS Code is hosted in. Examples include desktop, GitHub Codespaces, github.dev, and vscode.dev.
+
+Variables can be referenced in certain string values in attached configuration files in the following format: **${variableName}**. The following table is a list of available variables you can use.  
+| Variable | Properties | Description |
+|----------|---------|----------------------|
+| `${containerEnv:VAR_NAME}` | `remoteEnv` | Value of an existing environment variable inside the container (in this case, `VAR_NAME`) once it is up and running. For example: `"remoteEnv": { "PATH": "${containerEnv:PATH}:/some/other/path" }` |
+
+Hatch environments are now discovered and activated by default, similar to other common environments, such as Venv, Conda, and Poetry. Furthermore, in the case of Hatch, where an explicit environment identifier is not registered, the extension is able to determine the environment type (Hatch) from the environment locator.
+
+Answer
+----------------------------------------
+The purpose of using an 'env file' for environment variables is to define key-value pairs for debugging, tool execution such as linters, formatters, IntelliSense, testing tools, and in some cases, for managing different configurations like development and production servers. These files are not cross-platform and need to be compatible with the operating system in use. The Python extension in Visual Studio Code looks for and loads a file named `.env` by default for these variable definitions.
+
+Evaluation
+----------------------------------------
+Score (1-5): 5
+Answered: Yes.
+
+The response correctly identifies the purpose of an 'env file' for environment variables and provides a clear and concise explanation. The additional information about the Python extension in Visual Studio Code and the compatibility with different operating systems adds value to the response. The response is also specific and detailed, addressing the question fully.
+
+Evaluation_score
+----------------------------------------
+5
+
+Ground truth answer
+The purpose of using an 'env file' is to set a large number of environment variables.
+
+====================================================================================================
+
+Question
+----------------------------------------
+What is the purpose of 'containerEnv' property in 'devcontainer.json'?
+
+Documents
+----------------------------------------
+As mentioned in the main [Dev Containers documentation](/docs/devcontainers/containers.md), we're creating the **Development Containers Specification** to empower anyone in any tool to configure a consistent dev environment.  
+The `devcontainer.json` reference is [hosted on the specification site](https://containers.dev/implementors/json_reference). Here you can also review the [devcontainer.json schema](https://containers.dev/implementors/json_schema).  
+You can also review the specification documents and latest proposals in the [devcontainers/spec](https://github.com/devcontainers/spec/tree/main/docs/specs) repository.
+
+This next section describes in more detail how the Dev Containers extension sets up and configures your containers.  
+The Dev Containers extension uses the files in the `.devcontainer` folder, namely `devcontainer.json`, and an optional `Dockerfile` or `docker-compose.yml`, to create your dev containers.  
+In the example we just explored, the project has a `.devcontainer` folder with a `devcontainer.json` inside. The `devcontainer.json` uses the image `mcr.microsoft.com/devcontainers/javascript-node:0-18`. You can explore this image in greater detail in the [devcontainers/images](https://github.com/devcontainers/images/tree/main/src/javascript-node) repo.  
+First, your image is built from the supplied Dockerfile or image name, which would be `mcr.microsoft.com/devcontainers/javascript-node:0-18` in this example. Then a container is created and started using some of the settings in the `devcontainer.json`. Finally your Visual Studio Code environment is installed and configured again according to settings in the `devcontainer.json`. For example, the dev container in this example installs the `streetsidesoftware.code-spell-checker` extension.  
+> **Note:** Additional configuration will already be added to the container based on what's in the base image. For example, we see the `streetsidesoftware.code-spell-checker` extension above, and the container will also include `"dbaeumer.vscode-eslint"` as [that's part of `mcr.microsoft.com/devcontainers/typescript-node`](https://github.com/devcontainers/images/blob/main/src/javascript-node/.devcontainer/devcontainer.json#L27). This happens automatically when pre-building using devcontainer.json, which you may read more about in the [pre-build section](/docs/devcontainers/containers.md#prebuilding-dev-container-images).  
+Once all of this is done, your local copy of Visual Studio Code connects to the Visual Studio Code Server running inside of your new dev container.  
+![Architecture](../remote/images/remote-overview/architecture.png)
+
+Depending on what you reference in `devcontainer.json`:  
+* **Dockerfile or image**: Add the `containerEnv` property to `devcontainer.json` to set variables that should apply to the entire container or `remoteEnv` to set variables for VS Code and related sub-processes (terminals, tasks, debugging, etc.):  
+```json
+"containerEnv": {
+"MY_CONTAINER_VAR": "some-value-here",
+"MY_CONTAINER_VAR2": "${localEnv:SOME_LOCAL_VAR}"
+},
+"remoteEnv": {
+"PATH": "${containerEnv:PATH}:/some/other/path",
+"MY_REMOTE_VARIABLE": "some-other-value-here",
+"MY_REMOTE_VARIABLE2": "${localEnv:SOME_LOCAL_VAR}"
+}
+```  
+As this example illustrates, `containerEnv` can reference local variables and `remoteEnv` can reference both local and existing container variables.
+
+Once our container configuration files were added, we got a notification that our folder now has a `devcontainer.json` file. Let's select **Reopen in Container**:  
+![Reopen in container notification](21-reopen-notif.png)  
+A new instance of VS Code launches, where our image is being built and our app is starting in our dev container:  
+![Relaunch VS Code to start dev container](22-reload-starting.png)  
+Once our container is built, we have all the same files, but now the bottom-left indicator reads, "Dev Container: Python 3," signifying we're inside our container. We can run our code with ease, regardless of which version of Python (if any) we have installed on our local machine!  
+![Run Python code in dev container](24-run-code-cropped.png)
+
+Answer
+----------------------------------------
+The `containerEnv` property in `devcontainer.json` sets variables that should apply to the entire container. It can reference local variables.
+
+Evaluation
+----------------------------------------
+Score (1-5): 4
+Answered: Yes.
+
+The answer correctly identifies the 'containerEnv' property in 'devcontainer.json' and explains its purpose, however, it could be more specific about the property's ability to set environment variables and its scope within the container.
+
+Evaluation_score
+----------------------------------------
+4
+
+Ground truth answer
+The 'containerEnv' property in 'devcontainer.json' sets variables that should apply to the entire container.
+
+====================================================================================================
+
+Question
+----------------------------------------
+What variable can 'remoteEnv' reference in 'devcontainer.json'?
+
+Documents
+----------------------------------------
+Depending on what you reference in `devcontainer.json`:  
+* **Dockerfile or image**: Add the `containerEnv` property to `devcontainer.json` to set variables that should apply to the entire container or `remoteEnv` to set variables for VS Code and related sub-processes (terminals, tasks, debugging, etc.):  
+```json
+"containerEnv": {
+"MY_CONTAINER_VAR": "some-value-here",
+"MY_CONTAINER_VAR2": "${localEnv:SOME_LOCAL_VAR}"
+},
+"remoteEnv": {
+"PATH": "${containerEnv:PATH}:/some/other/path",
+"MY_REMOTE_VARIABLE": "some-other-value-here",
+"MY_REMOTE_VARIABLE2": "${localEnv:SOME_LOCAL_VAR}"
+}
+```  
+As this example illustrates, `containerEnv` can reference local variables and `remoteEnv` can reference both local and existing container variables.
+
+---
+Order: 13
+Area: devcontainers
+TOCTitle: devcontainer.json
+PageTitle: devcontainer.json reference
+ContentId: 52eaec33-21c6-410c-8e10-1ee3658a854f
+MetaDescription: devcontainer.json reference
+DateApproved: 05/02/2024
+---
+
+As mentioned in the main [Dev Containers documentation](/docs/devcontainers/containers.md), we're creating the **Development Containers Specification** to empower anyone in any tool to configure a consistent dev environment.  
+The `devcontainer.json` reference is [hosted on the specification site](https://containers.dev/implementors/json_reference). Here you can also review the [devcontainer.json schema](https://containers.dev/implementors/json_schema).  
+You can also review the specification documents and latest proposals in the [devcontainers/spec](https://github.com/devcontainers/spec/tree/main/docs/specs) repository.
+
+---
+Order: 47
+TOCTitle: Remote Development
+PageTitle: Remote Development with Visual Studio Code
+MetaDescription: VS Code remote support for WSL, Containers, and SSH
+MetaSocialImage: /assets/blogs/2019/05/02/social-remote.png
+Date: 2019-05-02
+ShortDescription: Remote Development with Visual Studio Code
+Author: Chris Dias
+---
+
+Answer
+----------------------------------------
+The 'remoteEnv' variable in 'devcontainer.json' can reference both local and existing container variables. This is useful for setting variables for VS Code and related sub-processes, such as terminals, tasks, and debugging.
+
+Evaluation
+----------------------------------------
+Score (1-5): 3
+Answered: Partially.
+
+The answer correctly mentions that the 'remoteEnv' variable in 'devcontainer.json' can reference both local and existing container variables. However, it does not provide a specific example of a variable that 'remoteEnv' can reference.
+
+Evaluation_score
+----------------------------------------
+3
+
+Ground truth answer
+'remoteEnv' can reference both local and existing container variables in 'devcontainer.json'.
+
+====================================================================================================
+
+Question
+----------------------------------------
+What feature of VS Code is used for PHP language diagnostics?
+
+Documents
+----------------------------------------
+VS Code is now using the official PHP linter (`php -l`) for PHP language diagnostics. VS Code will now stay current with PHP linter improvements.  
+There are two new settings to control the PHP linter:
+* _php.validate.executablePath_: points to the PHP executable on disk. Set this if the PHP executable is not on the system path.
+* _php.validate.run_: controls whether the validation is triggered on save (value: "onSave") or on type (value: "onType"). Default is on save.
+
+PHP debugging with **XDebug** is supported through a [PHP Debug extension](https://marketplace.visualstudio.com/items?itemName=xdebug.php-debug). Follow the extension's instructions for configuring **XDebug** to work with VS Code.
+
+MetaDescription: Visual Studio Code language extensions contribute programming language features. These guidelines present the language features available in Visual Studio Code and explain the API.
+---
+
+VS Code has several features you can enable to more closely match the coding experience on Sublime Text.
+
+Answer
+----------------------------------------
+The feature of VS Code used for PHP language diagnostics is the official PHP linter, which now uses the `php -l` command for diagnostics. The two new settings to control the PHP linter are _php.validate.executablePath_ and _php.validate.run_.
+
+Evaluation
+----------------------------------------
+Score (1-5): 4
+Answered: Yes.
+
+The response correctly identifies the feature of VS Code used for PHP language diagnostics and provides relevant information about the PHP linter and its settings. However, it could have been more concise, so it loses one point for score.
+
+Evaluation_score
+----------------------------------------
+4
+
+Ground truth answer
+VS Code uses the official PHP linter (`php -l`) for PHP language diagnostics.
+
+====================================================================================================
+
+Question
+----------------------------------------
+How to disable built-in PHP support in VS Code?
+
+Documents
+----------------------------------------
+VS Code uses the official PHP linter (`php -l`) for PHP language diagnostics. This allows VS Code to stay current with PHP linter improvements.  
+> Tip: Using XAMPP? Install the full version of PHP in order to obtain the development libraries.  
+There are three [settings](/docs/getstarted/settings.md) to control the PHP linter:  
+* `php.validate.enable`: controls whether to enable PHP linting at all. Enabled by default.
+* `php.validate.executablePath`: points to the PHP executable on disk. Set this if the PHP executable is not on the system path.
+* `php.validate.run`: controls whether the validation is triggered on save (value: `"onSave"`) or on type (value: `"onType"`). Default is on save.  
+To change the PHP settings, open your **User or Workspace Settings** (`kb(workbench.action.openSettings)`) and type 'php' to filter the list of available settings.  
+![show PHP settings](images/php/php-settings.png)  
+To set the PHP executable path, select the **Edit in settings.json** link under **PHP > Validate: Executable Path**, which will open your user `settings.json` file. Add the `php.validate.executablePath` setting with the path to your PHP installation:
+
+Our team maintains or contributes to a number of VS Code extensions. Most notably this month:  
+* [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint): Performance improvements to lower CPU load when linting large JavaScript files with lots of code actions.
+* [VSCodeVim](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim): We [refactored](https://github.com/VSCodeVim/Vim/pull/1642) the source code to make it easier to contribute to the project.
+* [PHP language server](https://github.com/felixfbecker/php-language-server): We are getting close to merging the [pull request](https://github.com/felixfbecker/php-language-server/pull/357) to adopt the [tolerant PHP parser](https://github.com/microsoft/tolerant-php-parser).
+
+If you don't want to permanently remove an extension, you can instead temporarily disable the extension by clicking the gear button at the right of an extension entry. You can disable an extension globally or just for your current Workspace. You will be prompted to restart the extension host (**Restart Extensions**) after you disable an extension.  
+If you want to quickly disable all installed extensions, there is a **Disable All Installed Extensions** command in the **Command Palette** and **More Actions** (`...`) dropdown menu.  
+Extensions remain disabled for all VS Code sessions until you re-enable them.
+
+You can file an issue on our IntelliCode for VS Code extension [GitHub feedback repo](https://github.com/MicrosoftDocs/intellicode/issues).
+
+Answer
+----------------------------------------
+To disable built-in PHP support in VS Code, you can set the `php.validate.enable` setting to `false` in your User or Workspace Settings. This will turn off PHP linting. If you want to completely remove the PHP language server, you can use the **Disable All Installed Extensions** command in the Command Palette and re-enable the other extensions manually.
+
+Evaluation
+----------------------------------------
+Score (1-5): 5
+Answered: Yes.
+
+The answer provides clear and actionable steps to disable built-in PHP support in VS Code. It explains two methods to achieve this, one by setting the `php.validate.enable` setting to `false` and the other by using the **Disable All Installed Extensions** command. The answer is specific, relevant, and accurate to the question. The length of the response is also appropriate for providing all necessary information.
+
+Evaluation_score
+----------------------------------------
+5
+
+Ground truth answer
+To disable the built-in PHP smart completions in favor of suggestions from an installed PHP extension, uncheck **PHP > Suggest: Basic** in the settings.
+
+====================================================================================================
+
+Question
+----------------------------------------
+How to change the PHP settings in VS Code?
+
+Documents
+----------------------------------------
+VS Code's customization model is very simple in the form of a `settings.json` file which you edit to configure VS Code's behavior. To discover available settings, we show **Default Settings** in a separate editor as well as provide IntelliSense in your opened global or workspace settings. From user feedback and usability studies, we learned that people were still having trouble working with their settings. In this release, we did some explorations to improve discoverability and the user experience for modifying settings and this resulted in the following improvements.
+
+There are additional browser configuration steps you can take when working with VS Code in a browser.
+
+If you'd prefer not to use `settings.json`, you can set **environment variables** in a terminal instead. The steps to do so are:  
+1. Shut down **all instances** of VS Code.
+2. Ensure VS Code is in your operating system `PATH`.
+3. Set the environment variables (for example `DOCKER_HOST`) in a terminal / command prompt.
+4. Type `code` in this same terminal / command prompt to launch VS Code with the variables set.
+
+After unzipping the VS Code download, create a `data` folder within VS Code's folder:  
+```
+|- VSCode-win32-x64-1.84.2
+|   |- Code.exe (or code executable)
+|   |- data
+|   |- bin
+|   |  |- code
+|   |  |- ...
+|   |- ...
+```  
+From then on, the `data` folder will be used to contain all VS Code data, including session state, preferences, extensions, etc.  
+>**Note**: The `data` folder will override the `--user-data-dir` and `--extensions-dir` [command line](/docs/editor/command-line.md#advanced-cli-options) options.  
+The `data` folder can be moved to other VS Code installations. This is useful for updating your portable VS Code version, in which case you can move the `data` folder to a newer extracted version of VS Code.
+
+Answer
+----------------------------------------
+Reason: The context provided is irrelevant to the question. The information given is about customizing settings in VS Code, creating a data folder for VS Code, and setting environment variables, but it does not mention how to change PHP settings in VS Code.
+
+Evaluation
+----------------------------------------
+Score (1-5): 2
+Answered: No.
+
+Reason: The answer only mentions how to change settings in VS Code in general, but it does not provide information on how to change PHP settings specifically.
+
+Evaluation_score
+----------------------------------------
+2
+
+Ground truth answer
+To change the PHP settings, open your User or Workspace Settings (`kb(workbench.action.openSettings)`) and type 'php' to filter the list of available settings.
+
+====================================================================================================
+
+Question
+----------------------------------------
+What is required to use XDebug for PHP debugging in VS Code?
+
+Documents
+----------------------------------------
+PHP debugging with **XDebug** is supported through a [PHP Debug extension](https://marketplace.visualstudio.com/items?itemName=xdebug.php-debug). Follow the extension's instructions for configuring **XDebug** to work with VS Code.
+
+VS Code uses the official PHP linter (`php -l`) for PHP language diagnostics. This allows VS Code to stay current with PHP linter improvements.  
+> Tip: Using XAMPP? Install the full version of PHP in order to obtain the development libraries.  
+There are three [settings](/docs/getstarted/settings.md) to control the PHP linter:  
+* `php.validate.enable`: controls whether to enable PHP linting at all. Enabled by default.
+* `php.validate.executablePath`: points to the PHP executable on disk. Set this if the PHP executable is not on the system path.
+* `php.validate.run`: controls whether the validation is triggered on save (value: `"onSave"`) or on type (value: `"onType"`). Default is on save.  
+To change the PHP settings, open your **User or Workspace Settings** (`kb(workbench.action.openSettings)`) and type 'php' to filter the list of available settings.  
+![show PHP settings](images/php/php-settings.png)  
+To set the PHP executable path, select the **Edit in settings.json** link under **PHP > Validate: Executable Path**, which will open your user `settings.json` file. Add the `php.validate.executablePath` setting with the path to your PHP installation:
+
+Debugging configurations are stored in a `launch.json` file located in your workspace's `.vscode` folder. An introduction into the creation and use of debugging configuration files is in the general [Debugging](/docs/editor/debugging.md#launch-configurations) article. You can either "launch" a browser with your application, or "attach" to an existing browser that you [started in debug mode](#attaching-to-browsers).  
+Below is a reference of common `launch.json` attributes specific to browser debugging. You can view the complete set of options in the [vscode-js-debug options](https://github.com/microsoft/vscode-js-debug/blob/main/OPTIONS.md) documentation.  
+* `webRoot` - The root directory for your source code. Most often, and by default, the `webRoot` is your workspace folder. This option is used for sourcemap resolution.
+* `outFiles` - An array of [glob patterns](/docs/editor/glob-patterns.md) for locating generated JavaScript files. See the section on [Source maps](#source-maps).
+* `smartStep`- Try to automatically step over source code that doesn't map to source files. See the section on [Smart stepping](/docs/nodejs/nodejs-debugging.md#smart-stepping).
+* `skipFiles` - Automatically skip files covered by these [glob patterns](/docs/editor/glob-patterns.md). See the section on [Skipping uninteresting code](/docs/nodejs/nodejs-debugging.md#skipping-uninteresting-code).
+* `trace` - Enable diagnostic output.  
+These attributes are only available for launch configurations of request type `launch`:  
+* `url` - The URL to automatically open when the browser is launched.
+* `runtimeExecutable` - Either an absolute path to the browser executable to use, or the version of the browser to use. Valid versions include `stable` (default), `canary`, `beta`, and `dev`.
+* `runtimeArgs` - Optional arguments passed when launching the browser.  
+These attributes are only available for launch configurations of request type `attach`:  
+* `url` - If given, VS Code will attach to a tab with this URL. If not provided, it will attach to all browser tabs.
+* `port` - Debug port to use. See the section on [Attaching to Node.js](/docs/nodejs/nodejs-debugging.md#attaching-to-nodejs).
+* `address` - TCP/IP address of the debug port. See the section on [Attaching to Browsers](#attaching-to-browsers).
+
+MetaDescription: Learn how to provide debugger extensions (plug-ins) for Visual Studio Code through a Debug Adapter.
+---
+
+Answer
+----------------------------------------
+To use XDebug for PHP debugging in VS Code, you need to follow these steps:
+
+1. Install the PHP Debug extension from the VS Code marketplace.
+2. Configure XDebug to work with VS Code by following the extension's instructions.
+3. Set the PHP executable path in VS Code settings if the PHP executable is not on the system path.
+4. Create and set up a `launch.json` file located in your workspace's `.vscode` folder for browser debugging configurations.
+
+If all the context provided is irrelevant, the response would be "Context is irrelevant to the question".
+If you cannot answer the question confidently, the response would be "I do not know the answer" for the reasons stated above.
+
+Evaluation
+----------------------------------------
+Score (1-5): 5
+Answered: Yes.
+
+The response provides a clear and detailed explanation of the steps required to use XDebug for PHP debugging in VS Code. It covers the necessary software installation, configuration, and setup processes. The answer is directly relevant to the question and demonstrates a good level of confidence and expertise.
+
+Evaluation_score
+----------------------------------------
+5
+
+Ground truth answer
+PHP debugging with **XDebug** is supported through a [PHP Debug extension](https://marketplace.visualstudio.com/items?itemName=xdebug.php-debug). Follow the extension's instructions for configuring **XDebug** to work with VS Code.
+
+====================================================================================================
+

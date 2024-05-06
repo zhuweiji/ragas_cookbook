@@ -26,7 +26,7 @@ class MarkdownChunker:
 
         if isinstance(markdown_text, Path):
             metadata['filename'] = markdown_text.name
-            markdown_text = markdown_text.read_text()
+            markdown_text = markdown_text.read_text(errors='ignore')
 
         docs = markdown_splitter.split_text(markdown_text)
 
@@ -41,7 +41,7 @@ class MarkdownChunker:
 
         headers = []
         if isinstance(markdown_text, Path):
-            markdown_text = markdown_text.read_text()
+            markdown_text = markdown_text.read_text(errors='ignore')
 
         lines = markdown_text.splitlines()
 

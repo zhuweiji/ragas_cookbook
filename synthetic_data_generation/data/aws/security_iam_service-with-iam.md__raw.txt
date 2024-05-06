@@ -1,0 +1,45 @@
+Question: What are identity-based policies in Amazon EKS?
+Answer: Identity-based policies in Amazon EKS are JSON policies that specify allowed or denied actions and resources along with conditions for access.
+
+Question: What does the `Action` element in a JSON policy describe?
+Answer: The `Action` element in a JSON policy describes the actions that can be used to allow or deny access in a policy.
+
+Question: How can you specify multiple actions in a single statement in Amazon EKS?
+Answer: You can specify multiple actions in a single statement by separating them with commas in the `Action` field.
+
+Question: What is the format of the Amazon EKS cluster resource ARN?
+Answer: The Amazon EKS cluster resource ARN is in the format: arn:aws:eks:region-code:account-id:cluster/cluster-name
+
+Question: What should you specify as a resource using its ARN in Amazon EKS?
+Answer: You can specify a resource using its ARN for actions that support a specific resource type, known as resource-level permissions.
+
+Question: What are the two region related condition keys supported by all Amazon EC2 actions?
+Answer: `aws:RequestedRegion` and `ec2:Region`
+
+Question: Where to find the list of Amazon EKS condition keys?
+Answer: See [Conditions defined by Amazon Elastic Kubernetes Service](https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelastickubernetesservice.html#amazonelastickubernetesservice-policy-keys) in the *Service Authorization Reference*
+
+Question: What are service-linked roles in AWS?
+Answer: Service-linked roles allow AWS services to access resources in other services to complete an action on your behalf. They appear in your IAM account and are owned by the service, with permissions that cannot be edited by an administrator.
+
+Question: How to grant additional IAM principals the ability to interact with an Amazon EKS cluster?
+Answer: Edit the `aws-auth` `ConfigMap` within Kubernetes and create a Kubernetes `rolebinding` or `clusterrolebinding` with the name of a `group` that you specify in the `aws-auth` `ConfigMap`.
+
+Question: Does Amazon EKS support resource-based policies?
+Answer: No, Amazon EKS does not support resource-based policies.
+
+Question: What does Amazon EKS require access to when creating a cluster resource?
+Answer: Amazon EKS requires access to several other AWS resources when creating a cluster resource.
+
+Question: What must be chosen when creating a cluster resource in Amazon EKS?
+Answer: A role must be chosen when creating a cluster resource in Amazon EKS.
+
+Question: Why is it important to choose a role with Amazon EKS managed policies attached to it?
+Answer: It's important to choose a role with Amazon EKS managed policies attached to it because Amazon EKS requires access to several other AWS resources when creating a cluster resource.
+
+Question: Where can more information be found about checking for an existing cluster role?
+Answer: More information about checking for an existing cluster role can be found in the "Check for an existing cluster role" section of the "Amazon EKS cluster IAM role" document.
+
+Question: Where can more information be found about checking for an existing node role?
+Answer: More information about checking for an existing node role can be found in the "Check for an existing node role" section of the "Amazon EKS node IAM role" document.
+

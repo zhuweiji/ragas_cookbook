@@ -1,0 +1,15 @@
+Question: What is the first step to update the software packages?
+Answer: The first step is to open the terminal and run the 'sudo dnf upgrade' command.
+
+Question: What is the code to enable fractional scaling on Wayland?
+Answer: The code is 'gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffer']"'.
+
+Question: How can one enable "tap-to-click" on the touchpad?
+Answer: To enable "tap-to-click", open the Mouse and Touchpad settings, select the touchpad option, and enable Tap to Click.
+
+Question: What command is used to enable brightness keys?
+Answer: The command is 'sudo grubby --update-kernel=ALL --args="module_blacklist=hid_sensor_hub"'.
+
+Question: How many times is a reboot required in this process?
+Answer: A reboot is required twice in this process, once after updating the software packages and once after enabling brightness keys.
+

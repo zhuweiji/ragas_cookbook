@@ -1,0 +1,15 @@
+Question: What does the command "sudo apt update && sudo apt upgrade -y" do?
+Answer: This command updates and upgrades the packages in Ubuntu.
+
+Question: What is the purpose of the line "echo "options snd-hda-intel model=dell-headset-multi" | sudo tee -a /etc/modprobe.d/alsa-base.conf"?
+Answer: This command enables headset mic input.
+
+Question: What is the effect of "gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffer']""?
+Answer: This command enables improved fractional scaling support for Ubuntu's GNOME environment using Wayland.
+
+Question: What is the impact of adding "GRUB_CMDLINE_LINUX_DEFAULT="quiet splash nvme.noacpi=1"" to /etc/default/grub?
+Answer: This change provides better suspend battery life for SSD power drain.
+
+Question: How does changing "wifi.powersave = 3" to "wifi.powersave = 2" affect Wi-Fi usage?
+Answer: This change prevents Wi-Fi drop-offs.
+

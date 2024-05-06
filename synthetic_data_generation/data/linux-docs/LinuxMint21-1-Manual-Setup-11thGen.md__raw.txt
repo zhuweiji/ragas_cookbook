@@ -1,0 +1,15 @@
+Question: What does the command "sudo apt update && sudo apt upgrade -y" do?
+Answer: This command updates and upgrades all the packages in the Linux Mint install.
+
+Question: What is the purpose of installing the "linux-oem-22.04c" package?
+Answer: Installing this package will update the system with the recommended OEM kernel.
+
+Question: What does the terminal command "echo "options snd-hda-intel model=dell-headset-multi" | sudo tee -a /etc/modprobe.d/alsa-base.conf" do?
+Answer: This command enables headset mic input.
+
+Question: What is the effect of changing "wifi.powersave = 3" to "wifi.powersave = 2" in the file /etc/NetworkManager/conf.d/default-wifi-powersave-on.conf?
+Answer: This change prevents wifi drop-offs.
+
+Question: What is the purpose of adding "nvme.noacpi=1" to the GRUB\_CMDLINE\_LINUX\_DEFAULT in the file /etc/default/grub?
+Answer: This is a workaround that helps to get the best suspend battery life for SSD power drain.
+

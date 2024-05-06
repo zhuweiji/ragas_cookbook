@@ -1,0 +1,10 @@
+What is the WSL extension for Visual Studio Code?,The WSL extension for Visual Studio Code enables running the code editor within the Windows Subsystem for Linux (WSL).
+How can you check if WSL is enabled after restarting Windows?,You can check if WSL is enabled by opening a Command Prompt and typing 'wsl'.
+Where can you install Linux distributions for WSL?,Linux distributions for WSL can be installed from the Microsoft Store.
+What command installs Python3 and pip into your Linux installation?,The command `sudo apt install python3 python3-pip` installs Python3 and pip into your Linux installation.
+What does the 'code .' command do in the WSL terminal?,The 'code .' command launches Visual Studio Code with the current folder.
+What notifies the user about connecting to WSL?,A quick notification telling you that VS Code is connecting to WSL.
+What action opens a new terminal instance in WSL?,Run **Terminal** > **New Terminal** (`kb(workbench.action.terminal.toggleTerminal)`).
+What extension recommendation is given when opening a Python file?,The [Microsoft Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) extension.
+What is the use of setting a breakpoint in the code?,"To inspect variables, create watches, and navigate the call stack during debugging."
+How to end a session in WSL and go back to running VS Code locally?,Using **File** > **Close Remote Connection**.

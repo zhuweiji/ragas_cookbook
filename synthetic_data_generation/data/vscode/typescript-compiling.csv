@@ -1,0 +1,27 @@
+What tool is used to transpile TypeScript to JavaScript?,The TypeScript compiler (`tsc`) is used to transpile TypeScript to JavaScript.
+How can you check the version of TypeScript installed on your computer?,You can check the version of TypeScript installed on your computer by running `tsc --version` in a terminal.
+What is the purpose of a `tsconfig.json` file in TypeScript projects?,"A `tsconfig.json` file defines the TypeScript project settings, such as compiler options and the files that should be included."
+What is the format of a simple `tsconfig.json` file for ES5 CommonJS modules and source maps?,"A simple `tsconfig.json` file for ES5 CommonJS modules and source maps would look like this:
+```json
+{
+    ""compilerOptions"": {
+        ""target"": ""ES5"",
+        ""module"": ""CommonJS"",
+        ""sourceMap"": true
+    }
+}
+```
+Question: How can you execute the TypeScript build task in VS Code?
+Answer: You can execute the TypeScript build task in VS Code by selecting **Run Build Task** (`kb(workbench.action.tasks.build)`) from the global **Terminal** menu and selecting the `tsc: build` entry."
+What happens when you run a program using VS Code's Run/Debug feature?,Details about running and debugging Node.js applications in VS Code can be found in the Node.js tutorial.
+What is the role of problem matchers in the VS Code task system?,Problem matchers parse build output based on the specific build tool and provide integrated issue display and navigation.
+What affects the TypeScript version VS Code uses?,The TypeScript version VS Code uses is affected by the version installed globally on your computer and the version installed locally in your workspace.
+How can you make VS Code use a specific TypeScript version in a workspace?,You can make VS Code use a specific TypeScript version in a workspace by adding a `typescript.tsdk` workspace setting pointing to the directory of the `tsserver.js` file.
+What does the `typescript.tsdk` setting control?,The `typescript.tsdk` setting controls which TypeScript version VS Code uses in a workspace.
+How does VS Code detect workspace versions of TypeScript?,VS Code detects workspace versions of TypeScript that are installed under `node_modules` in the root of your workspace.
+How can you explicitly specify a TypeScript version in VS Code settings?,You can explicitly specify a TypeScript version in VS Code settings by configuring the `typescript.tsdk` in your user or workspace settings.
+Which TypeScript version should be installed for VS Code?,A separate version of TypeScript should be installed from npm for VS Code.
+Why are code style issues not reported as errors in VS Code TypeScript?,"By default, VS Code TypeScript displays code style issues as warnings instead of errors."
+Which code style issues are reported as warnings in VS Code TypeScript?,"Variable is declared but never used, Property is declared but its value is never read, Unreachable code detected, Unused label, Fall through case in switch, Not all code paths return a value."
+How to disable code style issues as warnings in VS Code TypeScript?,"By setting ""typescript.reportStyleChecksAsWarnings"": false in User settings."
+Will code style issues be displayed as errors when running tsc from command line?,"Yes, they will still be displayed as errors when running tsc from the command line."

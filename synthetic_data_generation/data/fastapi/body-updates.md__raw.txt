@@ -1,0 +1,15 @@
+Question: What HTTP method is used to replace existing data?
+Answer: The HTTP `PUT` method is used to replace existing data.
+
+Question: What does the `jsonable_encoder` do in this context?
+Answer: The `jsonable_encoder` is used to convert input data to data that can be stored as JSON, such as converting `datetime` to `str`.
+
+Question: What happens if an attribute is not included in a `PUT` request?
+Answer: If an attribute is not included in a `PUT` request, the input model would take the default value of that attribute.
+
+Question: What is the purpose of using the `exclude_unset` parameter in Pydantic's model's `.model_dump()`?
+Answer: The `exclude_unset` parameter in Pydantic's model's `.model_dump()` generates a `dict` with only the data that was set when creating the model, excluding default values.
+
+Question: What does the `update` parameter do in Pydantic's `.model_copy()`?
+Answer: The `update` parameter in Pydantic's `.model_copy()` creates a copy of the existing model and updates its attributes with the data to update.
+

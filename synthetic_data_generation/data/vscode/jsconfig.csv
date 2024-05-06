@@ -1,0 +1,10 @@
+What indicates a directory as a JavaScript project?,The presence of a `jsconfig.json` file in a directory indicates that the directory is the root of a JavaScript Project.
+"What is the purpose of the ""exclude"" property in `jsconfig.json`?","The ""exclude"" property tells the language service what files are not part of your source code to keep performance at a high level."
+"What is the role of ""include"" property in `jsconfig.json`?","The ""include"" property sets the files in your project explicitly. If no ""include"" attribute is present, then all files in the containing directory and subdirectories are included."
+"What does the ""target"" option in `jsconfig.json` do?","The ""target"" option specifies which default library (lib.d.ts) to use for type checking."
+"What does the ""checkJs"" option in `jsconfig.json` enable?","The ""checkJs"" option enables type checking on JavaScript files."
+What is the purpose of specifying `paths` keys with a glob pattern in compilerOptions?,The purpose is to enable IntelliSense to work with webpack aliases.
+How should common project components be excluded?,They should be excluded by mapping to their installation folders in the exclude list.
+Which folder should be excluded for `node` components?,The `node_modules` folder should be excluded for `node` components.
+Which folders should be excluded for `webpack` and `webpack-dev-server`?,"The content folder, for example `dist`, should be excluded for `webpack` and `webpack-dev-server`."
+Which folders should be excluded for `jspm`?,The `jspm_packages` folder should be excluded for `jspm`.

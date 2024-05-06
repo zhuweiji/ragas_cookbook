@@ -1,0 +1,15 @@
+Question: What can you declare using `Field` in Pydantic models?
+Answer: You can declare validation and metadata inside of Pydantic models using `Field`.
+
+Question: Which module should you import `Field` from?
+Answer: `Field` is imported directly from `pydantic`.
+
+Question: How does `Field` work in Pydantic models?
+Answer: `Field` works the same way as `Query`, `Path` and `Body`, it has all the same parameters.
+
+Question: What happens when you pass extra keys to `Field`?
+Answer: Extra keys passed to `Field` will also be present in the resulting OpenAPI schema for your application, but some OpenAPI tools may not work with your generated schema.
+
+Question: What is the purpose of using `Field` with model attributes?
+Answer: You can declare extra validations and metadata for model attributes using `Field`.
+

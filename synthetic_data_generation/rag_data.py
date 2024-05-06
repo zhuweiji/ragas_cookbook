@@ -21,13 +21,13 @@ class DataGenerator(BasicAgent):
                     Each question must start with "Question:"
                     Each answer must start with "Answer:"
                     
-                    The question must satisfy the rules given below:
-                    1.The question should make sense to humans even when read without the given context.
-                    2.The question should be fully answered from the given context.
-                    3.The question should be framed from a part of context that contains 
-                    4.Do no use phrases like 'provided context',etc in the question
-                    5.Avoid framing question using word "and" that can be decomposed into more than one question.
-                    6.The question should not contain more than 10 words, make of use of abbreviation wherever possible.
+                    The generated questions must satisfy the rules given below:
+                    1. The question must be understandable by itself, without the given context.
+                    2. The question should be fully answered from the given context.
+                    3. The question should be framed from a part of context that contains 
+                    4. Do not use phrases like 'provided context',etc in the question
+                    5. Avoid framing question using word "and" that can be decomposed into more than one question.
+                    6. The question should not contain more than 20 words. Make of use of abbreviation wherever possible.
                     Follow the template below when generating the question answer pairs.
                     
                     Example:

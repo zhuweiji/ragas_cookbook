@@ -1,0 +1,15 @@
+Question: What operation does Step 1 perform on the laptop?
+Answer: Step 1 updates the software packages on the laptop.
+
+Question: How can one enable fractional scaling on Wayland in Step 2?
+Answer: In Step 2, one can enable fractional scaling on Wayland by executing a command in the terminal, setting the 'Scale' to their preference, and clicking 'Apply'.
+
+Question: What should be clicked to open 'Mouse and Touchpad' in Step 3?
+Answer: In Step 3, 'Mouse and Touchpad' can be clicked to open by looking for it under the 'mouse' option in the horizontal line in the upper left corner.
+
+Question: Which option should be enabled under 'Clicking' in Step 3 to enable 'tap-to-click' on the touchpad?
+Answer: To enable 'tap-to-click' on the touchpad in Step 3, 'Tap to Click' should be selected and enabled under 'Clicking'.
+
+Question: What action should be taken after executing the command in Step 2?
+Answer: After executing the command in Step 2, one should browse to the horizontal line in the upper left corner, type 'Displays', look for 'Scale', set it to their preference, and click 'Apply'.
+

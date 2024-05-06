@@ -1,0 +1,5 @@
+"What does the command ""sudo apt update && sudo apt upgrade -y"" do?",This command updates and upgrades all packages in the Linux Mint installation.
+"What is the purpose of installing ""linux-oem-22.04c""?","Installing ""linux-oem-22.04c"" updates the system to the recommended OEM kernel."
+"What is the effect of adding ""options snd-hda-intel model=dell-headset-multi"" to the file ""/etc/modprobe.d/alsa-base.conf""?",This configuration enables headset mic input.
+"What is the impact of changing ""wifi.powersave = 3"" to ""wifi.powersave = 2"" in the file ""/etc/NetworkManager/conf.d/default-wifi-powersave-on.conf""?",This change prevents wifi drop-offs by setting wifi power save to a less aggressive level (2 instead of 3).
+"What is the purpose of modifying the GRUB_CMDLINE_LINUX_DEFAULT in ""/etc/default/grub"" with ""module\_blacklist=hid\_sensor\_hub nvme.noacpi=1""?","This change disables the ALS sensor to ensure brightness keys work (13th gen only) and includes an ACPI parameter for NVMe compatibility, which helps with suspend battery life for SSD power drain."

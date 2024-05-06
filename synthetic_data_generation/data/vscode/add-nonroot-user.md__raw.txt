@@ -1,0 +1,30 @@
+Question: What issue arises with local filesystem (bind) mounts when using a non-root user in Docker Desktop for Mac?
+Answer: Inside the container, mounted files/folders will act as if they are owned by the container user you specify, but locally, all filesystem operations will use the permissions of your local user instead.
+
+Question: What happens to locally mounted files/folders when using a non-root user in Docker Desktop for Windows?
+Answer: Inside the container, mounted files/folders will appear as if they are owned by `root`, but the user you specify will still be able to read/write them and all files will be executable. Locally, all filesystem operations will use the permissions of your local user instead.
+
+Question: How do you specify a non-root user for VS Code in a Linux environment with a Dockerfile or image?
+Answer: Add the `remoteUser` property in `devcontainer.json` and set it to the desired user name, like `"remoteUser": "user-name-goes-here"`. On Linux, this will also automatically update the container user's UID/GID to match your local user.
+
+Question: How do you make all processes in a container run as a non-root user in a Dockerfile and image?
+Answer: Add the `containerUser` property to the same file, like `"containerUser": "user-name-goes-here"`. On Linux, this will also automatically update the container user's UID/GID to match your local user.
+
+Question: What is an example Dockerfile snippet to create a non-root user in a Debian/Ubuntu container?
+Answer: An example snippet is provided, which creates a user called `user-name-goes-here`, gives it the ability to use `sudo`, and sets it as the default user.
+
+Question: What is the purpose of the given Dockerfile snippet?
+Answer: The given Dockerfile snippet is used to manually change the UID/GID of a user.
+
+Question: What should be updated in the Dockerfile snippet?
+Answer: The `ARG` values, `USERNAME`, `USER_UID`, and `USER_GID` should be updated as appropriate.
+
+Question: What is required for Alpine Linux to run the user modification commands?
+Answer: The `shadow` package needs to be installed first on Alpine Linux.
+
+Question: What command is used to change the GID of a user in the Dockerfile snippet?
+Answer: The command used to change the GID of a user is `groupmod --gid $USER_GID $USERNAME`.
+
+Question: What command is used to change the UID and GID of a user's home directory in the Dockerfile snippet?
+Answer: The command used to change the UID and GID of a user's home directory is `chown -R $USER_UID:$USER_GID /home/$USERNAME`.
+

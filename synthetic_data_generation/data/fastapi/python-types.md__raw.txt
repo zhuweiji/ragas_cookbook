@@ -1,0 +1,60 @@
+Question: What is the purpose of type hints in Python?
+Answer: Type hints or annotations in Python allow declaring the type of a variable, providing better support from editors and tools.
+
+Question: What is one advantage of using type hints with FastAPI?
+Answer: FastAPI is built on type hints, which provide many advantages and benefits, even if you never use FastAPI.
+
+Question: What happened when you added type hints to the function parameters in the example?
+Answer: Adding type hints allowed for better autocompletion suggestions in the editor.
+
+Question: What is the difference between using equals (=) and colons (:) when declaring variables?
+Answer: Using colons is for adding type hints, while equals is for declaring default values.
+
+Question: What module is used to declare generic types with internal types?
+Answer: The `typing` module is used to declare generic types with internal types in Python.
+
+Question: What is the purpose of the `List` type in the Python code?
+Answer: The `List` type is used to declare a variable as a list with its items being of a specific type.
+
+Question: What does the `Union` type represent in Python?
+Answer: The `Union` type is used to declare that a variable can be any of several types.
+
+Question: What is the difference between `Optional` and `Union` in Python typing?
+Answer: Both `Optional` and `Union` are used to define a variable as having multiple types, but `Optional` is a shortcut for `Union[type, None]`.
+
+Question: What is the purpose of using `Optional[str]` or `Union[str, None]` in Python?
+Answer: It is used to declare that a value could have a type, like `str`, but that it could also be `None`.
+
+Question: What is the recommended way to define a variable as having multiple types in Python 3.8 and below?
+Answer: It is recommended to use `Union[type1, type2]` instead of `Optional[type]` as the word "optional" may imply that the value is not required, even if it can't be `None`.
+
+Question: What is the meaning of "Generic types" or "Generics" in Python 3.10+?
+Answer: In Python 3.10+, Generic types or Generics are types that take type parameters in square brackets. Examples include `list`, `tuple`, `set`, `dict` from built-in types and `Union`, `Optional` from the `typing` module.
+
+Question: What is an alternative to using `Union` and `Optional` in Python 3.10+?
+Answer: In Python 3.10+, you can use the vertical bar (`|`) to declare unions of types as an alternative to using `Union` and `Optional`.
+
+Question: What is the difference between `List` and `list` in Python 3.8+?
+Answer: In Python 3.8+, `List` (from the `typing` module) is a generic type, while `list` is a built-in type.
+
+Question: What does it mean to declare a class as the type of a variable in Python?
+Answer: In Python, declaring a class as the type of a variable means that the variable is an instance of the class.
+
+Question: What is the role of Pydantic in FastAPI?
+Answer: Pydantic is a Python library used in FastAPI for data validation. It validates the data, converts them to appropriate types, and provides editor support for the resulting object. FastAPI is based on Pydantic, and it uses Pydantic models for defining the shape of the data and validating the request data.
+
+Question: What does FastAPI do with standard Python types?
+Answer: FastAPI utilizes standard Python types to perform a lot of work, reducing the need for additional classes or decorators.
+
+Question: What is the benefit of using standard Python types in FastAPI?
+Answer: Using standard Python types in FastAPI allows for a lot of work to be done in a single place, simplifying the development process.
+
+Question: What is the purpose of the 'cheat sheet' in mypy?
+Answer: The 'cheat sheet' in mypy is a good resource for learning more about types in FastAPI.
+
+Question: Where can the mypy 'cheat sheet' be found?
+Answer: The mypy 'cheat sheet' can be found at <https://mypy.readthedocs.io/en/latest/cheat_sheet_py3.html>.
+
+Question: What can be used as a reference for types in FastAPI?
+Answer: The 'cheat sheet' from `mypy` is a good resource for types in FastAPI.
+

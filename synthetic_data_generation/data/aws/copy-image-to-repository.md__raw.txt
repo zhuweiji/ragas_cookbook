@@ -1,0 +1,27 @@
+Question: What is the purpose of the first step when copying a container image to another repository?
+Answer: The first step is to create an Amazon ECR private repository if one doesn't already exist, so the image can be pushed there.
+
+Question: What is the `aws ecr create-repository` command used for in the first step?
+Answer: It is used to create an Amazon ECR private repository for pushing the container image.
+
+Question: What is the format of the image information that should be determined in step 2?
+Answer: The format is `registry/repository[:tag]`.
+
+Question: How can you determine the registry, repository, and tag of the image that your nodes need to pull?
+Answer: Before applying a manifest file or installing a Helm chart, view the contents of the manifest or chart's `values.yaml` file to determine the registry, repository, and tag to pull.
+
+Question: How does Kubernetes handle an image location with only `repository-name:tag`?
+Answer: Kubernetes prepends the default registry `docker.io` to a repository name if no registry is specified.
+
+Question: What is the command to pull the CNI metrics helper image?
+Answer: docker pull 602401143452.dkr.ecr.region-code.amazonaws.com/cni-metrics-helper:v1.12.6
+
+Question: What is the command to tag the pulled image?
+Answer: docker tag cni-metrics-helper:v1.12.6 111122223333.dkr.ecr.region-code.amazonaws.com/cni-metrics-helper:v1.12.6
+
+Question: What is the command to authenticate to the Amazon ECR private registry?
+Answer: aws ecr get-login-password --region region-code | docker login --username AWS --password-stdin 111122223333.dkr.ecr.region-code.amazonaws.com
+
+Question: What is the command to push the image to the Amazon ECR private repository?
+Answer: docker push 111122223333.dkr.ecr.region-code.amazonaws.com/cni-metrics-helper:v1.12.6
+

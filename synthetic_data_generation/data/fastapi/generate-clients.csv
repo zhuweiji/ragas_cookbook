@@ -1,0 +1,7 @@
+What is one advantage of using FastAPI?,One advantage of using FastAPI is the ability to generate clients for various programming languages due to its compatibility with the OpenAPI specification.
+What is a common tool for generating clients from OpenAPI?,OpenAPI Generator is a common tool for generating clients from OpenAPI.
+What is the purpose of using company-backed client and SDK generators based on OpenAPI (FastAPI)?,"Company-backed client and SDK generators based on OpenAPI (FastAPI) offer additional features on top of high-quality generated SDKs/clients and sponsor the development of FastAPI and its ecosystem, showing their commitment to the framework and its community."
+What tool can be used to generate a TypeScript frontend client for a FastAPI application?,openapi-ts is a tool for generating a TypeScript frontend client for a FastAPI application.
+What is the output of the `generate-client` NPM script in the provided example?,"The `generate-client` NPM script generates client code using openapi-ts, which is then placed in the `./src/client` directory and uses axios (the frontend HTTP library) internally."
+What is the issue with the current method names in the client?,The current method names like `createItemItemsPost` don't look very clean.
+What does FastAPI use for the operation ID?,"FastAPI uses a unique ID for each path operation, it is used for the operation ID and also for the names of any needed custom models, for requests or responses."

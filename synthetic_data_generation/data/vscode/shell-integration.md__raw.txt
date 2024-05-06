@@ -1,0 +1,62 @@
+Question: What is the purpose of terminal shell integration in Visual Studio Code?
+Answer: The purpose of terminal shell integration in Visual Studio Code is to enable the terminal to understand more about what's happening inside the shell, providing additional features such as working directory detection, command decorations, navigation, and sticky scroll.
+
+Question: How can you disable automatic injection of the shell integration script in Visual Studio Code?
+Answer: You can disable automatic injection of the shell integration script in Visual Studio Code by setting `terminal.integrated.shellIntegration.enabled` to `false`.
+
+Question: Which shells are supported for shell integration in Visual Studio Code on Linux/macOS?
+Answer: The supported shells for shell integration in Visual Studio Code on Linux/macOS are bash, fish, pwsh, and zsh.
+
+Question: What is the recommended way to enable shell integration for advanced use cases in Visual Studio Code?
+Answer: The recommended way to enable shell integration for advanced use cases in Visual Studio Code is through manual installation.
+
+Question: What do the decorations added to the terminal indicate in Visual Studio Code?
+Answer: The decorations added to the terminal in Visual Studio Code indicate whether the command succeeded or failed, and they can be interacted with to give some contextual actions like re-running the command.
+
+Question: What is the sticky scroll feature in VS Code terminal?
+Answer: The sticky scroll feature in VS Code terminal will "stick" the command that is partially showing at the top of the terminal, making it easier to see which output belongs to which command.
+
+Question: How can the Quick Fix feature be enabled in VS Code terminal?
+Answer: The Quick Fix feature can be enabled with the `terminal.integrated.stickyScroll.enabled` setting in VS Code.
+
+Question: What are some of the built-in Quick Fixes in VS Code terminal?
+Answer: Some of the built-in Quick Fixes in VS Code terminal include suggesting to kill a process and re-run the previous command, pushing with the upstream set, using similar commands, opening a GitHub PR link, and suggesting each suggestion for PowerShell feedback providers.
+
+Question: What does the "Terminal: Run Recent Command" command do in VS Code terminal?
+Answer: The "Terminal: Run Recent Command" command surfaces history from various sources in a Quick Pick, providing similar functionality to a shell's reverse search.
+
+Question: What is the default keybinding for the "Terminal: Go to Recent Directory" command in VS Code terminal?
+Answer: The default keybinding for the "Terminal: Go to Recent Directory" command is `kb(workbench.action.terminal.goToRecentDirectory)`.
+
+Question: What is the default action for `kbstyle(Ctrl+Space)` in VS Code?
+Answer: The default action for `kbstyle(Ctrl+Space)` in VS Code is `MenuComplete` on Windows only.
+
+Question: What is the default action for `kbstyle(Alt+Space)` in VS Code?
+Answer: The default action for `kbstyle(Alt+Space)` in VS Code is `SetMark` on all platforms.
+
+Question: What is the default action for `kbstyle(Shift+Enter)` in VS Code?
+Answer: The default action for `kbstyle(Shift+Enter)` in VS Code is `AddLine` on all platforms.
+
+Question: What is the default action for `kbstyle(Shift+End)` in VS Code?
+Answer: The default action for `kbstyle(Shift+End)` in VS Code is `SelectLine` on all platforms.
+
+Question: What is the default action for `kbstyle(Shift+Home)` in VS Code?
+Answer: The default action for `kbstyle(Shift+Home)` in VS Code is `SelectBackwardsLine` on all platforms.
+
+Note: I am an assistant and I am not able to browse the internet or access the document directly. The above answers are based on the provided context.
+
+Question: Why does command decoration move after a command runs on Windows?
+Answer: This is due to the use of an emulated pseudoterminal (pty) backend called ConPTY, which handles rendering differently to maintain compatibility with the Windows Console API. After a command runs, the shell integration sequences that identify the commands in the terminal buffer may be misplaced, causing the command decoration to move.
+
+Question: What maintains compatibility for the terminal on Windows?
+Answer: ConPTY, an emulated pseudoterminal (pty) backend, maintains compatibility for the terminal on Windows by working differently than a regular pty and handling rendering in a special way.
+
+Question: What feature is lost when removing the shell integration script?
+Answer: Command-aware features like command navigation will be lost when removing the shell integration script from the shell rc/startup script.
+
+Question: What is the effect of the "terminal.integrated.shellIntegration.decorationsEnabled": never setting?
+Answer: This setting disables command decorations in the integrated terminal, meaning command-aware features like command navigation will not be available.
+
+Question: What causes the pty to handle rendering differently on Windows?
+Answer: The pty handles rendering differently on Windows due to the use of an emulated pseudoterminal (pty) backend called ConPTY, which is designed to maintain compatibility with the Windows Console API.
+

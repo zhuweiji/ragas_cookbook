@@ -1,0 +1,20 @@
+What is the purpose of type hints in Python?,"Type hints or annotations in Python allow declaring the type of a variable, providing better support from editors and tools."
+What is one advantage of using type hints with FastAPI?,"FastAPI is built on type hints, which provide many advantages and benefits, even if you never use FastAPI."
+What happened when you added type hints to the function parameters in the example?,Adding type hints allowed for better autocompletion suggestions in the editor.
+What is the difference between using equals (=) and colons (:) when declaring variables?,"Using colons is for adding type hints, while equals is for declaring default values."
+What module is used to declare generic types with internal types?,The `typing` module is used to declare generic types with internal types in Python.
+What is the purpose of the `List` type in the Python code?,The `List` type is used to declare a variable as a list with its items being of a specific type.
+What does the `Union` type represent in Python?,The `Union` type is used to declare that a variable can be any of several types.
+What is the difference between `Optional` and `Union` in Python typing?,"Both `Optional` and `Union` are used to define a variable as having multiple types, but `Optional` is a shortcut for `Union[type, None]`."
+"What is the purpose of using `Optional[str]` or `Union[str, None]` in Python?","It is used to declare that a value could have a type, like `str`, but that it could also be `None`."
+What is the recommended way to define a variable as having multiple types in Python 3.8 and below?,"It is recommended to use `Union[type1, type2]` instead of `Optional[type]` as the word ""optional"" may imply that the value is not required, even if it can't be `None`."
+"What is the meaning of ""Generic types"" or ""Generics"" in Python 3.10+?","In Python 3.10+, Generic types or Generics are types that take type parameters in square brackets. Examples include `list`, `tuple`, `set`, `dict` from built-in types and `Union`, `Optional` from the `typing` module."
+What is an alternative to using `Union` and `Optional` in Python 3.10+?,"In Python 3.10+, you can use the vertical bar (`|`) to declare unions of types as an alternative to using `Union` and `Optional`."
+What is the difference between `List` and `list` in Python 3.8+?,"In Python 3.8+, `List` (from the `typing` module) is a generic type, while `list` is a built-in type."
+What does it mean to declare a class as the type of a variable in Python?,"In Python, declaring a class as the type of a variable means that the variable is an instance of the class."
+What is the role of Pydantic in FastAPI?,"Pydantic is a Python library used in FastAPI for data validation. It validates the data, converts them to appropriate types, and provides editor support for the resulting object. FastAPI is based on Pydantic, and it uses Pydantic models for defining the shape of the data and validating the request data."
+What does FastAPI do with standard Python types?,"FastAPI utilizes standard Python types to perform a lot of work, reducing the need for additional classes or decorators."
+What is the benefit of using standard Python types in FastAPI?,"Using standard Python types in FastAPI allows for a lot of work to be done in a single place, simplifying the development process."
+What is the purpose of the 'cheat sheet' in mypy?,The 'cheat sheet' in mypy is a good resource for learning more about types in FastAPI.
+Where can the mypy 'cheat sheet' be found?,The mypy 'cheat sheet' can be found at <https://mypy.readthedocs.io/en/latest/cheat_sheet_py3.html>.
+What can be used as a reference for types in FastAPI?,The 'cheat sheet' from `mypy` is a good resource for types in FastAPI.

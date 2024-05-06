@@ -38,6 +38,10 @@ class BaseAgent:
         # self.llm_embeddings = OllamaEmbeddings(model=llm_model_name)
 
 
+def join_docs(docs: list[Document]):
+    return '\n\n'.join([i.page_content for i in docs])
+
+
 class BasicAgent(BaseAgent):
     def answer_question(self, query, docs: List[Document]):
 
@@ -62,9 +66,11 @@ class BasicAgent(BaseAgent):
 
         generate = prompt | self.llm
 
+        context = join_docs(docs)
+
         request = HumanMessage(
             content=f"""Question: {query}
-            Context: {docs}""".replace('\t', '')
+            Context: {context}""".replace('\t', '')
         )
 
         return generate.invoke({'question': [request]}, config=self.langchain_config)
@@ -129,7 +135,7 @@ class BasicAgent(BaseAgent):
 
         request = HumanMessage(
             content=f"""Question: {question}
-            Document: {document}""".replace('\t', '')
+            Document: {document.page_content}""".replace('\t', '')
         )
 
         return generate.invoke({'question': [request]}, config=self.langchain_config)
@@ -138,12 +144,19 @@ class BasicAgent(BaseAgent):
         """Try to salvage an irrelevant document by either 
         1. searching within the same document for more relevant chunks 
         2. modifying the search query"""
+
+        table_of_contents = document.metadata.get('table_of_contents', None)
+
+        if not table_of_contents:
+            return None
+
         prompt = ChatPromptTemplate.from_messages(
             [
                 (
                     "system",
                     """A document has been evaluated to be irrelevant to a question.
-                    Use the evaluation and a table of contents of the document, to determine if the question can be answered by other relevant chunks in the document or not.
+                    Use the evaluation of a generated answer and the table of contents of the document,
+                    to determine if the question can be answered by other relevant chunks in the document or not.
                     
                     Answer in the template of these examples:
                     Yes, using the following headers: 3: ##Prerequisites, 5: ### Examples
@@ -159,7 +172,8 @@ class BasicAgent(BaseAgent):
 
         request = HumanMessage(
             content=f"""Question: {question}
-                Document: {document}""".replace('\t', '')
+            Evaluation: {evaluation}
+            Table of Contents: {table_of_contents}""".replace('\t', '')
         )
 
         return generate.invoke({'question': [request]}, config=self.langchain_config)

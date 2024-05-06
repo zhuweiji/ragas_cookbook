@@ -1,0 +1,5 @@
+What are global dependencies in FastAPI?,"Global dependencies in FastAPI are dependencies added to the whole application, which are then applied to all the path operations in the application."
+How can dependencies be added to FastAPI application?,Dependencies can be added to FastAPI application by using the `dependencies` parameter in the application constructor.
+What is the effect of adding dependencies to all path operations?,"When dependencies are added to all path operations, they will be applied to all the path operations in the application."
+What is the recommended way to declare dependencies in FastAPI?,"The recommended way to declare dependencies in FastAPI is by using the `Annotated` version, as it provides better type checking and error messages."
+When will knowledge about declaring dependencies for a group of path operations be covered?,Knowledge about declaring dependencies for a group of path operations will be covered in the section about structuring bigger applications with multiple files.

@@ -1,0 +1,10 @@
+What is the syntax for declaring path parameters in FastAPI?,The syntax for declaring path parameters in FastAPI is similar to Python format strings.
+What happens when you declare the type of a path parameter in FastAPI?,"Declaring the type of a path parameter in FastAPI provides editor support inside the function, with error checks, completion, etc."
+What is the benefit of declaring the type of a path parameter in FastAPI?,Declaring the type of a path parameter in FastAPI allows for automatic request parsing and data validation.
+What is the error message when providing a string value to an integer path parameter in FastAPI?,"The error message is a JSON object that specifies the location of the error, the message, the input, and the URL to the error's documentation."
+What is the benefit of using FastAPI for API development?,"FastAPI provides automatic, interactive documentation, data validation, and request parsing, all based on standard Python type annotations."
+What are the available valid values for the path parameter?,"The available valid values for the path parameter are 'AlexNet', 'ResNet', and 'LeNet'."
+What is the type annotation used for the path parameter?,The type annotation used for the path parameter is the enum class `ModelName`.
+How can you compare the value of the path parameter with the enum members?,"You can compare it using the `is` keyword, like `model_name is ModelName.alexnet`."
+How can you get the actual value of an enumeration member?,"You can get it using `model_name.value`, where `model_name` is an enumeration member."
+How can you return enumeration members from a path operation?,"You can return them from a JSON body, and they will be converted to their corresponding values (strings in this case) before returning them to the client."
