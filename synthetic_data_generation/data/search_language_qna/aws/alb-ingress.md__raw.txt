@@ -1,0 +1,38 @@
+Question: eks cluster prereq?
+Answer: To meet the prerequisites for load balancing application traffic in an Amazon EKS cluster, you need to have an existing cluster, deploy the AWS Load Balancer Controller on your cluster (version 2.7.2 or later recommended), and have at least two subnets in different Availability Zones with specific tagging rules.
+
+Question: alb ingress annotation?
+Answer: When creating a Kubernetes ingress resource on the cluster, the `kubernetes.io/ingress.class: alb` annotation should be added to ensure that the AWS Load Balancer Controller is used and an Application Load Balancer (ALB) is created.
+
+Question: eks subnet tags?
+Answer: Private subnets must be tagged with `kubernetes.io/role/internal-elb: 1` and public subnets with `kubernetes.io/role/elb: 1` for successful auto discovery by the AWS Load Balancer Controller in an Amazon EKS cluster. However, it is recommended to explicitly add the private or public role tags rather than relying on examining the route table of the cluster VPC subnets.
+
+Question: alb ingress config?
+Answer: A Kubernetes ingress resource, when created with the `kubernetes.io/ingress.class: alb` annotation, configures the ALB to route HTTP or HTTPS traffic to different Pods within the Amazon EKS cluster.
+
+Question: lb controller version?
+Answer: It is recommended to use version 2.7.2 or later of the AWS Load Balancer Controller on your Amazon EKS cluster for deploying the controller.
+
+Question: Kubernetes ingress group
+Answer: To share an application load balancer across multiple service resources using IngressGroups, add the annotation 'alb.ingress.kubernetes.io/group.name' to a Kubernetes ingress resource specification.
+
+Question: ALB IP target type
+Answer: The IP target type is required when target Pods are running on Fargate and registers Pods as targets for the ALB, directly routing traffic to Pods for your service.
+
+Question: AWS Load Balancer Controller version
+Answer: Upgrading or downgrading the ALB controller version can introduce breaking changes for features that rely on it. Check the ALB controller release notes on GitHub for information about breaking changes in each release.
+
+Question: Ingress group annotation
+Answer: To join an ingress to a group, add the annotation 'alb.ingress.kubernetes.io/group.name' to a Kubernetes ingress resource specification.
+
+Question: Ingress group order
+Answer: You can add an order number of your ingress resource with 'alb.ingress.kubernetes.io/group.order' to determine the rule order between ingresses within the same ingress group.
+
+Question: Change alb internet-facing?
+Answer: To change the ALB scheme from internet-facing to internal, edit the file, find the line that says `alb.ingress.kubernetes.io/scheme: internet-facing`, change it to `alb.ingress.kubernetes.io/scheme: internal`, and then apply the manifest to your cluster.
+
+Question: Apply 2048_full.yaml?
+Answer: To apply the 2048_full.yaml manifest to your cluster, run the command `kubectl apply -f 2048_full.yaml`.
+
+Question: Get ingress-204
+

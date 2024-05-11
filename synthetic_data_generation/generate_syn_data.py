@@ -14,7 +14,11 @@ from synthetic_data_generation.rag_data import DataGenerator
 log = logging.getLogger(__name__)
 
 
-def generate_synthetic_test_data(md_file: Path, num_questions=5, output_dir: Path = project_root / 'synthetic_data_generation' / 'data', **kwargs):
+def generate_synthetic_test_data(md_file: Path,
+                                 num_questions=5,
+                                 output_dir: Path = project_root / 'synthetic_data_generation' / 'data',
+                                 generator_function=DataGenerator().generate_questions_from_document,
+                                 **kwargs):
     try:
         text = md_file.read_text(errors='ignore')
     except Exception as e:
@@ -40,7 +44,7 @@ def generate_synthetic_test_data(md_file: Path, num_questions=5, output_dir: Pat
 
     results = []
     for i in tqdm(docs, desc='Generating Questions from Documents:'):
-        q_a = generator.generate_questions_from_document(i, num_questions)
+        q_a = generator_function(i, num_questions)
         print(q_a)
         results.append(q_a)
 
@@ -106,4 +110,6 @@ if __name__ == "__main__":
 
         output_dir = project_root / 'synthetic_data_generation' / d.name
         for file in tqdm(files, leave=False, desc='Generating Synthetic Data from files:'):
-            generate_synthetic_test_data(md_file=file, output_dir=output_dir)
+            generate_synthetic_test_data(md_file=file,
+                                         output_dir=output_dir,
+                                         generator_function=DataGenerator().generate_questions_from_document__search_engine_style_query)

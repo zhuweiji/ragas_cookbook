@@ -1,0 +1,15 @@
+Question: What is the first step to update Ubuntu packages?
+Answer: The first step is to open the terminal and run the command 'sudo apt update && sudo apt upgrade -y && sudo snap refresh'.
+
+Question: How to disable power save for Intel Wi-Fi?
+Answer: To disable power save for Intel Wi-Fi, run the command 'sudo sed -i '/^wifi.powersave = 3$/s/3/2/' /etc/NetworkManager/conf.d/default-wifi-powersave-on.conf' after checking if power save is on with 'iw dev $interface get power_save'.
+
+Question: What is the purpose of the first command in Step 2?
+Answer: The first command in Step 2 checks if the Wi-Fi power save is on or off.
+
+Question: What is the recommended kernel for the 13th Gen Intel® Core™ Framework Laptop 13?
+Answer: The recommended kernel for the 13th Gen Intel® Core™ Framework Laptop 13 is the default kernel.
+
+Question: How to copy the commands from the document?
+Answer: You can use the little clipboard icon to the right of the code to copy it to your clipboard.
+

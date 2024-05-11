@@ -1,0 +1,105 @@
+Question: container isolate applications?
+Answer: Yes, containers are a lightweight way to package applications including all their dependencies and necessary files while keeping them isolated from other containers in the same system.
+
+Question: container image static version?
+Answer: A container image is a static version of all the files, environment variables, and the default command/program that should be present in a container.
+
+Question: container difference image?
+Answer: A container image is the stored static contents, while a container is the running instance of the image.
+
+Question: docker create container images?
+Answer: Docker is one of the main tools to create and manage container images and containers.
+
+Question: container default program?
+Answer: A container image normally includes in its metadata the default program or command that should be run when the container is started.
+
+Question: Dockerfile start image?
+Answer: The Dockerfile starts from the official Python base image.
+
+Question: Dockerfile install dependencies?
+Answer: The Dockerfile installs package dependencies from the requirements file using pip.
+
+Question: Dockerfile copy directory?
+Answer: The Dockerfile copies the app directory into the /code directory.
+
+Question: Dockerfile command?
+Answer: The Dockerfile sets the command to use fastapi run with the app/main.py file.
+
+Question: Dockerfile proxy headers?
+Answer: The Dockerfile includes the --proxy-headers option for running behind a TLS termination proxy.
+
+Question: Dockerfile cache steps
+Answer: The Dockerfile uses the cache for the step that installs dependencies, taking seconds as compared to downloading and installing the package dependencies which could take minutes.
+
+Question: Frequently changing files copy
+Answer: The copying of all code, which changes most frequently, is put near the end of the Dockerfile to ensure that almost always, anything after this step will not be able to use the cache.
+
+Question: Building container image
+Answer: To build the container image, go to the project directory and run 'docker build -t myimage .'.
+
+Question: Running container based on image
+Answer: To run a container based on the image, use 'docker run -d --name mycontainer -p 80:80 myimage'.
+
+Question: HTTPS handling in containers
+Answer: HTTPS is normally handled externally by another tool, such as Traefik, which can handle HTTPS and acquire certificates automatically.
+
+Question: Handling HTTPS with cloud?
+Answer: HTTPS can be handled by a cloud provider as one of their services, while still running the application in a container.
+
+Question: Tools for container startup?
+Answer: Docker, Docker Compose, Kubernetes, or a cloud service are some tools in charge of starting and running your container.
+
+Question: Replication handled at cluster level?
+Answer: Replication of containers can be handled at the cluster level in Kubernetes, Docker Swarm Mode, Nomad, or similar complex systems.
+
+Question: Recommended single process for Kubernetes?
+Answer: When working with Kubernetes, it's recommended to build a Docker image from scratch, install dependencies, and run a single Uvicorn process instead of Gunicorn with Uvicorn workers.
+
+Question: Load balancer for container comm?
+Answer: In container environments, communication (e.g., HTTP requests) from the load balancer to the container(s) is transmitted using the same system that starts and manages the containers.
+
+Question: Docker Compose replication?
+Answer: Docker Compose does not natively support replication of containers while preserving shared network and load balancing when deploying to a single server.
+
+Question: Single container process manager?
+Answer: A single container with a process manager can start several worker processes inside, which can be beneficial for certain use cases.
+
+Question: Prometheus multiple containers metrics?
+Answer: Prometheus, by default, reads metrics from a single container, so having one container with multiple processes can help collect accumulated metrics for all replicated containers.
+
+Question: Memory management in single process containers?
+Answer: Running a single process per container provides a relatively stable and limited amount of memory usage, making it easier to set memory limits and replicate containers in container management systems like Kubernetes.
+
+Question: Previous steps management in container setup?
+Answer: In a multiple container setup, it is recommended to have a separate container doing the work of previous steps, while in a single container setup, those steps can be run right before starting the main process.
+
+Question: Docker image cores?
+Answer: The number of processes on this image is computed automatically from the CPU cores available.
+
+Question: Dockerfile requirements?
+Answer: The COPY and RUN commands in the Dockerfile are used to install the dependencies from the requirements.txt file.
+
+Question: Poetry Docker multi-stage?
+Answer: Docker multi-stage builds can be used with Poetry to install dependencies in one stage and preserve them in the final container image.
+
+Question: Docker image memory?
+Answer: The amount of memory consumed by the container depends on the number of CPU cores available.
+
+Question: Kubernetes replication Docker image?
+Answer: It is not recommended to use this official base image with Kubernetes if you are already setting replication at the cluster level.
+
+Question: TLS termination proxy Dockerfile?
+Answer: When running a container behind a TLS Termination Proxy like Nginx or Traefik, add the `--proxy-headers` option to the Dockerfile command.
+
+Question: Docker container image build?
+Answer: To build a container image from scratch, create a Dockerfile based on the official Python Docker image and consider the order of instructions and Docker cache for minimizing build times.
+
+Question: Container deployment HTTPS?
+Answer: Handling HTTPS becomes straightforward in container systems like Docker and Kubernetes, making it easy to deploy applications securely.
+
+Question: Dockerfile instruction order?
+Answer: The order of instructions in the Dockerfile and the Docker cache can be optimized to minimize build times, improving productivity and avoiding boredom.
+
+Question: Kubernetes container replication?
+Answer: Kubernetes simplifies handling the number of processes running through replication and other deployment concepts like HTTPS, running on startup, restarts, memory, and previous steps before starting.
+

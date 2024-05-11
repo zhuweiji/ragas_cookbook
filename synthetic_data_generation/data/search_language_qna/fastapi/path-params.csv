@@ -1,0 +1,10 @@
+path parameter types?,"You can declare the type of a path parameter in the function using standard Python type annotations. For example, `item_id` is declared to be an `int`."
+data conversion path params?,"With type declaration, FastAPI gives you automatic request parsing. If you run this example and open your browser at <http://127.0.0.1:8000/items/3>, you will see a response of `{""item_id"":3}` as a Python `int`, not a string `""3""`."
+data validation path params?,"FastAPI gives you data validation. If the path parameter `item_id` has a value of `""foo""`, which is not an `int`, you will see an HTTP error of `{""detail"":[{""type"":""int_parsing""...`."
+path operation order?,"When creating path operations, you need to make sure that the path for `/users/me` is declared before the one for `/users/{user_id}` since path operations are evaluated in order."
+predefined path parameter values?,"If you want the possible valid path parameter values to be predefined, you can use a standard Python Enum. Create a sub-class that inherits from `str` and from `Enum` and create class attributes with fixed values which will be the available valid values."
+Enum in Python?,Enumerations (or enums) are available in Python since version 3.4.
+Enum class create?,You can create an enum class using the `enum.Enum` class in Python.
+Path parameter with enum?,You can create a path parameter with a type annotation using the enum class you created.
+Compare enumeration members?,You can compare the value of the path parameter with the enumeration member in your created enum.
+Get enumeration value?,You can get the actual value (a `str` in this case) using `model_name.value`.

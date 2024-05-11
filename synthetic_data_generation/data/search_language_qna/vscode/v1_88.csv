@@ -1,0 +1,52 @@
+Apply custom editor labels?,"You can customize the display label for editor tabs and the Open editors view by adding entries under the workbench.editor.customLabels.patterns setting, which includes a glob pattern that matches file paths and a template that defines the new name for the editor tab."
+Locked scrolling feature?,Locked scrolling feature allows you to compare editors side-by-side with synchronized scrolling.
+Extension update improvements?,Extension update improvements include the ability to restart extensions without reload and update extensions with VS Code releases.
+Test Coverage API feature?,Test Coverage API feature provides native code coverage support in VS Code.
+Python auto-detect improvements?,"Python auto-detect improvements include detecting startup files for Flask & Django, and discovering Hatch environments."
+Enable custom labels?,Use the `workbench.editor.customLabels.enabled` setting to enable or disable custom labels.
+Locked scrolling video?,The **View: Toggle Locked Scrolling Across Editors** command synchronizes scrolling across all visible editors.
+Activity Bar at bottom?,Change the `workbench.activityBar.location` setting to `bottom` to move the Activity Bar to the bottom.
+Search Editor single-click?,Configure the `search.searchEditor.singleClickBehaviour` setting to determine what happens when you single-click on a Search Editor entry.
+Quick Search sticky file paths?,"In Quick Search, file name separators are now sticky to make it clearer which file a search result is associated with."
+Refactor Preview keybinding?,The keybinding for previewing edits for the Rename Symbols refactoring is now `kb(refactorPreview.apply)` (previously `Shift + Enter`).
+Diff editor gutter?,"The diff editor now has a separate gutter for Stage and Revert controls, which can be used to stage or revert selected changes."
+Incoming changes file decorations?,File decorations for incoming changes are now shown in the Source Control section for files that have incoming changes and which were fetched but not yet merged/rebased.
+Shell integration in debug terminals?,Shell integration is now automatically enabled in terminals that are launched when debugging.
+Open detected link improvements?,The Open detected link command now previews the link result in the editor and highlights the link source in the terminal.
+Test Coverage API?,The Test Coverage API is a new feature that brings native coverage support to VS Code. It allows developers to get coverage if their testing system supports it.
+Run With Coverage button?,The Run With Coverage button is a new feature that lets developers run tests with coverage in the Test explorer view.
+Keybindings for running with coverage?,"There are new keybindings for running with coverage, such as `kbstyle(Ctrl+; Ctrl+Shift+A)` to run all tests with coverage, and `kbstyle(Ctrl+; Ctrl+Shift+L)` to run the last set of tests with coverage."
+TypeScript 5.4?,"VS Code now includes TypeScript 5.4, which brings new improvements to type-checking and IntelliSense, as well as several bug fixes."
+Notebooks keyboard shortcuts?,"We now support standard keyboard shortcuts in notebook outputs, such as selecting and copying output, scrolling output, and selecting output from the current selection point to the top or bottom of the output."
+Notebook outline filters,Notebook outline filter controls allow you to customize the view of your notebook outline.
+Interactive window save,Enabling the 'interactiveWindow.promptToSaveOnClose' setting prompts you to save changes in an Interactive Window when it is closed.
+Terminal Inline Chat?,"The terminal Inline Chat uses the `@terminal` chat participant, which has context about the integrated terminal's shell and its contents."
+Authentication Learn more?,The **Learn more** button takes you to our [documentation on authentication requirements](https://github.com/microsoft/vscode-copilot-release/blob/a032cf75104a99ca745118ca51ea77219441a898/docs/copilot-repo-scope.md).
+Variable Used references?,The **Used references** section in a chat response gives information about the context that is used.
+Secondary chat submit actions?,"In the Chat view, the chat submit button now has a dropdown for easy access to more actions."
+Python Debug config?,Creating launch configurations for Flask and Django apps just got easier! Improvements have been made to detect possible startup files in your workspace.
+github pr comments view,GitHub Pull Requests extension shows outdated comments differently from current comments in the Comments view.
+vscode pylance jupyter,"With the latest Pylance prerelease, there are better dependency analysis for Jupyter cells."
+vscode issue reporting,Extensions can contribute a command for issue reporting in the **Help: Report Issue...** command.
+vscode terminal rescaling,"A new setting, **terminal.integrated.rescaleOverlappingGlyphs**, is available to resize glyphs that overlap with following cells."
+vscode local workspace extensions,A preview feature allows packaging an extension directly in the workspace for tailored development experience.
+Terminal execute command?,The `Terminal.shellIntegration.executeCommand` proposal allows executing a command in a terminal immediately after creation and listening to the incoming data and exit codes of commands being executed in the terminal.
+Authentication Learn More property?,The proposed `LearnMore` property in `AuthenticationForceNewSessionOptions` enables specifying a URI to be presented to the user to learn more about why authentication is needed.
+Outdated comment property?,The new `applicability` property in comment thread allows comment threads to be marked as outdated in the Comments view.
+Comments view menus?,The `commentsView/commentThread/context` proposed menu enables adding actions to the right-click context menu of a comment thread in the Comments view.
+Electron 28 update?,The Electron 28 update with Chromium 120.0.6099.291 and Node.js 18.18.2 has been promoted to users on the stable release.
+vscode pull request 198164,The pull request 198164 by 333fred suggests not to trim whitespace when part of strings or regexes in Visual Studio Code.
+vscode devcontainer json,A devcontainer.json file in your project tells Visual Studio Code how to access or create a development container with a well-defined tool and runtime stack.
+vscode multiple cursors colors,Implemented separate colors for primary and secondary cursors when multiple cursors are present in Visual Studio Code through pull request 181991 by akbyrd.
+vscode terminal suggestions,"Fixes for terminal suggestions in Visual Studio Code include sorting by fuzzy score, not showing terminal suggestions when keybindings are sent through to shell, and making the suggest widget persist on completion acceptance through pull requests 208486, 208523, and 208524 by cpendery."
+vscode inline edit request cancel,"Inline edit - make sure we cancel in-progress request on blur in Visual Studio Code, addressed in pull request 206430 by Krzysztof-Cieslak."
+Fix off-by-one error in PR #205890,Krzysztof Cieślak fixed an off-by-one error in rendering removals in inline edits in PR #205890.
+Make sure we cancel in-progress request on blur in PR #206430,Krzysztof Cieślak made sure that inline edit requests are cancelled on blur in PR #206430.
+Add partial accept kind to inline completion handle in PR #202668,Marcus Revaj added a partial accept kind to inline completion handling in PR #202668.
+Fix broken description of editor.cursorSurroundingLinesStyle setting in PR #201482,Kyosuke Fujimoto fixed the broken description of the `editor.cursorSurroundingLinesStyle` setting in PR #201482.
+Honor GitHub brand name casing in PR #208503,solimant ensured proper casing for GitHub brand names in PR #208503.
+vscode-css-languageservice PR?,A pull request (PR #367) was made to `vscode-css-languageservice` to support hover tooltip for SCSS by Balaji Sivasakthi.
+vscode-eslint json support?,"Josh Goldberg added support for JSON, JSON5, and JSONC in eslint.probe setting in `vscode-eslint` (PR #1787)."
+vscode-extension-samples PR?,Julian Kasimir made a pull request (PR #983) to replace German with English in the `showQuickPick` function in `vscode-extension-samples`.
+vscode-js-debug PR?,Beanyy fixed the formatting of number 0 in remote object when description is not set in `vscode-js-debug` (PR #1968).
+language-server-protocol PR?,Maria José Solano suggested a specification for MarkupContent support in diagnostic messages in `language-server-protocol` (PR #1905).

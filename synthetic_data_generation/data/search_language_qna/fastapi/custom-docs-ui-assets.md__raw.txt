@@ -1,0 +1,30 @@
+Question: Disable automatic docs?
+Answer: Disable the automatic docs by setting their URLs to `None` when creating your `FastAPI` app.
+
+Question: Custom CDN docs urls?
+Answer: Customize the CDN by setting `swagger_js_url` and `swagger_css_url` for Swagger UI and `redoc_js_url` for ReDoc in the path operation.
+
+Question: Serve static files in FastAPI?
+Answer: Import `StaticFiles` and "Mount" a `StaticFiles()` instance in a specific path to serve static files in FastAPI.
+
+Question: Download Swagger and ReDoc files?
+Answer: Download the static files needed for the docs (swagger-ui-bundle.js, swagger-ui.css for Swagger UI and redoc.standalone.js for ReDoc) and put them in the `static/` directory.
+
+Question: Test Swagger UI static file?
+Answer: Start your application and go to <http://127.0.0.1:8000/static/swagger-ui-bundle.js> to confirm that you can serve static files from your app and that you placed the static files for the docs in the correct place.
+
+Question: Disable URLs in FastAPI app?
+Answer: To disable them, set their URLs to `None` when creating your `FastAPI` app.
+
+Question: Create custom docs for static files?
+Answer: You can create the path operations for the custom docs and re-use FastAPI's internal functions to create the HTML pages for the docs.
+
+Question: What is `swagger_js_url` in FastAPI?
+Answer: `swagger_js_url` is the URL where the HTML for your Swagger UI docs can get the JavaScript file, which your own app is now serving.
+
+Question: What is `swagger_css_url` in FastAPI?
+Answer: `swagger_css_url` is the URL where the HTML for your Swagger UI docs can get the CSS file, which your own app is now serving.
+
+Question: How to test Static Files UI in FastAPI?
+Answer: You can create a path operation to test that everything works and disconnect your WiFi, go to your docs, and reload the page. Even without Internet, you would be able to see the docs for your API and interact with it.
+

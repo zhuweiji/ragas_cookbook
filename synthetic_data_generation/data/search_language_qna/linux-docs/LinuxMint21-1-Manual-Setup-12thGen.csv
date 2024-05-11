@@ -1,0 +1,5 @@
+Update packages?,The command 'sudo apt update && sudo apt upgrade -y' updates and upgrades all packages.
+Install OEM kernel?,The command 'sudo apt install linux-oem-22.04c' installs the recommended OEM kernel.
+Enable headset mic?,"The command 'echo ""options snd-hda-intel model=dell-headset-multi"" | sudo tee -a /etc/modprobe.d/alsa-base.conf' enables headset mic input."
+Disable ALS sensor?,"The command 'sudo gedit /etc/default/grub' followed by appending 'GRUB_CMDLINE_LINUX_DEFAULT=""quiet splash module_blacklist=hid_sensor_hub""' to the GRUB_CMDLINE_LINUX_DEFAULT=""quiet splash section disables the ALS sensor."
+Prevent wifi drop offs?,The command 'sudo gedit /etc/NetworkManager/conf.d/default-wifi-powersave-on.conf' followed by changing '3' into a '2' in 'wifi.powersave = 2' prevents wifi drop offs.

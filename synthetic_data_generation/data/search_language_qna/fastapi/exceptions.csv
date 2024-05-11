@@ -1,0 +1,5 @@
+What are exceptions in FastAPI?,"FastAPI has two exceptions, HTTPException and WebSocketException, that can be raised to show errors to the client."
+What is HTTPException in FastAPI?,HTTPException is a type of exception in FastAPI that can be raised to show errors to the client during HTTP requests.
+How to import HTTPException in FastAPI?,HTTPException can be imported directly from FastAPI using `from fastapi import HTTPException`.
+What is WebSocketException in FastAPI?,WebSocketException is a type of exception in FastAPI that can be raised to show errors to the client during WebSocket connections.
+How to import WebSocketException in FastAPI?,WebSocketException can be imported directly from FastAPI using `from fastapi import WebSocketException`.

@@ -1,0 +1,10 @@
+Install OEM D kernel,The document provides instructions to install the OEM D kernel on Ubuntu for the Framework Laptop 13 AMD Ryzen 7040 Series.
+Graphical artifacts fix,The document suggests following a guide to allocate additional RAM to the iGPU for the Framework Laptop 13 AMD Ryzen 7040 Series to prevent graphical artifacts from appearing.
+Allow CPU and platform drivers,The document recommends using the AMD official PPA to ensure the Power Profiles Daemon is always up-to-date to allow both CPU and platform drivers to be simultaneously active.
+Suspend with lid workaround,The document offers a workaround for an active bug that causes a bogus key press when suspending the Framework Laptop 13 AMD Ryzen 7040 Series while attached to power.
+Kernel alert look,The document shows what the OEM Kernel alert looks like on the Framework Laptop 13 AMD Ryzen 7040 Series when a new version of the OEM kernel is ready and the user is on the current OEM D kernel.
+advanced users update packages,"The command to update packages for advanced users is ""sudo apt update && sudo apt upgrade -y""."
+install OEM kernel advanced,"The command to install the recommended OEM kernel for advanced users is ""sudo apt install linux-oem-22.04d""."
+identify OEM D kernel,"The command to identify the OEM D kernel is ""ls /boot/vmlinuz-* | awk -F""-"" '{split($0, a, ""-""); version=a[3]; if (version>max) {max=version; kernel=a[2] ""-"" a[3] ""-"" a[4]}} END{print kernel}'""."
+change GRUB default,"The command to change the GRUB default is ""sudo sed -i 's/^GRUB_DEFAULT=\""0\""/GRUB_DEFAULT=\""Advanced options for Ubuntu>Ubuntu, with Linux 6.5.0.1013-oem\""/' /etc/default/grub""."
+fix MediaTek WiFi dropout,"The command to fix MediaTek WiFi dropout on WiFi 6E routers is a long script starting with ""sudo add-apt-repository"" and ending with ""sudo update-initramfs -u""."

@@ -1,0 +1,15 @@
+Question: What is CORS?
+Answer: CORS or "Cross-Origin Resource Sharing" refers to the situations when a frontend running in a browser has JavaScript code that communicates with a backend, and the backend is in a different "origin" than the frontend.
+
+Question: What is origin?
+Answer: An origin is the combination of protocol (`http`, `https`), domain (`myapp.com`, `localhost`, `localhost.tiangolo.com`), and port (`80`, `443`, `8080`).
+
+Question: What are allowed origins?
+Answer: The backend must have a list of "allowed origins" to allow the JavaScript in the frontend send its request to the backend.
+
+Question: What is CORSMiddleware?
+Answer: You can configure CORS in your FastAPI application using the CORSMiddleware.
+
+Question: When to use wildcards?
+Answer: It's also possible to declare the list as `"*"` (a "wildcard") to say that all are allowed, but that will only allow certain types of communication, excluding everything that involves credentials.
+

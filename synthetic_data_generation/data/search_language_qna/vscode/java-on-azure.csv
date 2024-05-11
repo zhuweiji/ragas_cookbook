@@ -1,0 +1,5 @@
+Deploy Java containers Azure?,"The Azure Tools extension pack supports deploying Java applications, including containers, to Azure App Service."
+Tutorials Java Azure?,"The document provides several deployment tutorials for Java applications on Azure, including deploying Java web apps to Azure App Service and deploying Spring Boot apps to Azure Spring Apps."
+Tools deploy Java Azure?,Apache Maven and Azure App Service are listed as related tools for deploying Java web apps to Azure App Service.
+Extension Azure Spring Cloud?,The Azure Tools extension pack supports deploying Spring microservices to Azure Spring Cloud.
+Deploy Azure Functions Java?,The document provides a tutorial on deploying serverless code using Azure Functions and includes a link to the related Azure Functions extension for Visual Studio Code.

@@ -1,0 +1,5 @@
+Connect debugger VS Code?,You can connect the debugger in Visual Studio Code by following the steps provided in the document.
+Run FastAPI with debugger?,You can run your FastAPI application with the debugger by calling your Python program directly from the debugger.
+"Purpose __name__ == ""__main__"" ?","The main purpose of `__name__ == ""__main__""` is to have some code that is executed when the file is called directly, but not when another file imports it."
+uvicorn run code example?,The document provides an example of how to import and run `uvicorn` directly in your FastAPI application.
+Debug FastAPI in Pycharm?,"The document provides steps on how to debug a FastAPI application in Pycharm by opening the ""Run"" menu, selecting the option ""Debug..."", and then selecting the file to debug."

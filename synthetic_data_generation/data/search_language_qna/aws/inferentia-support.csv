@@ -1,0 +1,10 @@
+eksctl install prerequisites,"Have `eksctl` installed on your computer. If you don't have it installed, see Installation in the `eksctl` documentation."
+kubectl install prerequisites,"Have `kubectl` installed on your computer. For more information, see Installing or updating `kubectl`."
+python3 install prerequisites,"Have `python3` installed on your computer. If you don't have it installed, then see Python downloads for installation instructions."
+inf1 create cluster,"To create a cluster with Inf1 Amazon EC2 instance nodes, use the provided `eksctl` command with the desired instance type and node details."
+deploy tensorflow serving image,"An optional step to deploy a TensorFlow Serving application image, which uses a pre-built inference serving container for TensorFlow provided by AWS Deep Learning Containers. The container includes the AWS Neuron Runtime and TensorFlow Serving application."
+Neuron devices deployment yaml,The number of Neuron devices allocated to your serving application can be adjusted by changing the `aws.amazon.com/neuron` resource in the deployment yaml.
+Attach AmazonS3ReadOnlyAccess policy,Add the `AmazonS3ReadOnlyAccess` IAM policy to the node instance role that was created in step 1 of [Create a cluster](#create-cluster-inferentia).
+Create TensorFlow Serving Kubernetes service,Create a Kubernetes service for your TensorFlow model Serving application using the `rn50_service.yaml` file.
+Deploy TensorFlow Serving model,Deploy the model using the `kubectl apply -f rn50_deployment.yaml` command.
+Forward gRPC port to TensorFlow Serving service,"To test locally, forward the gRPC port to the `eks-neuron-test` service using the `kubectl port-forward service/eks-neuron-test 8500:8500 &` command."

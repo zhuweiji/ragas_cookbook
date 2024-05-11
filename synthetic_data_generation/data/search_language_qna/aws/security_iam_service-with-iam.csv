@@ -1,0 +1,12 @@
+EKS IAM policies actions?,The `Action` element of an IAM policy for Amazon EKS describes the actions that you can use to allow or deny access in a policy. Amazon EKS policy actions use the prefix `eks:` before the action.
+EKS IAM policies resources?,The `Resource` JSON policy element for Amazon EKS specifies the object or objects to which the action applies. It's a best practice to specify a resource using its Amazon Resource Name (ARN).
+EKS IAM policies ARN format?,The Amazon EKS cluster resource ARN has the following format: `arn:aws:eks:region-code:account-id:cluster/cluster-name`.
+EKS IAM global condition keys?,"Amazon EKS supports using some global condition keys, which can be found in the AWS Global Condition Context Keys in the IAM User Guide."
+EKS actions for specific resources?,"To see a list of Amazon EKS actions and their associated resource types, see Resources defined by Amazon Elastic Kubernetes Service in the Service Authorization Reference."
+What are Amazon EKS condition keys?,Amazon EKS defines its own set of condition keys and also supports using some global condition keys. These keys can be set when associating an OpenID Connect provider to a cluster.
+Which region condition keys does EC2 support?,All Amazon EC2 actions support the `aws:RequestedRegion` and `ec2:Region` condition keys.
+What is EKS service role?,"When creating a cluster resource in Amazon EKS, you must choose a role to allow Amazon EKS to access several other AWS resources on your behalf."
+How to attach policies to EKS service role?,Choose a role that has the Amazon EKS managed policies attached to it when creating a cluster resource in Amazon EKS.
+What if existing role for EKS service?,"If you have previously created a service role, then Amazon EKS provides you with a list of roles to choose from."
+How to check for existing EKS cluster role?,"For more information, see [Check for an existing cluster role](service_IAM_role.md#check-service-role)."
+How to check for existing EKS node role?,"For more information, see [Check for an existing node role](create-node-role.md#check-worker-node-role)."

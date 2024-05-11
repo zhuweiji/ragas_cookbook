@@ -1,0 +1,37 @@
+Question: EKS IAM policies actions?
+Answer: The `Action` element of an IAM policy for Amazon EKS describes the actions that you can use to allow or deny access in a policy. Amazon EKS policy actions use the prefix `eks:` before the action.
+
+Question: EKS IAM policies resources?
+Answer: The `Resource` JSON policy element for Amazon EKS specifies the object or objects to which the action applies. It's a best practice to specify a resource using its Amazon Resource Name (ARN).
+
+Question: EKS IAM policies ARN format?
+Answer: The Amazon EKS cluster resource ARN has the following format: `arn:aws:eks:region-code:account-id:cluster/cluster-name`.
+
+Question: EKS IAM global condition keys?
+Answer: Amazon EKS supports using some global condition keys, which can be found in the AWS Global Condition Context Keys in the IAM User Guide.
+
+Question: EKS actions for specific resources?
+Answer: To see a list of Amazon EKS actions and their associated resource types, see Resources defined by Amazon Elastic Kubernetes Service in the Service Authorization Reference.
+
+Question: What are Amazon EKS condition keys?
+Answer: Amazon EKS defines its own set of condition keys and also supports using some global condition keys. These keys can be set when associating an OpenID Connect provider to a cluster.
+
+Question: Which region condition keys does EC2 support?
+Answer: All Amazon EC2 actions support the `aws:RequestedRegion` and `ec2:Region` condition keys.
+
+
+Question: What is EKS service role?
+Answer: When creating a cluster resource in Amazon EKS, you must choose a role to allow Amazon EKS to access several other AWS resources on your behalf.
+
+Question: How to attach policies to EKS service role?
+Answer: Choose a role that has the Amazon EKS managed policies attached to it when creating a cluster resource in Amazon EKS.
+
+Question: What if existing role for EKS service?
+Answer: If you have previously created a service role, then Amazon EKS provides you with a list of roles to choose from.
+
+Question: How to check for existing EKS cluster role?
+Answer: For more information, see [Check for an existing cluster role](service_IAM_role.md#check-service-role).
+
+Question: How to check for existing EKS node role?
+Answer: For more information, see [Check for an existing node role](create-node-role.md#check-worker-node-role).
+

@@ -1,0 +1,15 @@
+Question: What is Kubernetes Dashboard?
+Answer: The Kubernetes Dashboard is a general-purpose, web-based UI for Kubernetes clusters that allows users to manage applications running in the cluster and troubleshoot them, as well as manage the cluster itself.
+
+Question: How to install Metrics Server?
+Answer: Installing the Kubernetes Metrics Server involves learning how to aggregate resource usage data in your cluster. It is not deployed by default in your cluster, but is used by Kubernetes add-ons, such as the Kubernetes Dashboard and Horizontal Pod Autoscaler.
+
+Question: What is the use of Helm with Amazon EKS?
+Answer: The Helm package manager for Kubernetes helps you install and manage applications on your Kubernetes cluster. This topic helps you install and run the Helm binaries so that you can install and manage charts using the Helm CLI on your local computer.
+
+Question: What are Amazon EKS service quotas?
+Answer: Amazon EKS service quotas are the default quotas, formerly referred to as limits, for each AWS service. This topic describes quotas for Amazon EKS and how to increase them.
+
+Question: How to tag Amazon EKS resources?
+Answer: Tagging your Amazon EKS resources involves assigning your own metadata to each resource in the form of tags to help you manage your Amazon EKS resources. This topic describes tags and shows you how to create them.
+

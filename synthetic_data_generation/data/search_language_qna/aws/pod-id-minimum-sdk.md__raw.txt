@@ -1,0 +1,15 @@
+Question: Which SDKs support EKS Pod Identities?
+Answer: The AWS SDK for Java (Version 2), Go v1, Go v2, Python (Boto3), Python (botocore), AWS CLI (Version 1 and 2), JavaScript v2, JavaScript v3, Ruby, C++, .NET, and PHP support EKS Pod Identities.
+
+Question: How to ensure using supported SDK for EKS Pod Identity?
+Answer: Follow the installation instructions for your preferred SDK at AWS Tools when building your containers to ensure using a supported SDK for EKS Pod Identity.
+
+Question: Where EKS Pod Identity credentials are searched in default chain?
+Answer: EKS Pod Identity credentials are searched in the Container credential provider in the default credential chain.
+
+Question: What happens if workloads use credentials earlier in chain?
+Answer: If workloads currently use credentials that are earlier in the chain of credentials, those credentials will continue to be used even if you configure an EKS Pod Identity association for the same workload.
+
+Question: How to use EKS Pod Identity credentials in code?
+Answer: To use the credentials from a EKS Pod Identity association in code, create a client for an AWS service with an SDK, and the SDK will search in a chain of locations for AWS Identity and Access Management credentials to use, with EKS Pod Identity credentials being used if you don't specify a credential provider.
+

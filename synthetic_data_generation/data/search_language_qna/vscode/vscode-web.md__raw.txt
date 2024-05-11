@@ -1,0 +1,49 @@
+Question: VS Code for the Web features?
+Answer: VS Code for the Web provides a browser-based experience for navigating files and repositories and committing lightweight code changes. It includes search and syntax highlighting while browsing and editing, along with extension support.
+
+
+Question: VS Code for Web themes
+Answer: Themes can be experienced through VS Code for the Web using the URL schema: `https://vscode.dev/editor/theme/<extensionId>`.
+
+Question: VS Code for Web Live Share
+Answer: Live Share guest sessions are available in the browser through the `https://vscode.dev/editor/liveshare` URL.
+
+Question: Continue working in different environment
+Answer: The GitHub Repositories extension makes it easy for you to clone the repository locally, reopen it on the desktop, or create a GitHub codespace for the current repository.
+
+Question: Saving and sharing work in VS Code for Web
+Answer: When working on a remote repository, your work is saved in the browser's local storage until you commit it. You can push your changes in the Source Control view to persist any new work.
+
+Question: Use own compute with Remote Tunnels
+Answer: You can develop against another machine in VS Code for the Web using the [Remote - Tunnels](https://marketplace.visualstudio.com/items?itemName=ms-vscode.remote-server) extension.
+
+Question: Remote - Tunnels extension?
+Answer: The Remote - Tunnels extension allows you to connect to a remote machine via a secure tunnel and use it as a development environment in VS Code for the Web.
+
+Question: VS Code for the Web language support?
+Answer: VS Code for the Web provides varying levels of language support, from code syntax colorization to rich single file completions and semantic highlighting.
+
+Question: Extensions in VS Code for the Web?
+Answer: Only a subset of extensions can run in VS Code for the Web, and they must be updated to support running in the browser sandbox.
+
+Question: File System API in VS Code for the Web?
+Answer: The File System API allows web pages to access the local file system, but it's only supported in the latest versions of Chrome, Edge, Firefox, and Safari.
+
+Question: VS Code for the Web limitations?
+Answer: VS Code for the Web has some limitations, such as the unavailability of the terminal and debugger, and a subset of extensions that can run in the browser.
+
+Question: Which browsers support VS Code for the Web?
+Answer: The latest versions of Chrome, Edge, Firefox, and Safari support VS Code for the Web.
+
+Question: How to check compatible browser version?
+Answer: You can look at the Playright version used for testing VS Code and review its supported browser versions in the Release notes.
+
+Question: What are the keybindings issues in VS Code for the Web?
+Answer: Some keybindings may not work as expected or are reserved in certain browsers like Firefox.
+
+Question: How to open new tabs or windows in VS Code for the Web?
+Answer: Depending on your browser, you may grant access to the clipboard or allow pop-up windows in different ways.
+
+Question: What are the additional browser setup steps for VS Code in a browser?
+Answer: There are additional browser configuration steps you can take when working with VS Code in a browser like setting up permissions for opening new tabs and windows, and handling clipboard access.
+

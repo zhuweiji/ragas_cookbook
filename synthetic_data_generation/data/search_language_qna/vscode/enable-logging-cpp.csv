@@ -1,0 +1,5 @@
+Enable language server logging,"To enable full logging for the language server, open the Command Palette, choose Preferences: Workspace settings, search for ""logging"", change the level of C\_Cpp: Logging Level to Debug, and select the C/C++ option in the log filter selector."
+Log filter selector location,"The log filter selector can be found in the Output panel, which can be opened from the main menu by choosing View > Output."
+Debug adapter logging configuration,Enabling logging for the debug adapter is configured in `launch.json`.
+LLDB-MI debugger logging block,"The logging block for macOS LLDB-MI debuggers, along with its default configuration, can be found in `launch.json`."
+Visual C++ debugger logging,The logging block for the Visual C++ debugger with its default configuration in `launch.json` shows only the communication to and from VS Code as all communication to the debugger is done internally to the process and is not visible through logging.

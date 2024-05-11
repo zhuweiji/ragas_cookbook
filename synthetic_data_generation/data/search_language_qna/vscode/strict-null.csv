@@ -1,0 +1,17 @@
+Strict null checking VS Code benefits?,Enabling TypeScript's strict null checking in the VS Code codebase allows for moving faster and shipping a more stable product by addressing larger hazards.
+VS Code example crash issue?,"The example crash issue was due to calling getStatus(undefined), which caused an exception when accessing undefined.id."
+VS Code fix for call with undefined?,"The fix involved updating the calling code, handling undefined in getStatus, and adding a warning in the doc comment."
+VS Code strict null checking requirement?,"With strict null checking enabled, VS Code requires defensively checking for undefined, updating tests or adding new tests, and getting team sign-off for changes introducing calls to getStatus."
+VS Code strict null checking issue resolution?,"Strict null checking helps address the root cause of unexpected undefined issues, making code more stable and improving the development experience."
+TypeScript strict null checking?,"TypeScript's strict null checking option treats `undefined` and `null` as distinct types, requiring any type that may be nullable to be annotated as such."
+VS Code codebase null checking issue?,The lack of strict null checking in the VS Code codebase was identified as a hazard that allowed well-meaning engineers to introduce bugs.
+VS Code migration to strict null checking?,"VS Code created a new TypeScript project file `tsconfig.strictNullChecks.json` that enables strict null checking and selectively adds individual files to this project, fixing the strict null errors in those files."
+Preventing regressions in strict null checking?,"To prevent accidental regressions to already strict null checked files, VS Code added a continuous integration step that compiles `tsconfig.strictNullChecks.json`, breaking the build for checkins that regress strict null checking."
+Automating strict null checking tasks?,"VS Code put together two simple scripts to automate some of the repetitive tasks related to adding files to the strict null checked project, such as printing a list of eligible files and automatically adding eligible files to the strict null project."
+Strict null errors fixes?,Automating strict null fixes was considered but manual review and fixing gave a chance to improve the codebase.
+Strict null effect on errors?,"Despite fixing strict null errors, the total number of errors in VS Code codebase didn't decrease due to cascading effects."
+bug response tests?,"The response to a bug is often to add tests, but people should also consider the root cause of the bug and potential hazards it reveals."
+hazardous coding pattern?,The document suggests that encountering a bug should prompt developers to consider whether there is a hazardous coding pattern in the source code that could benefit from refactoring.
+upfront work automate?,The document recommends doing the minimum amount of upfront work required and automating when it makes sense in order to reduce hazards and make the world incrementally better.
+explore bug root cause?,"The document advises to explore the root cause of a bug, rather than rushing in a fix and moving on to the next issue."
+vscode strict null checking?,The document mentions that the approach of exploring the root cause of a bug and addressing hazards proportionally to their impact was taken with strict null checking in VS Code.

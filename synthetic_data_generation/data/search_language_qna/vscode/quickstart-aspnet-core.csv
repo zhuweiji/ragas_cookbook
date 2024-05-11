@@ -1,0 +1,10 @@
+.NET Core container create,The guide teaches how to create a `Dockerfile` file describing a simple .NET Core service container.
+Docker build run verify,"The guide explains how to build, run, and verify the functionality of the .NET Core service."
+Docker add files project,The guide shows how to add Docker files to the .NET Core project using the Docker extension in VS Code.
+Add env Dockerfile image,The guide demonstrates how to add an environment variable to the service container image using the `ENV` instruction in the `Dockerfile`.
+Test service container Docker,The guide instructs on how to test the .NET Core service container by running it and verifying it in the Docker Explorer.
+Docker default host port?,"By default, Docker assigns a randomly chosen host port to a port exposed by a container."
+Docker container port?,"In the application, the exposed (container) port is 5000."
+Verify Docker container host port?,You can verify which host port is being used by the container by right-clicking the container in the Docker Explorer and choosing **Inspect**.
+Docker run options for specific port?,You can use specific port on the host by changing the Docker run options used by `docker-run: debug` task.
+Customize Docker build and run tasks?,You can customize your Docker build and run tasks by modifying the `.vscode/tasks.json` file.

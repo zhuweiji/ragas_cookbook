@@ -1,0 +1,10 @@
+FastAPI NoSQL database,"FastAPI can be integrated with any NoSQL database, with an example provided for Couchbase, a document-based NoSQL database."
+Couchbase document structure,"In Couchbase, a document is a JSON object with keys and values, where values can also be other JSON objects, arrays, numbers, strings, booleans, etc."
+Couchbase Bucket function,"The `get_bucket` function connects to a Couchbase cluster, authenticates in the cluster, gets a Bucket instance, sets defaults for timeouts, and returns it."
+Pydantic models in Couchbase,"Pydantic models can be used to represent Couchbase documents, with the `User` model representing the data returned in the path operation and the `UserInDB` model representing the data stored in the database."
+Function to get user from username,"A dedicated function was created to get the user from a `username`, independent of the path operation function, for easier reuse and unit testing."
+Integrate third party NoSQL database?,You can integrate any third party NoSQL database by using their standard packages.
+Use external tools with NoSQL databases?,"The same applies to any other external tool, system or API - you can use them with NoSQL databases."
+Standard packages for NoSQL integration?,You can integrate any third party NoSQL database by using their standard packages.
+External systems usage with NoSQL databases?,"The same applies to any other external tool, system or API - you can use them with NoSQL databases."
+API usage in NoSQL integration?,You can integrate any third party NoSQL database by using their standard packages or APIs.

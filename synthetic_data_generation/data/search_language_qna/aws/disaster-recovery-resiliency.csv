@@ -1,0 +1,5 @@
+EKS control plane availability?,"Amazon EKS runs and scales the Kubernetes control plane across multiple AWS Availability Zones to ensure high availability. It automatically scales control plane instances based on load, detects and replaces unhealthy control plane instances, and automatically patches the control plane."
+AWS regions and EKS?,Amazon EKS leverages the architecture of AWS Regions to maintain high availability and is able to offer an SLA for API server endpoint availability.
+EKS etcd instances?,The control plane of Amazon EKS consists of at least two API server instances and three `etcd` instances that run across three Availability Zones within an AWS Region.
+EKS auto scaling?,"Amazon EKS actively monitors the load on control plane instances and automatically scales them to ensure high performance. It also automatically detects and replaces unhealthy control plane instances, restarting them across the Availability Zones within the AWS Region as needed."
+EKS patching?,Amazon EKS automatically patches the control plane to ensure security and stability.

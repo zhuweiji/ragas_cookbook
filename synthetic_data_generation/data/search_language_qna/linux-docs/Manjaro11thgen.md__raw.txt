@@ -1,0 +1,15 @@
+Question: update Manjaro packages?
+Answer: The command 'sudo pacman -Syyu --noconfirm' updates Manjaro packages.
+
+Question: suspend battery life workaround?
+Answer: The command 'sudo sed -i.bak 's/^\(GRUB_CMDLINE_LINUX_DEFAULT="[^"]*\)"$/\1 nvme.noacpi=1"/' /etc/default/grub && sudo update-grub' is used to improve suspend battery life for SSD power drain.
+
+Question: prevent wireless drops?
+Answer: The command 'echo "[connection]" | sudo tee /etc/NetworkManager/conf.d/default-wifi-powersave-on.conf && echo "wifi.powersave = 2" | sudo tee -a /etc/NetworkManager/conf.d/default-wifi-powersave-on.conf' prevents wireless drops.
+
+Question: NVMe ACPI parameter?
+Answer: The 'nvme.noacpi=1' parameter is an ACPI parameter used to ensure compatibility by disabling ACPI support for NVMe.
+
+Question: change Wi-Fi power save setting?
+Answer: Changing 3 into a 2 in the '/etc/NetworkManager/conf.d/default-wifi-powersave-on.conf' file sets the Wi-Fi power save to 2.
+

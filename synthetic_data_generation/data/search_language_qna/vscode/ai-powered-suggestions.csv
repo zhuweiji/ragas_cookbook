@@ -1,0 +1,10 @@
+copilot vs code,GitHub Copilot is an AI-powered pair programmer that suggests code completions directly in the editor while you write your code in Visual Studio Code.
+copilot subscription,"To use GitHub Copilot, you must have an active subscription for GitHub Copilot in your personal account, or you need to be assigned a seat by your organization."
+copilot install,"To use GitHub Copilot in Visual Studio Code, you must have the GitHub Copilot extension, which is installed from the Visual Studio Code marketplace."
+copilot suggestions,"GitHub Copilot offers code suggestions as you type, sometimes completing the current line and sometimes offering a whole new block of code."
+copilot enable,You can enable or disable GitHub Copilot inline suggestions by selecting the GitHub Copilot icon in the Status Bar of Visual Studio Code and choosing the desired option.
+GitHub Copilot Chat use,The document provides information on how to use AI chat conversations with GitHub Copilot Chat.
+Copilot with programming languages,"The VS Code Copilot Series on YouTube offers programming-specific videos for using Copilot with Python, C#, Java, PowerShell, and more."
+Copilot documentation location,The GitHub Copilot documentation can be found at this link: <https://docs.github.com/copilot/getting-started-with-github-copilot?tool=vscode>.
+Copilot in Visual Studio Code,The document provides information on how to use GitHub Copilot in Visual Studio Code.
+Copilot additional resources,The document provides links to additional resources for learning about Copilot and how to use it in VS Code.

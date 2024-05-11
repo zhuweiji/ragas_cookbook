@@ -1,0 +1,24 @@
+Question: VS Code zoom level
+Answer: You can adjust the zoom level in VS Code with the **View** > **Appearance** > **Zoom** commands. The default value is 0 and each increment/decrement changes the zoom level by 20 percent.
+
+Question: VS Code high contrast theme
+Answer: VS Code supports a High Contrast color theme on all platforms. Use **File** > **Preferences** > **Theme** > **Color Theme** to display the **Select Color Theme** dropdown and select the **High Contrast** theme.
+
+Question: color accessibility
+Answer: The accessibility of colors is subjective to the type of anomalous trichromacy (color blindness). The level of severity ranges per person and can be divided into four condition types: Deuteranopia, Protanopia, Tritanopia, and Monochromia. One of the best approaches to selecting the best colors for a specific condition is to apply complementary colors.
+
+Question: tab navigation focus
+Answer: You can use the `kbstyle(Tab)` key to navigate between UI controls in VS Code, with an indicator appearing around each UI element when it has focus. This also works in the integrated terminal and can be toggled with `kb(editor.action.toggleTabFocusMode)`.
+
+Question: NVDA focus mode
+Answer: It is recommended to stay in focus mode for NVDA and use hotkeys to navigate instead of browse mode.
+
+Question: Screen reader optimized mode
+Answer: VS Code goes into screen reader optimized mode for UI such as the editor and Integrated Terminal when it detects that a screen reader is being used.
+
+Question: Accessibility signals sounds?
+Answer: The command **Help: List Signal Sounds** lists all available accessibility signal sounds, lets you hear each as you move through the list, and allows for configuring their enabled/disabled status.
+
+Question: Orca silent Linux?
+Answer: If Orca in your Linux distribution does not read the editor content, ensure that the setting `"editor.accessibilitySupport": "on"` is enabled in VS Code. Additionally, try setting `ACCESSIBILITY_ENABLED=1` as an environment variable to resolve the issue.
+

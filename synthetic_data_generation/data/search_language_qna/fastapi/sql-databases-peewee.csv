@@ -1,0 +1,25 @@
+peewee async compatibility?,The document explains how to make Peewee async-compatible by overriding its internal parts that rely on `threading.local` and replacing them with `contextvars`.
+peewee standard code?,"The document shows the standard Peewee code for creating a Peewee database, which includes defining a SQLite database and creating tables for the models."
+peewee database change?,"If you wanted to use a different database, like PostgreSQL, you would need to use a different Peewee database class, as changing the string is not enough."
+peewee connection state?,"The document introduces `PeeweeConnectionState`, which overrides the internal parts of Peewee that use `threading.local` and replaces them with `contextvars`."
+peewee contextvars?,"The document uses `contextvars` as a more advanced alternative to `threading.local`, which is compatible with the new async features of modern Python."
+What is the class that makes Peewee use contextvars?,The `PeeweeConnectionState` class is used to make Peewee use `contextvars` instead of `threading.local`.
+Where to overwrite db._state with the new PeeweeConnectionState?,You should overwrite `db._state` with the new `PeeweeConnectionState` after creating `db`.
+What is the custom class for Pydantic models to convert Peewee ModelSelect?,The custom `PeeweeGetterDict` class is used to convert Peewee's `ModelSelect` to a list of Pydantic models when using `orm_mode = True`.
+Which file contains the CRUD utilities for Peewee models?,The file `sql_app/crud.py` contains the CRUD utilities for Peewee models.
+What is the name of the magical attribute Peewee adds to the Item model?,"Peewee automatically adds an `id` attribute as an integer to be the primary key, and also adds a magical `owner_id` attribute with the integer ID of the `User` for the `Item` model."
+db connection?,The database connection is created in the `get_db()` dependency and is connected at the beginning of a request and disconnected at the end.
+db state?,"The database state is stored in an internal variable that is independent for each request, using the `contextvars` tricks."
+list models?,"To return several objects like in `get_users`, we directly call `list`, like in: `list(models.User.select())`, to make the `response_model` work correctly."
+path operation decorator?,"The `get_db()` dependency is added to the *path operation decorator* in the `dependencies` parameter, not in the *path operation function*."
+context variable sub-dependency?,The `reset_db_state()` dependency is used to set the value for the context variable (with just a default `dict`) that will be used as the database state for the whole request.
+peewee thread local,"Peewee uses threading.local by default to store its database ""state"" data, which can cause issues in an async framework like FastAPI where multiple tasks could be using the same threading.local variable and sharing the same connection."
+fix peewee with fastapi,"To fix this issue, the line db._state = PeeweeConnectionState() is uncommented in the sql\_app/database.py file, and the body of the async dependency reset\_db\_state() is uncommented in the sql\_app/main.py file."
+context variables in peewee,"Python 3.7 has contextvars that can create a local variable similar to threading.local but also supports async features. To set a value used in the current ""context"" (e.g. for the current request), use some\_var.set(""new value""), and to get a value anywhere inside of the context (e.g. in any part handling the current request) use some\_var.get()."
+set context variables in reset\_db\_state,"If some part of the async code sets the value with some\_var.set(""updated in function"") (e.g. like the async dependency reset\_db\_state()), the rest of the code in it and the code that goes after (including code inside of async functions called with await) will see that new value. So, in our case, if we set the Peewee state variable (with a default dict) in the async dependency reset\_db\_state(), all the rest of the internal code in our app will see this value and will be able to reuse it for the whole request."
+concurrent requests with context variables,"The context variable would be set again for the next request, even if they are concurrent, ensuring that each request has its own separate database state."
+Database state dict?,The Peewee state variable is a default dict that is set in the async dependency and can be reused for the whole request.
+Context variable scope?,The context variable is a dict that is set for each request and is available to the entire codebase for that request.
+Connect/disconnect in async dep?,"It's not practical to connect and disconnect the database in the async dependency, as it needs to be async for the context variable to be preserved, but creating and closing the database connection is potentially blocking."
+Reason for normal def dependency?,"The normal def dependency, get\_db(), is needed to add the database state to the dict, like the connection, etc."
+Set entire dict in async dep?,"It's not possible to set the entire dict itself in the async dependency, only values in the dict can be set."

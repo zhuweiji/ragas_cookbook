@@ -1,0 +1,5 @@
+CodeLens actionable,"CodeLens links are actionable, meaning you can click on them and something happens."
+Git Lens UI,"Git Lens uses the CodeLens UI to show commit information, number of authors, inline blame annotations, and exposes the Peek window for a full history view."
+CodeMetrics extension,"The CodeMetrics extension shows the complexity of functions and allows you to check metrics on the source code you are writing, with customizable descriptions."
+Regex Previewer extension,The Regex Previewer extension is useful for testing regular expressions quickly.
+Version Lens extension,"The Version Lens extension supports many package management systems, shows outdated packages, and allows for quick upgrades with a mouse click."

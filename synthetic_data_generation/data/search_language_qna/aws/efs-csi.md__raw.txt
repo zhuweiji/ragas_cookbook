@@ -1,0 +1,30 @@
+Question: efs csi driver compatibility?
+Answer: The Amazon EFS CSI driver isn't compatible with Windows-based container images. However, version 1.3.2 or later supports the Arm64 architecture, including Amazon EC2 Graviton-based instances.
+
+Question: efs csi driver kubernetes versions?
+Answer: You can use static provisioning for persistent volumes using version 1.1 of the driver on any supported Amazon EKS cluster version. Dynamic provisioning requires 1.2 or later of the driver.
+
+Question: efs csi driver iam prerequisites?
+Answer: Prerequisites include an existing AWS Identity and Access Management (IAM) OpenID Connect (OIDC) provider for your cluster, version 2.12.3 or later or version 1.27.160 or later of the AWS Command Line Interface (AWS CLI) installed and configured, and the `kubectl` command line tool installed on your device or AWS CloudShell.
+
+Question: efs csi driver pod fargate?
+Answer: A Pod running on AWS Fargate automatically mounts an Amazon EFS file system without requiring any additional configuration.
+
+Question: creating efs csi driver IAM role?
+Answer: To create an IAM role for the Amazon EFS CSI driver, you can use `eksctl`, the AWS Management Console, or the AWS CLI. The specific steps to follow depend on your chosen method and are detailed in the given document.
+
+Question: Create IAM role efs-csi?
+Answer: Use the AWS Management Console to create the IAM role `AmazonEKS_EFS_CSI_DriverRole` with the specified trust policy, and attach the `AmazonEFSCSIDriverPolicy` policy.
+
+Question: Prerequisites for creating IAM role?
+Answer: Before creating the IAM role, you need to view your cluster's OIDC provider URL using the AWS CLI and the `describe-cluster` command.
+
+Question: Modify trust policy condition?
+Answer: In the trust policy, modify the `Condition` operator from `"StringEquals"` to `"StringLike"`.
+
+Question: Attach managed policy to IAM role?
+Answer: Attach the `AmazonEFSCSIDriverPolicy` policy to the `AmazonEKS_EFS_CSI_DriverRole` role using the AWS CLI and the `attach-role-policy` command.
+
+Question: Install Amazon EFS CSI driver?
+Answer: We recommend installing the Amazon EFS CSI driver through the Amazon EKS add-on. If you're unable to use the Amazon EKS add-on, you can install it using the instructions on the GitHub repository.
+

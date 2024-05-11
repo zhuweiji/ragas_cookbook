@@ -1,0 +1,15 @@
+Question: How to update Ubuntu packages?
+Answer: Use the command "sudo apt update && sudo apt upgrade -y && sudo snap refresh" in the terminal.
+
+Question: What is the workaround for dropped Intel AX210 wifi?
+Answer: Disable power save for Intel Wi-Fi by executing specific commands in the terminal.
+
+Question: How to disable ALS sensor for brightness keys?
+Answer: The document does not provide specific instructions for this task.
+
+Question: Which kernel is recommended for the 12th Gen Intel Core Framework Laptop 13?
+Answer: The default kernel is recommended.
+
+Question: How to disable Wi-Fi power save?
+Answer: Use the command "sudo sed -i '/^wifi.powersave = 3$/s/3/2/' /etc/NetworkManager/conf.d/default-wifi-powersave-on.conf" in the terminal.
+

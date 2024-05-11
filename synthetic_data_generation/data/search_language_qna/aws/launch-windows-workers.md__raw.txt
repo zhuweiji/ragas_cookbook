@@ -1,0 +1,52 @@
+Question: EKS cluster Windows nodes
+Answer: Amazon EKS nodes are standard Amazon EC2 instances that can run Windows nodes in extended clusters on AWS Outposts.
+
+Question: eksctl node group
+Answer: You can create a self-managed Windows node group using eksctl with the 'eksctl create nodegroup' command.
+
+Question: EKS console manage Windows
+Answer: Yes, you can launch self-managed Windows nodes with eksctl or the AWS Management Console.
+
+Question: EKS Windows node IAM role
+Answer: For enabling IRSA, assign the AmazonEKS_CNI_Policy managed IAM policy to an IAM role associated with the Kubernetes aws-node service account instead of the Amazon EKS node IAM role.
+
+Question: EKS restrict IMDS access
+Answer: It is recommended to block Pod access to IMDS if all Pods in the cluster have IAM roles assigned for minimum permissions and no Pods require access to IMDS for other reasons.
+
+Question: aws eks cluster create
+Answer: To create an Amazon EKS cluster, follow the steps outlined in 'Creating an Amazon EKS cluster'.
+
+Question: aws eks self-managed nodes
+Answer: To launch self-managed Windows nodes using the AWS Management Console, follow the steps outlined in 'Step 1: To launch self-managed Windows nodes using the AWS Management Console'.
+
+Question: eks cluster status
+Answer: Before launching nodes, ensure the cluster status shows as `ACTIVE`, otherwise, the nodes fail to register with the cluster.
+
+Question: aws eks node console
+Answer: To create a stack for launching self-managed Windows nodes using the AWS Management Console, open the AWS CloudFormation console at [https://console.aws.amazon.com/cloudformation/](https://console.aws.amazon.com/cloudformation/).
+
+Question: eks cloudformation requirements
+Answer: To launch self-managed Windows nodes using the AWS Management Console, ensure that the prerequisites are met, including an existing Amazon EKS cluster, a Linux node group, an existing VPC and security group, and an Amazon EKS cluster that uses a VPC and security group that meets the requirements of an Amazon EKS cluster.
+
+Question: eks node group create?
+Answer: To create an EKS node group, open the Amazon EKS console, choose the cluster name, then the Networking tab. Use the Additional security groups value as a reference when selecting from the ClusterControlPlaneSecurityGroup dropdown list. Enter a name for your node group, the minimum, desired, and maximum number of nodes, and choose an instance type. You can also specify a root volume size, SSH key pair, and bootstrap arguments.
+
+Question: eks node group subnets?
+Answer: When creating an EKS node group, you need to choose the subnets that you created for your VPC. If you created your VPC using the steps in Creating a VPC for your Amazon EKS cluster, then specify only the private subnets within the VPC for your nodes to launch into.
+
+
+Question: What is NodeInstanceRole in EKS?
+Answer: NodeInstanceRole is a term used in Amazon EKS to refer to the IAM role that needs to be recorded for the node group that was created. It is used when configuring your Amazon EKS Windows nodes.
+
+Question: How to enable nodes to join EKS cluster?
+Answer: To enable nodes to join your EKS cluster, you need to check if you already have an `aws-auth` ConfigMap and update it as needed. If not found, you need to apply the stock `ConfigMap` and set the `rolearn` values to the applicable `NodeInstanceRole` values.
+
+Question: How to apply the configuration map in EKS?
+Answer: You can apply the configuration map in EKS by running the command `kubectl apply -f aws-auth-cm-windows.yaml`. This command might take a few minutes to finish.
+
+Question: What is the purpose of watching the status of nodes in EKS?
+Answer: Watching the status of nodes in EKS allows you to wait for them to reach the `Ready` status, which indicates that the nodes are fully functional and ready to be used in the cluster.
+
+Question: What is the recommended way to block Pod access to IMDS in EKS?
+Answer: The recommended way to block Pod access to IMDS in EKS is to restrict access to the instance profile assigned to the worker node if you plan to assign IAM roles to all of your Kubernetes service accounts so that Pods only have the minimum permissions that they need. This is not applicable if any Pods in the cluster require access to the Amazon EC2 instance metadata service for other reasons, such as retrieving the current AWS Region.
+

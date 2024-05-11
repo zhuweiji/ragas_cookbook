@@ -1,0 +1,15 @@
+Question: FastAPI mount sub-apps?
+Answer: FastAPI allows you to mount a sub-application into a specific path of a main FastAPI application, each with their own path operations and docs UI.
+
+Question: FastAPI mount path?
+Answer: The path where a sub-application is mounted is determined when you mount it into the main FastAPI application.
+
+Question: FastAPI sub-app docs?
+Answer: Each FastAPI sub-application has its own automatic API docs, accessible under a specific sub-path prefix.
+
+Question: FastAPI sub-app path operations?
+Answer: Each FastAPI sub-application, when mounted, handles all the path operations declared under its own path.
+
+Question: FastAPI root_path?
+Answer: The `root_path` is a mechanism from the ASGI specification used by FastAPI to communicate the mount path for a sub-application, allowing it to use the correct path prefix for the docs UI and handle all mounted sub-applications correctly.
+

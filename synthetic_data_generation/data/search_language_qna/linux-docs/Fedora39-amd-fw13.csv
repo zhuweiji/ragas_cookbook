@@ -1,0 +1,3 @@
+How to update software packages?,"To update software packages, open the terminal, copy and paste the command 'sudo dnf upgrade', and press enter. After that, reboot your system."
+How to enable fractional scaling on Wayland?,"To enable fractional scaling on Wayland, open the terminal, copy and paste the command 'gsettings set org.gnome.mutter experimental-features ""['scale-monitor-framebuffer']""', and press enter. Then, go to Displays, set the scale to your preference, and click Apply."
+How to enable tap-to-click on the touchpad?,"To enable tap-to-click on the touchpad, open the mouse settings, click on the touchpad option at the top, and select Tap to Click."

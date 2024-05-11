@@ -1,0 +1,30 @@
+Question: managed node update steps?
+Answer: The managed node update process in Amazon EKS has four phases: Setup, Scale up, Upgrade, and Scale down. The Setup phase creates a new launch template version for the Auto Scaling group and updates the group to use it. The Scale up phase increments the maximum and desired size of the Auto Scaling group and checks for new nodes in the node group. The Upgrade phase drains Pods from nodes and sends termination requests to the Auto Scaling Group for cordoned nodes. The Scale down phase decrements the desired size of the Auto Scaling group and waits for nodes to be terminated.
+
+Question: managed node group capacity error?
+Answer: A "Insufficient capacity in the Availability Zone" error in the Scale up phase of the managed node update process in Amazon EKS indicates that the Availability Zone might not have capacity of the requested instance types. It is recommended to configure multiple instance types while creating a managed node group to prevent this error.
+
+Question: managed node group EC2 limits error?
+Answer: A "EC2 instance limits in your account" error in the Scale up phase of the managed node update process in Amazon EKS indicates that the number of Amazon EC2 instances that the account can run simultaneously needs to be increased using Service Quotas.
+
+Question: managed node group custom user data error?
+Answer: A "Custom user data" error in the Scale up phase of the managed node update process in Amazon EKS indicates that custom user data may be causing issues with the bootstrap process, leading to the `kubelet` not starting on the node or nodes not getting expected Amazon EKS labels.
+
+Question: managed node group node unhealthy error?
+Answer: Any changes that make a node unhealthy or not ready, such as node disk pressure or memory pressure, can lead to a node not going to `Ready` state and cause an error in the Upgrade phase of the managed node update process in Amazon EKS.
+
+Question: Aggressive PDB cause PodEvictionFailure?
+Answer: Yes, Aggressive PDB can cause `PodEvictionFailure` during the upgrade process.
+
+Question: Node tainted and deployment?
+Answer: If the node is tainted and the deployment tolerates every taint, then the node is more likely to be non-empty, leading to Pod eviction failure during the upgrade process.
+
+Question: Scale down phase purpose?
+Answer: The scale down phase decrements the Auto Scaling group maximum size and desired size by one to return to values before the update started.
+
+Question: Upgrade workflow and Cluster Autoscaler?
+Answer: If the Upgrade workflow determines that the Cluster Autoscaler is scaling up the node group during the scale down phase of the workflow, it exits immediately without bringing the node group back to its original size.
+
+Question: PDBs point to same Pod cause?
+Answer: `PodEvictionFailure` can occur during the upgrade phase if there are multiple PodDisruptionBudgets (PDBs) pointing to the same Pod.
+

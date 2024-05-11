@@ -1,0 +1,12 @@
+Question: How to update software packages?
+Answer: Open the terminal and run 'sudo dnf upgrade' to update software packages.
+
+Question: How to enable fractional scaling on Wayland?
+Answer: Run the command 'gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffer']"' and set the scale in Displays.
+
+Question: How to enable tap-to-click on touchpad?
+Answer: Go to Mouse and Touchpad settings, select Tap to Click under Clicking.
+
+Question: How to enable brightness keys?
+Answer: Run 'sudo grubby --update-kernel=ALL --args="module_blacklist=hid_sensor_hub"' and reboot.
+

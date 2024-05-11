@@ -1,0 +1,10 @@
+Show Command Palette?,"You can show the Command Palette in Visual Studio Code by pressing `kb(workbench.action.showCommands)`, `kbstyle(F1)`."
+Insert cursor below?,"To insert a cursor below the current line in Visual Studio Code, you can use the command `kb(editor.action.insertCursorbelow)`."
+Format document?,"To format the entire document in Visual Studio Code, you can use the command `kb(editor.action.formatDocument)`."
+Go to Symbol?,You can use the command `kb(workbench.action.gotoSymbol)` to go to a symbol in Visual Studio Code.
+Close editor?,"To close the current editor in Visual Studio Code, you can use the command `kb(workbench.action.closeActiveEditor)`, `kbstyle(Ctrl+W)`."
+New file command,The command for creating a new file is `kb(workbench.action.files.newUntitledfile)`.
+Open file command,The command for opening a file is `kb(workbench.action.files.openfile)`.
+Toggle full screen,The command for toggling full screen is `kb(workbench.action.toggleFullScreen)`.
+Start debugging,The command for starting to debug is `kb(workbench.action.debug.start)`.
+Create new terminal,The command for creating a new terminal is `kb(workbench.action.terminal.new)`.

@@ -1,0 +1,5 @@
+custom data html support,Custom Data format allows extension authors to extend VS Code's HTML language support.
+custom data css entities,Custom Data format provides language support for CSS entities defined in custom data files.
+vscode custom data package json,The `package.json` of a VS Code extension should include `contributes.html.customData` and `contributes.css.customData` to use custom data.
+custom data auto-completion,Custom Data format provides auto-completion and hover information for HTML/CSS entities defined in custom data files.
+custom-data-sample location,The custom-data-sample can be found in [microsoft/vscode-extension-samples](https://github.com/microsoft/vscode-extension-samples).
