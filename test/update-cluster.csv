@@ -1,0 +1,12 @@
+Update to new Kubernetes version?,"Amazon EKS allows updating an EKS cluster to the latest Kubernetes version when available. However, downgrading to a previous version is not possible after the upgrade."
+What happens if cluster upgrade fails?,"If any of the readiness health checks fail during the cluster upgrade, Amazon EKS will revert the infrastructure deployment, and the cluster remains on the prior Kubernetes version. Running applications are not affected, and the cluster is never left in an unrecoverable state."
+eksctl update command,"The command to update the Kubernetes version of an Amazon EKS cluster using `eksctl` is ""eksctl upgrade cluster --name [cluster\_name] --version [version] --approve""."
+eks console update,"To update the cluster version in the Amazon EKS console, open the console, select the cluster, choose ""Update cluster version"", select the version, and confirm."
+eks update skew policy,"The version skew policy for `kubelet` in Amazon EKS allows it to be up to three minor versions older than `kube-apiserver` starting from Kubernetes version 1.28, and up to two minor versions older if the `kubelet` is version 1.24 or older."
+eks update pre-reqs,"Before updating an Amazon EKS cluster, ensure the `kubelet` on nodes is at the same version as the control plane, and update the Amazon VPC CNI plugin for Kubernetes to the latest version if it's earlier than 1.8.0."
+aws load balancer controller version update,"If the AWS Load Balancer Controller is deployed in the cluster and you're updating to version 1.25 or later, update the controller to version 2.4.7 or later before updating the cluster version."
+aws eks update cluster,The AWS CLI command to update an Amazon EKS cluster is `aws eks update-cluster-version`.
+cluster version update status,The status of a cluster version update can be monitored using the command `aws eks describe-update`.
+update node kubernetes version,"After updating the cluster, nodes should be updated to the same Kubernetes minor version using self-managed node updates or updating a managed node group."
+cluster autoscaler update,"If the Kubernetes Cluster Autoscaler was deployed before updating the cluster, it should be updated to the latest version that matches the Kubernetes major and minor version."
+update amazon vpc cni plugin,"The Amazon VPC CNI plugin, CoreDNS, and `kube-proxy` add-ons should be updated to the minimum versions listed in Service account tokens."

@@ -1,0 +1,10 @@
+FastAPI NoSQL integration,"FastAPI can be integrated with any NoSQL database, including Couchbase, MongoDB, Cassandra, CouchDB, and ArangoDB."
+Couchbase bucket usage,"In Couchbase, a bucket is a set of documents that can be of different types, representing the main entrypoint of communication with the database."
+User model creation,"A `User` model is created using Pydantic to model Couchbase documents, which are JSON objects with keys and values."
+Get user by username,"A function is created to get a user by their username, generate a document ID from it, get the document with that ID, and put the contents of the document in a `UserInDB` model."
+FastAPI app creation,"The FastAPI app is created with a *path operation function* that takes a username, generates a document ID from it, gets the document with that ID, puts the contents of the document in a `UserInDB` model, and returns the user if found."
+Integrate third party NoSQL?,You can integrate any third party NoSQL database by using their standard packages in Python.
+Use other external tools?,"The same approach applies to any other external tool, system or API."
+Use standard packages for NoSQL?,"In the Python example provided, the standard package for the NoSQL database is used for integration."
+Use other APIs or systems?,The method for integrating a NoSQL database using standard packages can also be applied to other APIs or systems.
+Need NoSQL packages in Python?,"To integrate a third party NoSQL database in Python, you need to use their standard packages."

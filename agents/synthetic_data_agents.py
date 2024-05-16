@@ -100,6 +100,37 @@ class DataGenerator(BasicAgent):
 
         return generate.invoke({'document': [request]}, config=self.langchain_config)
 
+    def evaluate_generated_question(self, document: Document, question, answer):
+        """evaluate if the generated question is usable
+        """
+        prompt = ChatPromptTemplate.from_messages(
+            [
+                (
+                    "system",
+                    """Evaluate if the following generated question and answer for a given document is usable as synthetic test data.
+                    Give your answer as a single word, either 'yes' or 'no.' Do not provide additional output besides 'yes' or 'no'.
+                    
+                    Answer 'no' if the following criteria are not met:
+                    1. If the question is understandable by itself
+                    2. If the answer is relevant to the question
+                    3. If it is plausible that the question can be answered using the document and/or table of contents given.
+                    """.replace('\t', '')
+                ),
+                MessagesPlaceholder(variable_name="document"),
+            ]
+        )
+
+        generate = prompt | self.llm
+
+        request = HumanMessage(
+            content=f"""Document Name: {document.metadata.get('filename', 'unknown')}
+            Table of Contents: {document.metadata.get('table_of_contents')}
+            Question: {question}
+            Answer: {answer}
+            """.replace('\t', '')
+        )
+        return generate.invoke({'document': [request]}, config=self.langchain_config)
+
     def generate_questions_from_document__simple_style_query(self, document: Document, num_questions=3):
         """Generate questions, focusing on how someone might ask the question 
         when they don't know the technical keywords/jargon.

@@ -1,4 +1,4 @@
-from synthetic_data_generation.rag_data import DataGenerator
+from agents.synthetic_data_agents import DataGenerator
 
 # Example usage
 text = """Question: What is the capital of France?

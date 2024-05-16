@@ -6,10 +6,10 @@ from pathlib import Path
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from tqdm import tqdm
 
+from agents.synthetic_data_agents import DataGenerator
 from chunkers.markdown_chunker import MarkdownChunker
 from config.project_paths import project_root, source_document_directory
 from retrievers.chroma import ExtendedChromaMarkdownRetriever
-from synthetic_data_generation.rag_data import DataGenerator
 
 log = logging.getLogger(__name__)
 
@@ -18,7 +18,8 @@ def generate_synthetic_test_data(md_file: Path,
                                  num_questions=5,
                                  output_dir: Path = project_root / 'synthetic_data_generation' / 'data',
                                  generator_function=DataGenerator().generate_questions_from_document,
-                                 **kwargs):
+                                 evaluation_function=DataGenerator().evaluate_generated_question,
+                                 ** kwargs):
     try:
         text = md_file.read_text(errors='ignore')
     except Exception as e:
@@ -45,7 +46,18 @@ def generate_synthetic_test_data(md_file: Path,
     results = []
     for i in tqdm(docs, desc='Generating Questions from Documents:'):
         q_a = generator_function(i, num_questions)
+        if not q_a:
+            continue
+
         print(q_a)
+        if evaluation_function:
+            qa_tuples = generator.extract_qa_tuples(q_a.content)
+            for q, a in qa_tuples:
+                r = evaluation_function(i, q, a)
+                print('='*50)
+                print('evaluation')
+                print(r.content)
+                print('\n\n')
         results.append(q_a)
 
     filepath = output_dir / f'{md_file.name}__raw.txt'
@@ -106,10 +118,12 @@ if __name__ == "__main__":
     for d in sub_dirs:
         print(d)
         files = list(d.glob('*.md'))
-        files = random.sample(files, 10)
+        files = random.sample(files, 1)
 
         output_dir = project_root / 'synthetic_data_generation' / d.name
         for file in tqdm(files, leave=False, desc='Generating Synthetic Data from files:'):
             generate_synthetic_test_data(md_file=file,
-                                         output_dir=output_dir,
+                                         output_dir=project_root / 'test',
+
+                                         #  output_dir=output_dir,
                                          generator_function=DataGenerator().generate_questions_from_document__search_engine_style_query)

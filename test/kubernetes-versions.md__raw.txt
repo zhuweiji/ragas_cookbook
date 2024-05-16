@@ -1,0 +1,45 @@
+Question: Kubernetes versions standard support?
+Answer: Amazon EKS offers standard support for at least four production-ready versions of Kubernetes at any given time, with each version receiving 14 months of standard support.
+
+Question: EKS version feature support?
+Answer: Amazon EKS supports all generally available features of the Kubernetes API, while not enabling new beta APIs by default starting with version 1.24. Alpha features aren't supported.
+
+Question: Notification before EKS version support ends?
+Answer: Amazon EKS sends a notice through the AWS Health Dashboard approximately 12 months after the Kubernetes version was released on Amazon EKS, and at least 60 days before the end of support date.
+
+Question: Extended support for Kubernetes on EKS?
+Answer: After standard support ends, a Kubernetes version enters extended support for an additional 12 months, requiring an additional cost per cluster hour.
+
+Question: Oldest extended version for EKS auto-upgrade?
+Answer: If a user hasn't updated their cluster before the extended support period ends, it is auto-upgraded to the oldest currently supported extended version.
+
+Question: Kubernetes features supported Amazon EKS?
+Answer: Amazon EKS supports all generally available (GA) features of the Kubernetes API.
+
+Question: EKS managed node groups automatically updated?
+Answer: No, managed node groups aren't automatically upgraded when you or Amazon EKS update the control plane.
+
+Question: Fargate Pods upgraded with automatic cluster control plane?
+Answer: No, Fargate Pods aren't automatically upgraded with an automatic cluster control plane version upgrade; you must manually update the Fargate nodes.
+
+Question: Meaning of standard and extended support in EKS?
+Answer: Standard support for a Kubernetes version in Amazon EKS begins when a version is released and ends 14 months after the release date. Extended support for a Kubernetes version begins immediately after the end of standard support and lasts for 12 more months.
+
+Question: Upgrade required for non-extended support in EKS?
+Answer: To avoid extended support enrollment, you can upgrade your cluster to a Kubernetes version that's in standard Amazon EKS support before the end of the extended support period.
+
+Question: When is control plane updated?
+Answer: Automatic updates can happen at any time after the end of extended support date, with no notification beforehand.
+
+Question: Can control plane stay on old version?
+Answer: No, control planes can't be left on a version that reached end of extended support due to security reasons.
+
+Question: What is the cost of extended support?
+Answer: There is additional cost for Amazon EKS clusters running in extended support.
+
+Question: What does extended support include?
+Answer: Amazon EKS clusters in Extended Support receive ongoing security patches for the Kubernetes control plane, patches for Amazon VPC CNI, and AWS-published Amazon EKS optimized AMIs for Amazon Linux, Bottlerocket, and Windows.
+
+Question: Are there AMI component limitations in extended support?
+Answer: Extended Support will provide support for AWS-published Amazon EKS optimized AMIs for Amazon Linux, Bottlerocket, and Windows, but users might have newer components on their Amazon EKS optimized AMI while using Extended Support.
+
