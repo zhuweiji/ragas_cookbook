@@ -16,16 +16,16 @@ logging.basicConfig(
 log = logging.getLogger(__name__)
 
 
-responses = []
+hn_tech = []
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    global responses
+    global hn_tech
     log.info('starting lifespan function')
     # Load the ML model
-    responses = parse_hn()
-    log.info(responses)
+    hn_tech = parse_hn()
+    log.info(hn_tech)
     yield
 
 app = FastAPI(
@@ -52,15 +52,14 @@ templates = Jinja2Templates(directory=f"{project_root}/templates")
 
 @app.get("/", response_class=HTMLResponse)
 async def render_dashboard(request: Request):
-    my_list = ["Item 1", "Item 2", "Item 3"]
     context = {
-        'items': my_list,
-        'myid': 'hello',
         'request': request,
+        'hn_tech': hn_tech
     }
 
     log.info(context)
     return templates.TemplateResponse(
         name="index.html",
         context=context,
+
     )

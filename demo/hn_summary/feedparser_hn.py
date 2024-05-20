@@ -1,3 +1,4 @@
+import json
 import logging
 import ssl
 import time
@@ -56,20 +57,46 @@ class RSSTechAgent(BaseAgent):
         article = entry['links'][0].get('href')
         if article:
             try:
-                article = search_online.invoke(article)
-                article['linked_article'] = article
-            except ssl.SSLCertVerificationError:
-                pass
+                articles = search_online.invoke(article)
+                entry['linked_article'] = articles
+            except Exception as e:
+                print(f'unable to get article: {e}')
+                return
 
-        prompt = f"""Read the following RSS feed and determine which if it contains useful new technologies with a strong grounding. Your response should only be about the intended output. Ignore anything irrelevant to the output. RSS feed:{entry}"""
+        prompt = """Read an entry in an RSS feed and determine which if it contains useful new programming technologies or tools.
+Your response should only be about the intended output. Ignore anything irrelevant to the output. Your response must follow the format of the examples given.
+Examples:
+Two useful techs: {
+    "technology": [
+        {
+            "name": "Kaniko",
+            "summary": "Kaniko is an open-source tool that allows you to build container images in Kubernetes without needing to run a Docker daemon inside the cluster.",
+            "link": ""
+        },
+        {
+            "name": "needle-in-a-needlestack",
+            "summary": "Needle in a Needlestack is a new benchmark to measure how well LLMs pay attention to the information in their context window. NIAN creates a prompt that includes thousands of limericks and the prompt asks a question about one limerick at a specific location.",
+            "link": "https://github.com/llmonpy/needle-in-a-needlestack"
+        }
+    ],
+}
 
-        return self.llm.invoke(prompt)
+No useful techs:
+{"technology": []}
+
+
+"""
+
+        prompt += f"RSS feed entry:{entry}"
+
+        return self.llm.invoke(prompt, response_format={"type": "json_object"})
 
 
 def parse_hn():
     agent2 = RSSTechAgent(config='stdout')
 
     responses = []
+    result = []
     useful_keys = ['title', 'summary', 'published', 'links', 'comments']
 
     feed, timestamp = get_feed()
@@ -77,4 +104,13 @@ def parse_hn():
 
     for i in stripped_feed:
         responses.append(agent2.find_interesting_tech_from_feed(i))
+
+    for i in responses:
+        try:
+            content = json.loads(i.content)
+            if content and content.get('technology'):
+                result.append(content)
+        except:
+            print(i.content)
+            continue
     return responses
