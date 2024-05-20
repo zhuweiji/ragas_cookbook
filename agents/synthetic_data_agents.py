@@ -5,12 +5,12 @@ from langchain_core.documents import Document
 from langchain_core.messages import AIMessage, BaseMessage, HumanMessage
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 
-from agents.basic_agents import BasicAgent
+from agents.basic_agents import BaseAgent
 
 log = logging.getLogger(__name__)
 
 
-class DataGenerator(BasicAgent):
+class DataGenerator(BaseAgent):
     def generate_questions_from_document(self, document: Document, num_questions=3):
         prompt = ChatPromptTemplate.from_messages(
             [
